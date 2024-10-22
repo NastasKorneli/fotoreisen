@@ -1,0 +1,3165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YDYYVDE06J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YDYYVDE06J');
+</script>
+
+  <!-- Подключение библиотеки Font Awesome для иконок -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+    <link rel="icon" type="image/x-icon" href="apple-touch-icon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <head>
+      
+        <!-- Open Graph Tags для Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Название страницы или изображения">
+        <meta property="og:description" content="Описание вашей страницы или изображения">
+        <meta property="og:image" content="https://yourwebsite.com/path-to-your-image.jpg">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:url" content="https://yourwebsite.com/page-url">
+        <meta property="og:site_name" content="Ваш сайт">
+      
+        <!-- Twitter Card Tags для Twitter -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Название страницы или изображения">
+        <meta name="twitter:description" content="Описание вашей страницы или изображения">
+        <meta name="twitter:image" content="https://yourwebsite.com/path-to-your-image.jpg">
+        <meta name="twitter:url" content="https://yourwebsite.com/page-url">
+ 
+      
+    
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+    name="description"
+    content="Entdecken Sie die faszinierende Welt der Street-Fotografie und Fotoreisen – fangen Sie einzigartige Momente in Georgien, Armenien, Kasachstan, Usbekistan und der Mongolei ein."
+  />
+  <meta name="author" content="Korneli Nastas" />
+  <meta
+    name="keywords"
+    content="Street-Fotografie, Fotoreisen, Reisefotografie, Abenteuerreisen, Georgien, Armenien, Kasachstan, Usbekistan, Mongolei, Fotografie-Touren, Fotokurse, Landschaftsfotografie, urbane Fotografie, fotografische Expeditionen, Fotoworkshops, kreative Fotografie"
+  >
+  <title>Street-Fotografie und Abenteuerreisen</title>
+  
+
+    <style>
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+
+      
+.content-section {
+  display: none; /* Все статьи будут скрыты */
+}
+
+.content-section.active {
+  display: block; /* Только активная статья будет показана */
+}
+
+.article-right {
+  display: flex;
+  flex-direction: row-reverse; /* Изображение будет справа */
+}
+
+.article {
+  display: flex;
+  flex-direction: row; /* Изображение будет слева */
+}
+
+.article img {
+  margin-right: 20px;
+}
+
+.article-right img {
+  margin-left: 20px;
+}
+
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--gap);
+        padding: var(--gap);
+        height: 100vh;
+        width: 100vw;
+        position: relative;
+        background: hsl(220, 35%, 5%);
+      }
+
+      .grid div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        padding: calc(var(--gap) * 1.5);
+        
+        min-height: 160px;
+        color: #fff;
+        font-size: 1.1rem;
+        font-weight: 600;
+        background-color: teal;
+        background-image: url(51.webp);
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        transition-property: filter, backdrop-filter, opacity, color;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-out;
+      }
+
+      .grid div:hover {
+        color: #fff;
+        filter: brightness(1.2);
+      }
+
+      .grid div span:first-of-type {
+        z-index: 2;
+      }
+
+      .grid div .overlay {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        background: linear-gradient(
+          180deg,
+          hsl(0, 0%, 0%, 0) 5%,
+          hsl(0, 0%, 0%, 0.8)
+        );
+        backdrop-filter: blur(6px);
+        transition-property: opacity;
+        transition-duration: 0.4s;
+        transition-timing-function: ease-out;
+        z-index: -1;
+      }
+
+      .grid div .shop {
+        display: block;
+        color: tomato;
+        font-size: 0.8rem;
+        font-weight: 200;
+        margin-top: 8px;
+        margin-bottom: -25px;
+        opacity: 0;
+        transition-property: margin-bottom, opacity;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-out;
+        z-index: 2;
+      }
+
+      .grid div:hover > .overlay {
+        opacity: 1;
+      }
+
+      .grid div:hover > .shop {
+        opacity: 1;
+        margin-bottom: 0;
+      }
+
+      .grid > div:nth-of-type(1) {
+        grid-column: 1/3;
+      }
+
+      .grid > div:nth-of-type(2) {
+        grid-column: 3/5;
+        grid-row: 1/3;
+      }
+
+      .grid > div:nth-of-type(4) {
+        grid-column: 2/3;
+        grid-row: 2/5;
+      }
+
+      @media screen and (max-width: 840px) {
+        .grid {
+          height: auto;
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .grid div {
+          min-height: auto;
+          aspect-ratio: 1 / 1;
+          width: 100%;
+        }
+
+        .grid > div:nth-of-type(1),
+        .grid > div:nth-of-type(2),
+        .grid > div:nth-of-type(4) {
+          grid-column: auto;
+          grid-row: auto;
+        }
+      }
+      @font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('/fonts/Montserrat-Black.woff2') format('woff2');
+}
+@media screen and (max-width: 1024px) {
+  .grid {
+    display: none; /* Скрываем весь блок .grid */
+  }
+}
+
+    </style>
+    <style>
+
+section #gallery2 {
+  overscroll-behavior-x: none;
+  overscroll-behavior-y: none;
+  scroll-behavior: smooth;
+}
+section #gallery2 {
+  position: relative;
+  color: #1da1f2;
+
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+section {
+  position: relative;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  max-width: 100vw;
+
+  /* overflow-x: hidden; */
+}
+
+p {
+  line-height: 1;
+  color: #1da1f2;
+}
+a {
+  color: #1da1f2;
+  text-decoration: none;
+}
+/* img {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+} */
+#gallery {
+  position: relative;
+  left: calc(-1 * var(--adjust-size));
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  max-width: 100vw;
+  padding: 20px;
+  -webkit-perspective: 0;
+  perspective: 0;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+#gallery figure:nth-child(7n) {
+  --duration: 1s;
+  --pin-color: crimson;
+}
+#gallery figure:nth-child(7n + 1) {
+  --duration: 1.8s;
+  --pin-color: hotpink;
+}
+#gallery figure:nth-child(7n + 2) {
+  --duration: 1.3s;
+  --pin-color: magenta;
+}
+#gallery figure:nth-child(7n + 3) {
+  --duration: 1.5s;
+  --pin-color: orangered;
+}
+#gallery figure:nth-child(7n + 4) {
+  --duration: 1.1s;
+  --pin-color: darkorchid;
+}
+#gallery figure:nth-child(7n + 5) {
+  --duration: 1.6s;
+  --pin-color: deeppink;
+}
+#gallery figure:nth-child(7n + 6) {
+  --duration: 1.2s;
+  --pin-color: mediumvioletred;
+}
+#gallery figure:nth-child(3n) {
+  --angle: 3deg;
+}
+#gallery figure:nth-child(3n + 1) {
+  --angle: -3.3deg;
+}
+#gallery figure:nth-child(3n + 2) {
+  --angle: 2.4deg;
+}
+#gallery figure:nth-child(odd) {
+  --direction: alternate;
+}
+#gallery figure:nth-child(even) {
+  --direction: alternate-reverse;
+}
+#gallery figure {
+  --angle: 3deg;
+  --count: 5;
+  --duration: 1s;
+  --delay: calc(-0.5 * var(--duration));
+  --direction: alternate;
+  --pin-color: red;
+
+  position: relative;
+  display: inline-block;
+  margin: var(--adjust-size);
+  padding: 0.5rem;
+  border-radius: 5px;
+  box-shadow: 0 7px 8px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: auto;
+  text-align: center;
+  background-color: ghostwhite;
+  background-image: url('https://images.unsplash.com/photo-1629968417850-3505f5180761?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTMzMjQ3ODJ8&ixlib=rb-4.0.3&q=80&w=500');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+
+  transform-origin: center 0.22rem;
+  will-change: transform;
+  break-inside: avoid;
+  overflow: hidden;
+  outline: 1px solid transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+#gallery.active figure {
+  animation-duration: var(--duration), 1.5s;
+  animation-delay: var(--delay),
+    calc(var(--delay) + var(--duration) * var(--count));
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: var(--count), 1;
+  animation-direction: var(--direction), normal;
+  animation-fill-mode: both;
+  animation-name: swing, swingEnd;
+}
+#gallery figure:after {
+  position: absolute;
+  top: 0.22rem;
+  left: 50%;
+  width: 0.7rem;
+  height: 0.7rem;
+  content: '';
+  background: var(--pin-color);
+  border-radius: 50%;
+  box-shadow: -0.1rem -0.1rem 0.3rem 0.02rem rgba(0, 0, 0, 0.5) inset;
+  filter: drop-shadow(0.3rem 0.15rem 0.2rem rgba(0, 0, 0, 0.5));
+  transform: translateZ(0);
+  z-index: 2;
+}
+figure img {
+  aspect-ratio: 1 /1;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  z-index: 1;
+}
+figure figcaption {
+  font-family: 'Titillium Web', sans-serif;
+
+  font-size: 14px;
+  font-weight: 200;
+  
+  white-space: normal;
+
+  z-index: 1;
+}
+figure h2 {
+  font-family: 'Titillium Web', sans-serif;
+  color: #ff6347;
+  font-size: 22px;
+}
+figure p {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 17px;
+}
+figure small {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 12px;
+}
+figure > div {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes swing {
+  0% {
+    transform: rotate3d(0, 0, 1, calc(-1 * var(--angle)));
+  }
+  100% {
+    transform: rotate3d(0, 0, 1, var(--angle));
+  }
+}
+@keyframes swingEnd {
+  to {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+#info {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+#info a {
+  font-size: 1.1rem;
+}
+/*
+@media (orientation: landscape) {
+#gallery {
+grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+}
+*/
+@media (min-width: 800px) {
+  #gallery {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+.share-buttons {
+  margin-top: 10px;
+}
+
+.share-buttons a {
+  margin-right: 10px;
+}
+
+.share-buttons img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+    </style>
+  
+  <link rel="stylesheet" href="styles.css" />
+  </head>
+ 
+  <header>
+    <br>
+    <section >
+      <div style="background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('pngegg.webp'); background-size: cover; background-position: center; width: 100vw; box-sizing: border-box;" class="container22">
+        <br>
+        <p class="grid22">
+          <div style="display: inline-block; padding: 10px; border-radius: 18px;">
+            <span style="padding-left: 1vw;" class="reisen1">welt</span>
+            <span style="padding-left: 1vw;" class="photo1">weit</span>
+          </div>
+      
+          <div style="display: inline-block; padding: 10px; border-radius: 18px;">
+            <span  class="photo">foto</span>
+            <span class="reisen">reisen</span>
+          </div>
+        </p>
+        <br>
+      </div>
+      
+      
+      <nav class="navbar" id="navbar">
+        <div class="burger-menu">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <ul class="nlist">
+          <li>
+            <a href="index.html" class="nav-link" title="Startseite">Start</a>
+          </li>
+
+          <li>
+            <a href="reiseplan.html" class="nav-link" title="Reiseplan"
+              >Reiseplan</a
+            >
+          </li>
+
+          <li>
+            <a href="model.html" class="nav-link" title="Myanmar in Farben"
+              >Myanmar in Farben</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </section>
+  </header>
+    <br />
+<body>
+  
+
+  <section class="grid-container">
+    <ul class="columnlist">
+      <li class="modal">
+        <section>
+          <a href="photo-viewer.html?image=24.webp">
+            <img alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten" height="400" loading="lazy" src="24.webp" width="600"/>
+          </a>
+        </section>
+      </li>
+      <li class="modal">
+        <section>
+          <a href="photo-viewer.html?image=45.webp">
+            <img alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten" height="400" loading="lazy" src="45.webp" width="600"/>
+          </a>
+        </section>
+      </li>
+      <li class="modal">
+        <section>
+          <a href="photo-viewer.html?image=49.webp">
+            <img alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten" height="400" loading="lazy" src="49.webp" width="600"/>
+          </a>
+        </section>
+      </li>
+      <li class="modal">
+        <section>
+          <a href="photo-viewer.html?image=44.webp">
+            <img alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten" height="400" loading="lazy" src="44.webp" width="600"/>
+          </a>
+        </section>
+      </li>
+    </ul>
+  </section>
+  
+
+    <ul class="nlist submenu">
+      <li>
+        <a href="#" onclick="setActive('Italien', 'flexbox1');return false;">Italien 🌤</a>
+      </li>
+      <li>
+        <a href="#" onclick="setActive('Frankreich', 'flexbox2');return false;">Frankreich 🌤</a>
+      </li>
+      <li>
+        <a href="#" onclick="setActive('Myanmar', 'flexbox3');return false;">Myanmar 🌤</a>
+      </li>
+      <li>
+        <a href="#" onclick="setActive('Türkei', 'flexbox4');return false;">Türkei 🌤</a>
+      </li>
+      <li>
+        <a href="#" onclick="setActive('Portugal', 'flexbox5');return false;">Portugal 🌤</a>
+      </li>
+    </ul>
+    <div class="flag-icons">
+      <br>
+      <h2 style="color: #1da1f2 ; text-align: center;" class="leader"> Länder, die uns ans Herz gewachsen sind und die wir bereits bereist haben.</h2>
+ 
+    <div id="flexbox1" class="content-section active">
+      <div class="content">
+        <section class="article">
+          <img
+            src="../12345678.webp"
+            alt="Bildbeschreibung 1"
+            class="article-image"
+            width="600"
+                height="400"
+          />
+          <div class="article-content">
+            <!-- <h2>Die unendliche Liebe zu Italien und zur Fotografie</h2> -->
+
+            <p class="note">
+              Italien ist ein Land, das man durch die Linse eines Fotografen neu entdecken kann.
+            </p>
+            <br />
+            <div style="color: #555555;">
+              Italien ist nicht nur ein Reiseziel – es ist eine Quelle der Inspiration für Fotografen. Vom tiefblauen Meer an der Amalfiküste bis hin zu den sonnenverwöhnten Hügellandschaften der Toskana – jedes Bild erzählt seine eigene Geschichte und hält die Schönheit des Moments fest.
+            </div>
+            <br>
+            <div style="color: #555555;">
+              Die alten Gassen Roms, die weichen Lichter über Venedig bei Sonnenuntergang und die unberührten Strände Siziliens – all dies bietet endlose Möglichkeiten, den Zauber Italiens mit der Kamera festzuhalten. Jede Aufnahme wird zu einem Meisterwerk, das die Seele des Landes einfängt.
+            </div>
+            <blockquote>
+              "Fotografie ist die Kunst, den Augenblick unvergänglich zu machen." - Unbekannt
+            </blockquote>
+            <div style="color: #555555;">
+              Haben Sie schon einmal die leuchtenden Farben des italienischen Sommers fotografiert? Die ruhigen Strände und versteckten Buchten, die in der sanften Brise des Mittelmeers liegen, laden dazu ein, die Schönheit dieses einzigartigen Landes auf eine Weise zu erleben, die nur die Fotografie ermöglichen kann.
+            </div>
+          </div>
+        </section>
+        <!-- Ваше содержимое статьи -->
+      </div>
+    </div>
+    
+    <div id="flexbox5" class="content-section">
+      <div class="content">
+        <section class="article">
+          <img
+            src="../sw22.webp"
+            alt="Bildbeschreibung 2"
+            class="article-image"
+            width="600"
+                height="400"
+          />
+          <div class="article-content">
+            <!-- <h2>Die verborgenen Schätze Portugals entdecken</h2> -->
+          
+            <div style="color: #555555;">
+                Portugal, ein Land voller Geschichte und Seele, wo reiche Kultur und atemberaubende Landschaften auf wunderbare Weise verschmelzen. Entdecken Sie die unberührten Strände, die malerischen Dörfer und die beeindruckende Küstenlinie des Atlantiks, die von den wilden Wellen umspült wird.
+            </div>
+            <br>
+            <div style="color: #555555;">
+                Jede Region Portugals hat ihre eigene Geschichte zu erzählen. Ob es die antiken Straßen von Lissabon, die farbenfrohen Häuser von Porto oder die majestätischen Klippen der Algarve sind – Portugal bietet unendliche Möglichkeiten für Entdecker und Fotografen gleichermaßen.
+            </div>
+            <br />
+            <p class="note">
+                Portugal ist weit mehr als nur Fado und Bacalhau – es ist eine Reise durch Kultur, Natur und Tradition.
+            </p>
+            <br />
+            <div style="color: #555555;">
+                Haben Sie schon einmal die versteckten Buchten der Algarve besucht? Diese idyllischen Orte, umgeben von kristallklarem Wasser und steilen Klippen, bieten die perfekte Kulisse für jeden Fotografen und Reisenden.
+            </div>
+            <blockquote>
+                "Reisen in Portugal bedeutet, das Herz für neue Entdeckungen zu öffnen." - Unbekannt
+            </blockquote>
+        </div>
+        
+        </section>
+      </div>
+    </div>
+    <div id="flexbox2" class="content-section">
+      <div class="content">
+        <section class="article article-right">
+          <img
+            src="../123456789.webp"
+            alt="Bildbeschreibung 1"
+            class="article-image"
+            width="600"
+                height="400"
+          />
+          <div class="article-content">
+            <!-- <h2>Die Eleganz Frankreichs in der Fotografie einfangen</h2>
+            <br /> -->
+           
+            <br />
+            <div style="color: #555555;">
+              Frankreich, das Land der Eleganz und Raffinesse, inspiriert Fotografen aus der ganzen Welt. Ob es sich um einen flüchtigen Moment in den belebten Straßen von Paris handelt oder um die sanften Farben der Provence – Frankreich ist eine Leinwand für unvergessliche Aufnahmen. 
+            </div>
+            <br>
+            <p class="note">
+              Jede Fotografie ist ein Fenster in die Seele Frankreichs.
+            </p>
+          <div style="color: #555555;">
+              Die Straßenfotografie in Frankreich hat eine lange Tradition, die das Leben in all seinen Facetten einfängt. Ein einfaches Porträt einer eleganten Frau auf den Boulevards von Paris kann die Geschichte von Stil, Zeit und Kultur erzählen. Die Kombination aus Mode und urbaner Landschaft schafft eine einzigartige Kulisse für zeitlose Aufnahmen.
+            </div>
+            <br>
+            <p>
+              Haben Sie schon einmal die charmanten Viertel von Montmartre fotografiert? Die schmalen, kopfsteingepflasterten Straßen und die lebendige Atmosphäre machen diesen Teil von Paris zu einem Paradies für Fotografen. 
+            </p>
+            <blockquote>
+              "Fotografie ist die Kunst, die Magie des Alltags einzufangen." - Unbekannt
+            </blockquote>
+  </div>
+  
+        </section>
+      </div>
+    </div>
+    <div id="flexbox4" class="content-section">
+      <div class="content">
+        <section class="article article-right">
+          <img
+            src="../1234567890.webp"
+            alt="Bildbeschreibung 2"
+            class="article-image"
+            width="600"
+                height="400"
+          />
+          <div class="article-content">
+            <!-- <h2>Die faszinierende Vielfalt der Türkei in Bildern</h2>
+  
+            <br /> -->
+            <div style="color: #555555;">
+              Die Türkei, ein Land zwischen Europa und Asien, ist ein Ort, an dem Geschichte, Kultur und atemberaubende Landschaften aufeinandertreffen. Von den geschäftigen Basaren Istanbuls bis zu den ruhigen Stränden der Ägäis – jede Fotografie erzählt eine einzigartige Geschichte.
+              
+            </div>
+            <br>
+            <div style="color: #555555;">
+              Erleben Sie die Vielfalt der Türkei, von den malerischen Gassen in Kappadokien bis zu den historischen Ruinen von Ephesos. Für Fotografen bietet die Türkei endlose Möglichkeiten, das Wechselspiel von Licht und Schatten in den alten Straßen, Märkten und Landschaften festzuhalten.
+            </div>
+            <br />
+            <p class="note">
+              Jede Ecke der Türkei hält eine neue Perspektive bereit, die nur darauf wartet, mit der Kamera eingefangen zu werden.
+            </p>
+            <br />
+            <p>
+              Haben Sie schon einmal die Heißluftballons über den märchenhaften Tälern Kappadokiens fotografiert? Dieser Anblick bleibt für immer im Gedächtnis und ist ein Traum für jeden Fotografen.
+              
+            </p>
+            <blockquote>
+              "Fotografie ist die Kunst, das Unsichtbare sichtbar zu machen." - Unbekannt
+            </blockquote>
+          </div>
+  
+        </section>
+      </div>
+    </div>
+    <div id="flexbox3" class="content-section">
+      <div class="content">
+        <section class="article">
+          <img
+            src="../36.webp"
+            alt="Fotografie von Myanmar"
+            class="article-image"
+            width="600"
+            height="400"
+          />
+          <div class="article-content">
+            <!-- <h2>Myanmar – das verborgene Juwel Südostasiens</h2>
+            <br /> -->
+            <div style="color: #555555;">
+              Myanmar, ein Land voller alter Traditionen und atemberaubender Landschaften, ist ein Traumziel für Fotografen, die die einzigartige Atmosphäre Südostasiens einfangen möchten. Hier findet man jahrtausendealte Tempel, malerische Dörfer und beeindruckende Berglandschaften, die es nirgendwo sonst auf der Welt gibt.
+            </div>
+            <br />
+            <div style="color: #555555;">
+              Jeder Winkel Myanmars bietet unzählige Fotomöglichkeiten. Die Sonnenaufgänge über Bagan, die mystischen Inle-Seen und die goldenen Pagoden, die im tropischen Sonnenlicht erstrahlen, eröffnen endlose Möglichkeiten für Fotografen.
+            </div>
+            <br />
+            <p class="note">
+              Myanmar ist nicht nur ein Land der Tempel und Pagoden, es ist ein Ort, an dem man die perfekte Harmonie von Natur und Geschichte erleben kann.
+            </p>
+            <br />
+            <div style="color: #555555;">
+              Haben Sie jemals darüber nachgedacht, wie atemberaubend die Sonnenauf- und -untergänge über den alten Tempeln von Bagan aussehen? Diese Orte sind ein wahres Paradies für Fotografen, die die Essenz von Zeit und Kultur festhalten möchten.
+            </div>
+            <blockquote>
+              "Fotografie ist die Kunst, das Ewige im Moment einzufangen." - Unbekannt
+            </blockquote>
+          </div>
+        </section>
+        
+      </div>
+    </div>
+
+    <article>
+      <h1 style="color: #1da1f2;" class="title">Leidenschaft für Street-Fotografie und Reisen?</h1>
+      <br>
+      <div style="color: #555555;">
+        Ich organisiere weltweit Reisen mit kleinen, exklusiven Gruppen, die auf
+        der Suche nach authentischen und einzigartigen Fotografie-Erlebnissen
+        sind. Diese Reisen bieten nicht nur die Gelegenheit, atemberaubende Orte
+        abseits der ausgetretenen Pfade zu entdecken, sondern auch die
+        Möglichkeit, sich intensiv mit der Kunst der Fotografie
+        auseinanderzusetzen.
+      </div>
+<br>
+
+<div class="note"  style="color: #555555;">
+Diese Touren sind darauf ausgelegt, Ihre fotografischen Fähigkeiten weiterzuentwickeln und gleichzeitig unvergessliche Erlebnisse zu schaffen. Jeder Moment wird zu einer Gelegenheit, einzigartige Geschichten mit Ihrer Kamera festzuhalten.</div>
+<br>
+      <div style="color: #555555;">
+        Mit meinen 25 Jahren Erfahrung in der Fotografie und dem Wissen, bereits
+        die halbe Welt bereist zu haben, bringe ich nicht nur technisches
+        Know-how mit, sondern auch ein tiefes Verständnis für verschiedene
+        Kulturen und Lebensweisen. Mein Ziel ist es, meinen Teilnehmern zu
+        helfen, ihre fotografischen Fähigkeiten zu erweitern und gleichzeitig
+        unvergessliche Abenteuer zu erleben.
+      </div>
+  <br>
+      <br>
+      <div class="reise-container2">
+        <div class="reise-container">
+          <form action="/submit" method="post">
+            <div class="reise-form-group">
+              <label for="departure">Ihr Name:</label>
+              <input
+                type="text"
+                id="departure"
+                name="departure"
+                placeholder="Vorname Nachname"
+                required
+              />
+            </div>
+            <div class="reise-form-group">
+              <label for="departure">Ihre E-Mail-Adresse:</label>
+              <input
+                type="text"
+                id="departure"
+                name="departure"
+                placeholder="beispiel@dmail.de"
+                required
+              />
+            </div>
+            <div class="reise-form-group">
+              <label for="departure">Telephone:</label>
+              <input
+                type="text"
+                id="departure"
+                name="departure"
+                placeholder="+49 123 456 789"
+                required
+              />
+            </div>
+
+            <div class="reise-form-group">
+              <label for="destination">Reiseziel:</label>
+              <select id="destination" name="destination" required>
+                <option value="">Wählen Sie ein Ziel aus</option>
+                <option value="Tiflis, Georgien – Februar 2025">
+                  Tiflis, Georgien – Februar 2025
+                </option>
+                <option value="Eriwan, Armenien – März 2025">
+                  Eriwan, Armenien – März 2025
+                </option>
+                <option value="Almaty, Kasachstan – April 2025">
+                  Almaty, Kasachstan – April 2025
+                </option>
+                <option value="Bischkek, Kirgisistan – Juni 2025">
+                  Bischkek, Kirgisistan – Juni 2025
+                </option>
+                <option value="Taschkent, Usbekistan – Juli 2025">
+                  Taschkent, Usbekistan – Juli 2025
+                </option>
+                <option value="Ulaanbaatar, Mongolei – August bis September 2025">
+                  Ulaanbaatar, Mongolei – August bis September 2025
+                </option>
+                <option value="Reykjavik, Island – Oktober 2025">
+                  Reykjavik, Island – Oktober 2025
+                </option>
+                
+              </select>
+            </div>
+
+            <div class="reise-form-group">
+              <label for="departure-date">Abflugdatum:</label>
+              <input
+                type="date"
+                id="departure-date"
+                name="departure-date"
+                required
+              />
+            </div>
+
+            <div class="reise-form-group">
+              <label for="return-date">Rückflugdatum (optional):</label>
+              <input type="date" id="return-date" name="return-date" />
+            </div>
+
+            <div class="reise-form-group">
+              <label for="passengers">Anzahl der Personen:</label>
+              <input
+                type="number"
+                id="passengers"
+                name="passengers"
+                min="1"
+                max="10"
+                required
+              />
+            </div>
+
+            <button type="submit">Anfrage zur Reservierung</button>
+          </form>
+        </div>
+      </div>
+
+      <a
+        class="weatherwidget-io"
+        href="https://forecast7.com/de/40d71n74d01/new-york/"
+        data-label_1="Hamburg"
+        data-label_2="WEATHER"
+        data-theme="original"
+        >Hamburg WEATHER</a
+      >
+      <script>
+        !(function (d, s, id) {
+          var js,
+            fjs = d.getElementsByTagName(s)[0];
+          if (!d.getElementById(id)) {
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://weatherwidget.io/js/widget.min.js';
+            fjs.parentNode.insertBefore(js, fjs);
+          }
+        })(document, 'script', 'weatherwidget-io-js');
+      </script>
+    </article>
+    <br />
+    <main>
+  
+
+      <section>
+        <div class="grid">
+          <div class="item-1">
+            <span>Reise</span>
+            <span class="shop"></span>
+            <div class="overlay"></div>
+          </div>
+          <div class="alt">
+            <span>Flughafen</span>
+            <span class="shop"></span>
+            <div class="overlay"></div>
+          </div>
+          <div class="item-1">
+            <span>Hotel</span>
+            <span class="shop"></span>
+            <div class="overlay"></div>
+          </div>
+          <div class="item-1">
+            <span>Reisepass</span>
+            <span class="shop"></span>
+            <div class="overlay"></div>
+          </div>
+          <div class="item-1">
+            <span>Gepäck</span>
+            <span class="shop"></span>
+            <div class="overlay"></div>
+          </div>
+          <div class="alt">
+            <span>Stadtführung</span>
+            <span class="shop"></span>
+            <div class="overlay"></div>
+          </div>
+          <div class="alt">
+            <span>Fahrkarte</span>
+            <span class="shop"></span>
+            <div class="overlay"></div>
+          </div>
+          <div class="">
+            <span>Accessories</span>
+            <span class="shop"></span>
+            <div class="overlay"></div>
+          </div>
+          <div class="alt">
+            <span>Reiseziele</span>
+            <span class="shop"></span>
+            <div class="overlay"></div>
+          </div>
+          <div class="item-1 alt">
+            <span>Mietwagen</span>
+            <span class="shop"></span>
+            <div class="overlay"></div>
+          </div>
+        </div>
+      </section>
+   
+ 
+<br>
+<!-- <section>
+  <h2 style="color: #1da1f2 ;font-size: 24px; text-align: center;" class="leader"> Länder, die wir  im 2025 bereisen wollen.</h2>
+</section> -->
+<div style="background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('pngegg.webp'); background-size: cover; background-position: center; width: 100vw; box-sizing: border-box;" class="container22">
+  <br>
+  <p class="grid22">
+    <div style= "display: inline-block; " > <span style="padding-left: 1vw;" class="reisen1">reise</span><span style="padding-left: 1vw;" class="photo1">ziele</span></div>
+    
+<div style="display: inline-block; ">      <span class="photo">20</span><span class="reisen">25</span></div>
+    
+</p>
+  <br>
+</div>
+
+<section id="gallery2">
+  <div id="gallery">
+    <figure>
+      <div>
+        <div>
+          <a target="_blank" href="https://fotoreisen.2ix.de/reiseplan.html?country=Gergien">
+            <img src="../georgia.webp" style="width: 180px; height: 240px;" alt="Reiseplan 2025" />
+          </a>
+      
+        </div>
+      </div>
+    </figure>
+    <figure>
+      <div>
+        <div>
+          <a target="_blank" href="https://fotoreisen.2ix.de/reiseplan.html?country=Armenien">
+            <img src="../armenia.webp" style="width: 180px; height: 240px;" alt="Reiseplan 2025" />
+          </a>
+      
+        </div>
+      </div>
+    </figure>
+    <figure>
+      <div>
+        <div>
+          <a target="_blank" href="https://fotoreisen.2ix.de/reiseplan.html?country=Kazachstan">
+            <img src="../kazachstan.webp" style="width: 180px; height: 240px;" alt="Reiseplan 2025" />
+          </a>
+      
+        </div>
+      </div>
+    </figure>
+    <figure>
+      <div>
+        <div>
+          <a target="_blank" href="https://fotoreisen.2ix.de/reiseplan.html?country=Uzbekistan">
+            <img src="../uzbekistan.webp" style="width: 180px; height: 240px;" alt="Reiseplan 2025" />
+          </a>
+      
+        </div>
+      </div>
+    </figure>
+    <figure>
+      <div>
+        <div>
+          <a target="_blank" href="https://fotoreisen.2ix.de/reiseplan.html?country=Mongolai">
+            <img src="../mongolai.webp" style="width: 180px; height: 240px;" alt="Reiseplan 2025" />
+          </a>
+      
+        </div>
+      </div>
+    </figure>
+    
+    
+ 
+  </div>
+</section>
+
+<article >
+  
+  
+    
+  <p>Im Jahr <a class="link" href="https://fotoreisen.2ix.de/reiseplan.html" target="_blank">2025</a> plane ich, einige der atemberaubendsten Regionen unserer Welt zu bereisen – von den schneebedeckten Bergen Georgiens über die kulturellen Schätze Armeniens bis hin zu den weiten Steppen der Mongolei. Diese Länder bieten eine einzigartige Mischung aus Geschichte, Kultur und spektakulären Landschaften, die jede Fotoreise zu einem unvergesslichen Erlebnis machen.</p>
+
+  <p>Ob in  <a class="link"  href="https://fotoreisen.2ix.de/reiseplan.html" target="_blank">Tiflis, Georgien</a> im Februar oder in <a class="link"  href="https://fotoreisen.2ix.de/reiseplan.html?country=Armenien" target="_blank">Eriwan, Armenien</a> im März – überall begegnet man eindrucksvollen Szenen, die wie geschaffen sind, um auf Bildern festgehalten zu werden. Besonders freue ich mich auf die Reisen nach <a class="link"  href="https://fotoreisen.2ix.de/reiseplan.html?country=Kazachstan" target="_blank">Almaty, Kasachstan</a> im April, und <a class="link"  href="https://fotoreisen.2ix.de/reiseplan.html?country=Uzbekistan" target="_blank">Taschkent, Usbekistan</a> im Juli. Diese Städte beeindrucken durch ihre unverwechselbare Architektur und die herzliche Gastfreundschaft der Menschen.</p>
+
+  <p>Im Spätsommer geht es nach <a class="link"  href="https://fotoreisen.2ix.de/reiseplan.html?country=Mongolai" target="_blank">Ulaanbaatar, Mongolei</a> – ein absolutes Highlight. Die unendlichen Weiten und die unberührte Natur sind perfekt für atemberaubende Fotos.</p>
+  <p class="note" style="color: #555555; font-size: 16px;">
+    Der Kaukasus ist ein Ort, wo Berge den Himmel berühren und Kulturen aufeinanderprallen – eine Reise hier bedeutet, die Seele der Natur und der Menschen zu entdecken.
+  </p>
+
+  <p>Für mich als leidenschaftlichen Fotografen ist es wichtig, die Schönheit dieser Regionen mit meiner Kamera einzufangen und zu teilen. Folgt mir, um die erstaunlichen Bilder dieser Reisen zu sehen, und lasst euch von der Magie der Fotografie verzaubern. Gemeinsam werden wir unvergessliche Momente festhalten!</p>
+
+ 
+
+  
+</article> 
+  
+<form class="news-form" onsubmit="showAlert(event)">
+  <div class="news-form-group">
+      <label for="news-name">Ihr Name:</label>
+      <input type="text" id="news-name" name="news-name" placeholder="Vorname Nachname" required />
+  </div>
+  <div class="news-form-group">
+      <label for="news-email">Ihre E-Mail-Adresse:</label>
+      <input type="email" id="news-email" name="news-email" placeholder="beispiel@dmail.de" required />
+  </div>
+  <div class="news-submit">
+      <button type="submit">Newsletter Abonnieren</button>
+  </div>
+</form>
+
+
+
+
+
+      <!-- <form class="news-form">
+        <div class="news-form-group">
+          <label for="news-name">Ihr Name:</label>
+          <input
+            type="text"
+            id="news-name"
+            name="news-name"
+            placeholder="Vorname Nachname"
+            required
+          />
+        </div>
+        <div class="news-form-group">
+          <label for="news-email">Ihre E-Mail-Adresse:</label>
+          <input
+            type="email"
+            id="news-email"
+            name="news-email"
+            placeholder="beispiel@dmail.de"
+            required
+          />
+        </div>
+        <div class="news-submit">
+          <button type="submit">Newsletter Abonnieren</button>
+        </div>
+      </form> -->
+      <section class="faq-block">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleAnswer(this)">
+            <h3>Wie kann ich mich anmelden?</h3>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <section class="article article-right">
+              <img
+                src="../Korneli_Nastas.jpg"
+                alt="Bildbeschreibung 2"
+                class="article-image"
+                width="600"
+              height="400"
+              />
+              <div class="article-content">
+                <p>
+                  Sie können sich über das Kontaktformular auf dieser Website
+                  anmelden oder mir eine direkte E-Mail an meine Kontaktadresse
+                  senden. 
+                </p>
+
+             
+                <p>
+                  Oder ganz einfach über soziale Netzwerke mit mir in Kontakt treten.
+                  <div class="contact-info">
+                    <div class="contact-data">
+                      <div class="name">Korneli Nastas</div>
+                      <div class="address">Winterhuder Weg 67, 22085 Hamburg</div>
+                      <div class="phone">Telephone: 0157 381 81 756</div>
+            
+                      <a class="email" href="mailto:korneli.nastas@gmail.com"
+                        >korneli.nastas@gmail.com</a
+                      >
+            
+                      <section class="social-media">
+                        <a
+                          href="https://www.facebook.com/korneli.nastas/photos_by"
+                          target="_blank"
+                          class="social-icon fb"
+                        >
+                          <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a
+                          href="https://x.com/KorneliNastas/media"
+                          target="_blank"
+                          class="social-icon twitter"
+                        >
+                          <i class="fab fa-twitter"></i>
+                        </a>
+                        <a
+                          href="https://wa.me/49157 381 81 756"
+                          target="_blank"
+                          class="social-icon wa"
+                        >
+                          <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a
+                          href="skype:korneli_nastas?chat"
+                          target="_blank"
+                          class="social-icon skype"
+                        >
+                          <i class="fab fa-skype"></i>
+                        </a>
+                      </section>
+                    </div>
+                  </div>
+
+                </p>
+              
+                <p class="note">
+                  Neue Freunde bringen frischen Wind in unser Leben und öffnen Türen zu neuen Welten. 
+                </p>
+             
+              
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleAnswer(this)">
+            <h3>Welche Fotoausrüstung soll ich mitbringen?</h3>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <section class="article">
+              <img
+                src="../fujixt1.webp"
+                alt="Bildbeschreibung 1"
+                class="article-image"
+                width="600"
+              height="400"
+              />
+              <div class="article-content">
+              
+                <br />
+                <p>
+                  Ich empfehle, mindestens eine digitale Spiegelreflexkamera oder eine spiegellose Kamera mitzubringen, zusammen mit einer Auswahl an Objektiven (Weitwinkel, Standard und Teleobjektiv).
+                  </p>
+                  <p>
+                  Ein Stativ ist ebenfalls unerlässlich, insbesondere für Langzeitbelichtungen und Nachtfotografie.
+                </p>
+                <br>
+                <p class="note">
+                  Die beste Kamera ist die, die man dabei hat.
+                </p>
+                <br>
+                <p>
+                  Ich persönlich verwende sehr gerne Vintage-Objektive von Leica, da sie eine einzigartige Bildqualität und Charakteristik bieten, die besonders bei Porträts zur Geltung kommen.
+                </p>
+                <p>
+              Diese Objektive verleihen den Bildern eine unverwechselbare Tiefe und ein zeitloses Flair, das moderne Linsen oft nicht erreichen.
+                </p>
+           
+          
+              </div>
+            </section>
+
+            <!-- Вторая статья с изображением справа -->
+
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleAnswer(this)">
+            <h3>Wie lange dauern die Fotografie-Touren?</h3>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <section class="article article-right">
+              <img
+                src="../223344.webp"
+                alt="Bildbeschreibung 2"
+                class="article-image"
+                width="600"
+              height="400"
+              />
+              <div class="article-content">
+              
+<div style="color: #555555;">
+                 Die Touren dauern in der Regel zwischen 5 und 10 Tagen. Während dieser Zeit werden wir jeden Tag an verschiedenen Orten fotografieren, um die besten Motive einzufangen. 
+             
+                  Die Routen sind so gestaltet, dass wir sowohl beliebte Sehenswürdigkeiten als auch versteckte Juwelen besuchen, die oft nur den Einheimischen bekannt sind.</div>
+<br>
+                <p>Jeder Tag beginnt früh am Morgen, um das beste Licht für die Fotografie zu nutzen. Wir werden uns auch ausreichend Zeit nehmen, um in Ruhe zu fotografieren, ohne den Stress.</p><p>
+                   Für Pausen und Mahlzeiten werden wir lokale Restaurants besuchen, um die Kultur und Küche des jeweiligen Landes zu erleben.</p>
+                   <br>
+                <p class="note">
+                  Fotografie fängt Momente ein, die sonst für immer verloren wären.
+                </p>
+                <br> <div>
+                 Zusätzlich  plane ich auch Besprechungen am Abend, bei denen wir die Aufnahmen des Tages analysieren, die wertvolle Tipps zur Verbesserung Ihrer Fototechniken besprechen.</div>
+                
+              
+             
+             
+              
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleAnswer(this)">
+            <h3>Gibt es eine Mindestanzahl an Teilnehmern?</h3>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Ja, die Mindestanzahl beträgt 5 Teilnehmer, damit die Tour
+              stattfinden kann. Maximal können 12 Personen teilnehmen, um eine
+              individuelle Betreuung zu gewährleisten.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleAnswer(this)">
+            <h3>
+              Kann ich eine Rückerstattung erhalten, wenn ich absagen muss?
+            </h3>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Eine Rückerstattung ist bis zu 30 Tage vor Beginn der Tour
+              möglich. Danach kann nur ein Teilbetrag zurückerstattet werden,
+              abhängig von den bereits entstandenen Kosten.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleAnswer(this)">
+            <h3>Welche Länder besuchen wir bei den Fotografie-Touren?</h3>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <section class="article">
+              <img
+                src="../DALL·E 2024-09-21 10.13.42 - A detailed and vibrant route map showing a travel itinerary through Georgia, with key landmarks like Tbilisi, Gergeti Trinity Church, and Batumi marke.webp"
+                alt="Грузия"
+                class="article-image"
+                width="500"
+                height="500"
+              />
+              <div class="article-content">
+                <p class="note">
+                  Georgien ist ein Land, das Sie mit all Ihren Sinnen erleben sollten.
+                </p>
+                <br />
+                <p>
+                  Georgien ist nicht einfach nur ein Land – es ist ein faszinierendes Abenteuer. Von den historischen Kirchen in Tbilisi bis zu den majestätischen Gipfeln des Kaukasus, Georgien vereint Geschichte, Natur und Kultur auf beeindruckende Weise. <a class="link" href="https://fotoreisen.2ix.de/reiseplan.html" target="_blank">Mehr erfahren</a>
+                </p>
+                <p>
+                  Tauchen Sie ein in die einzigartige Atmosphäre der georgischen Landschaften, wo die Zeit stillzustehen scheint. Die traditionelle georgische Küche, die Ihnen auf jedem Teller serviert wird, ist nicht nur Nahrung, sondern pure Leidenschaft. Jeder Bissen erzählt eine Geschichte von Gastfreundschaft und Tradition.
+                </p>
+                <blockquote>
+                  "Georgien ist ein Ort, den man mit dem Herzen entdeckt." – unbekannt
+                </blockquote>
+                <p>
+                  Haben Sie bereits die faszinierenden Dörfer in Svanetien erkundet? Diese abgelegenen Orte, umgeben von schneebedeckten Bergen, bieten außergewöhnliche Möglichkeiten für Abenteuer und Naturerlebnisse. <a class="link" href="https://fotoreisen.2ix.de/reiseplan.html" target="_blank">Mehr erfahren</a> 
+                </p>
+               <br>
+                <p>
+                  Genießen Sie die herzliche georgische Gastfreundschaft und entdecken Sie versteckte Ecken dieser bezaubernden Stadt. Vom historischen Altstadtviertel bis hin zu den malerischen Ausblicken auf die Berge – Tiflis bietet unzählige Fotomöglichkeiten, die Sie nicht verpassen sollten. <a class="link" href="https://fotoreisen.2ix.de/reiseplan.html" target="_blank">Mehr erfahren</a> 
+                </p>
+                <p>
+                  Melden Sie sich noch heute an und sichern Sie sich Ihren Platz auf dieser unvergesslichen Reise. Lassen Sie sich von der Schönheit Georgiens inspirieren und erleben Sie ein Abenteuer, das Ihre Fotografie auf ein neues Niveau hebt.
+                </p>
+              </div>
+             
+            
+             
+              
+            </section>
+            <section class="article article-right">
+              <img
+                src="../DALL·E 2024-09-21 10.13.45 - A detailed and vibrant route map showing a travel itinerary through Armenia, with key landmarks like Yerevan, Chor Virap, and Lake Sevan marked, follo.webp"
+                alt="Armenien"
+                class="article-image"
+                width="500"
+                height="500"
+              />
+              <div class="article-content">
+                <p>
+                  Armenien ist ein Land voller Geschichte und beeindruckender Landschaften. Entdecken Sie alte Klöster und atemberaubende Berglandschaften, die unvergessliche Eindrücke hinterlassen. 
+                  <a class="link" href="https://fotoreisen.2ix.de/reiseplan.html?country=Armenien" target="_blank">Mehr erfahren</a> 
+                </p>
+                <p>
+                  Armenien bietet eine Vielzahl kultureller und historischer Schätze, wie das Kloster Geghard und die Festung Amberd. Jeder Ort in Armenien erzählt seine eigene Geschichte und fesselt mit seiner Einzigartigkeit.
+                </p>
+                <br />
+                <p class="note">
+                  Armenien ist mehr als nur ein Reiseziel – es ist eine Reise zurück zu den Wurzeln.
+                </p>
+                <br />
+                <p>
+                  Haben Sie schon den armenischen Lavash und Kebab probiert? Diese Gerichte, die nach alten Rezepten zubereitet werden, sind nicht nur Mahlzeiten, sondern ein Stück armenischer Kultur. 
+                  <a class="link" href="https://fotoreisen.2ix.de/reiseplan.html?country=Armenien" target="_blank">Mehr erfahren</a> 
+                </p>
+                <blockquote>
+                  "Wo die Berge den Himmel berühren, beginnt Armenien." – unbekannt
+                </blockquote>
+    
+        <p>
+          Erleben Sie die lebhaften Märkte, die majestätischen Klöster und die beeindruckenden Berglandschaften rund um Eriwan. Unsere Reise wird Ihnen zahlreiche Möglichkeiten bieten, außergewöhnliche Aufnahmen zu machen und unvergessliche Momente festzuhalten. <a class="link" href="https://fotoreisen.2ix.de/reiseplan.html?country=Armenien" target="_blank">Mehr erfahren</a> 
+        </p>
+        <p>
+          Reservieren Sie Ihren Platz jetzt und seien Sie Teil dieses einmaligen Fotografie-Abenteuers. Lassen Sie sich von Armenien verzaubern und bringen Sie unvergessliche Bilder nach Hause.
+        </p>
+      
+              </div>
+            </section>
+
+            <section class="article">
+              <img
+                src="../DALL·E 2024-09-21 10.13.49 - A detailed and vibrant route map showing a travel itinerary through Kazakhstan, with key landmarks like Almaty, Charyn Canyon, and Baikonur marked, fo.webp"
+                alt="Kasachstan"
+                class="article-image"
+                width="500"
+                height="500"
+              />
+              <div class="article-content">
+                <p class="note">
+                  Kasachstan ist ein Land der endlosen Steppen und alten Traditionen.
+                </p>
+                <br />
+                <p>
+                  Kasachstan bietet atemberaubende Landschaften, von den mächtigen Tian-Shan-Bergen bis zu den weiten Steppen. Erforschen Sie alte Kulturschätze und genießen Sie die Vielfalt der kasachischen Küche. <a class="link" href="https://fotoreisen.2ix.de/reiseplan.html?country=Kazachstan" target="_blank">Mehr erfahren</a> 
+                </p>
+                <p>
+                  Eine Reise durch Kasachstan ist eine Gelegenheit, in die reiche Kultur der Nomaden einzutauchen und faszinierende Naturerlebnisse zu genießen. Jedes Reiseziel hier hat seinen eigenen Charme und seine Geschichte.
+                </p>
+                <blockquote>
+                  "Kasachstan ist der Ort, an dem der Himmel die Erde berührt." – unbekannt
+                </blockquote>
+                <p>
+                  Haben Sie bereits Almaty besucht? Diese Stadt, eingebettet in die Berge, verbindet moderne Annehmlichkeiten mit traditionellen Elementen und bietet unvergessliche Erlebnisse. <a class="link" href="https://fotoreisen.2ix.de/reiseplan.html?country=Kazachstan" target="_blank">Mehr erfahren</a> 
+                </p>
+                <br>
+           
+                <p>
+                  Melden Sie sich heute noch an, um Ihren Platz auf dieser unvergesslichen Reise zu sichern. Lassen Sie sich von Kasachstan inspirieren und erweitern Sie Ihre fotografischen Horizonte.
+                </p>
+              </div>
+            </section>
+            <section class="article article-right">
+              <img
+                src="../DALL·E 2024-09-21 10.13.37 - A detailed and vibrant route map showing a travel itinerary through Uzbekistan, with key landmarks like Samarkand, Bukhara, and Khiva marked, followin.webp"
+                alt="Usbekistan"
+                class="article-image"
+                width="500"
+                height="500"
+              />
+              <div class="article-content">
+                <p>
+                  Usbekistan ist ein Land, in dem Geschichte und Kultur sich zu einem faszinierenden Mosaik verweben. Entdecken Sie alte Städte wie Samarkand und Buchara, die wahre Juwelen des Ostens sind. 
+                  <a class="link" href="https://fotoreisen.2ix.de/reiseplan.html?country=Uzbekistan" target="_blank">Mehr erfahren</a> 
+                </p>
+                <p>
+                  Usbekistan ist reich an historischen Monumenten und einzigartiger Architektur. Erkunden Sie die prächtigen Mausoleen und Medressen, die mit ihrem Glanz und ihrer Geschichte beeindrucken.
+                </p>
+                <br />
+                <p class="note">
+                  Usbekistan ist eine Reise auf der Seidenstraße, die Geschichte zum Leben erweckt.
+                </p>
+                <br />
+                <p>
+                  Haben Sie schon einmal uzbekischen Pilaw probiert? Dieses Gericht, das nach traditionellen Rezepten zubereitet wird, ist ein kulinarisches Highlight und ein wesentlicher Bestandteil der usbekischen Kultur. 
+                  <a class="link" href="https://fotoreisen.2ix.de/reiseplan.html?country=Uzbekistan" target="_blank">Mehr erfahren</a> 
+                </p>
+                <blockquote>
+                  "Die Geschichte Usbekistans ist ein Buch, geschrieben in goldenen Buchstaben." – unbekannt
+                </blockquote>
+                <br>
+      
+          <p>
+            Reservieren Sie noch heute Ihren Platz für diese einmalige Reise. Tauchen Sie ein in die Welt Usbekistans und bringen Sie außergewöhnliche Erinnerungen und Fotos mit nach Hause.
+          </p>
+              </div>
+            </section>
+            <section class="article">
+              <img
+                src="../DALL·E 2024-09-21 10.13.28 - A detailed and vibrant route map showing a travel itinerary through Mongolia, with key landmarks like Ulaanbaatar, Khovsgol Lake, and the Gobi Desert .webp"
+                alt="Mongolei"
+                class="article-image"
+                width="500"
+                height="500"
+              />
+              <div class="article-content">
+                <p class="note">
+                  Die Mongolei ist ein Land der endlosen Weiten und alten Kulturen.
+                </p>
+                <br />
+                <p>
+                  Die Mongolei bietet eine einzigartige Natur und Geschichte. Erforschen Sie die unendlichen Steppen, erleben Sie das Leben der Nomaden und genießen Sie die Gastfreundschaft der Einheimischen. <a class="link" href="https://fotoreisen.2ix.de/reiseplan.html?country=Mongolai" target="_blank">Mehr erfahren</a> 
+                </p>
+                <p>
+                  Eine Reise durch die Mongolei ist eine Gelegenheit, in die traditionelle Kultur einzutauchen und beeindruckende Landschaften zu erleben. Jeder Besuch hinterlässt bleibende Eindrücke.
+                </p>
+                <blockquote>
+                  "Die Mongolei ist das Land, wo das Herz auf die unendlichen Weiten trifft." – unbekannt
+                </blockquote>
+                <p>
+                  Haben Sie den See Khuvsgul besucht? Dieser wunderschöne Ort in der Mongolei bietet einzigartige Möglichkeiten für Erholung und Abenteuer inmitten der Natur. <a class="link" href="https://fotoreisen.2ix.de/reiseplan.html?country=Mongolai" target="_blank">Mehr erfahren</a> 
+                </p>
+                <br>
+               
+                <p>
+                  Von den endlosen Steppen bis zu den traditionellen Jurten und den lebhaften Märkten in Ulaanbaatar – die Mongolei bietet Ihnen zahlreiche Fotomotive und unvergessliche Erlebnisse. Nutzen Sie die Chance, die majestätische Landschaft und die traditionelle Lebensweise der Mongolen festzuhalten.
+                </p>
+          
+              </div>
+            </section>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleAnswer(this)">
+            <h3>Was kostet ein Flüg nach Georgien aus Deutschland?</h3>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <section class="article-content">
+            <article  >
+              <blockquote>
+                Ein Flug von Deutschland nach Georgien kostet zwischen 50€ und
+                450€, abhängig von verschiedenen Faktoren. Hier sind einige
+                Details zu den Preisen und Optionen:
+              </blockquote>
+              <h3>Preisspanne</h3>
+              <p>
+                Die günstigsten Flüge beginnen bei etwa 38-50€ für einen
+                einfachen Hinflug.
+              </p>
+              <p>
+                Durchschnittliche Preise für Hin- und Rückflüge liegen bei etwa
+                200-250€.
+              </p>
+              <p>
+                Im August, einer Hauptreisezeit, können die Preise auf
+                durchschnittlich 448€ pro Ticket steigen.
+              </p>
+              <h3>Günstige Optionen</h3>
+              <br>
+              <p class="note">
+                Wizz Air, Pegasus Airlines und AnadoluJet bieten oft die
+                preiswertesten Flüge an.
+              </p>
+              <p>
+                Flüge mit Zwischenstopps sind in der Regel günstiger als
+                Nonstop-Flüge.
+              </p>
+              <p>
+                Der günstigste Monat für Flüge nach Georgien ist derzeit
+                September.
+              </p>
+              <h3>Faktoren, die den Preis beeinflussen</h3>
+              <p>
+                Reisezeit: Dienstagnachmittag ist oft am günstigsten, während
+                Dienstagabend die höchsten Preise aufweist.
+              </p>
+              <p>
+                Flughafen: Kutaissi ist aktuell der budgetfreundlichste
+                Zielflughafen in Georgien.
+              </p>
+              <p class="note">
+                Vorlaufzeit: Die besten Angebote gibt es in der Regel 40-75 Tage
+                vor dem Flug.
+              </p>
+              <h3>Flugdauer und beliebte Routen</h3>
+              <p>
+                Die durchschnittliche Flugdauer von Deutschland nach Georgien
+                beträgt etwa 4-6 Stunden.
+              </p>
+              <p>
+                Beliebte Direktflugverbindungen gibt es z.B. von München oder
+                Berlin nach Tiflis.
+              </p>
+              <p>
+                Um die besten Preise zu finden, empfiehlt es sich, verschiedene
+                Fluggesellschaften und Reisedaten zu vergleichen und frühzeitig
+                zu buchen.
+              </p>
+              <h3>
+                Welche Airlines bieten die günstigsten Flüge nach Georgien an
+              </h3>
+              <p>
+                Basierend auf den verfügbaren Informationen bieten folgende
+                Airlines günstige Flüge von Deutschland nach Georgien an:
+              </p>
+              <h3>Günstigste Airlines</h3>
+              <p>
+                Wizz Air: Diese Billigfluggesellschaft bietet einige der
+                preiswertesten Optionen mit Flügen ab 24,99€.
+              </p>
+              <p>
+                Pegasus Airlines: Wird als eine der günstigen Fluggesellschaften
+                für Flüge nach Georgien genannt.
+              </p>
+              <p>
+                AnadoluJet: Ebenfalls als preiswerte Option für Flüge nach
+                Georgien erwähnt.
+              </p>
+              <h3>Weitere günstige Optionen</h3>
+              <p>
+                Lufthansa: Obwohl keine Billigairline, wird Lufthansa als eine
+                der günstigsten Airlines für Flüge von Frankfurt nach Georgien
+                aufgeführt.
+              </p>
+              <p>
+                Air Canada: Überraschenderweise als eine der kostengünstigsten
+                Optionen für Flüge von Frankfurt nach Georgien genannt.
+              </p>
+              <h3>Preisbeispiele</h3>
+              <br>
+              <p class="note">
+                Die günstigsten Flüge beginnen bei etwa 38-50€ für einen
+                einfachen Hinflug.
+              </p>
+              <p>Hin- und Rückflüge sind bereits ab 63€ erhältlich.</p>
+              <h3>Tipps für günstige Flüge</h3>
+              <p>
+                Zielflughafen: Kutaissi ist derzeit der budgetfreundlichste
+                Zielflughafen in Georgien.
+              </p>
+              <p>
+                Reisezeit: Dienstagnachmittag ist oft am günstigsten für Flüge.
+              </p>
+              <p>
+                Buchungszeitraum: Die besten Angebote gibt es in der Regel 40-75
+                Tage vor dem Flug.
+              </p>
+              <p>
+                Um die besten Preise zu finden, empfiehlt es sich, verschiedene
+                Fluggesellschaften und Reisedaten zu vergleichen und frühzeitig
+                zu buchen.
+              </p>
+            </article>
+          </section>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleAnswer(this)">
+            <h3>Sind die Touren für Anfänger geeignet?</h3>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Ja, die Touren sind für alle Fotografie-Enthusiasten geeignet,
+              egal ob Anfänger oder Fortgeschrittene. Jeder Teilnehmer erhält
+              individuelle Unterstützung und kann sich auf die eigenen
+              Interessen konzentrieren.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleAnswer(this)">
+            <h3>Was beinhaltet die Reise nach Georgien</h3>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <section class="article-content">
+              
+            <article>
+              <h3>Tag 1: Ankunft in Tiflis</h3>
+              
+              <p>
+                Willkommen in der Hauptstadt Georgiens! Nach der Ankunft
+                Transfer zum Hotel und Zeit zur freien Verfügung. Am Abend
+                gemeinsames Abendessen mit traditioneller georgischer Küche.
+              </p>
+           
+
+              <h3>Tag 2: Stadtrundfahrt Tiflis</h3>
+              <p>
+                Besichtigung der Altstadt, der Festung Narikala, der
+                Schwefelbäder und der modernen Seite von Tiflis. Entdecke die
+                reiche Geschichte und Kultur dieser faszinierenden Stadt.
+              </p>
+              
+
+              <h3>Tag 3: Ausflug nach Mzcheta</h3>
+              <p>
+                Fahrt zur alten Hauptstadt Georgiens, Mzcheta. Besichtigung der
+                Dschwari-Kirche und des Svetitskhoveli-Doms, die zum
+                UNESCO-Weltkulturerbe gehören.
+              </p>
+         
+
+              <h3>Tag 4: Weinstraße von Kachetien</h3>
+              <p>
+                Ein Besuch in der Region Kachetien, dem Zentrum des georgischen
+                Weinanbaus. Verkostung lokaler Weine und ein traditionelles
+                georgisches Mittagessen bei einer Winzerfamilie.
+              </p>
+          
+
+              <h3>Tag 5: Kaukasus - Fahrt nach Stepanzminda</h3>
+              <p>
+                Eine atemberaubende Fahrt entlang der georgischen Heerstraße in
+                die Berge des Kaukasus. Besuch der Dreifaltigkeitskirche Gergeti
+                und Genießen der Aussicht auf den Kazbegi-Gipfel.
+              </p>
+         
+
+              <h3>Tag 6: Entspannung in Gudauri</h3>
+              <p>
+                Ein entspannter Tag im Bergort Gudauri. Möglichkeit zum Wandern
+                oder einfach nur das Panorama der Berge genießen.
+              </p>
+         
+
+              <h3>Tag 7: Besuch der Höhlenstadt Uplistsikhe</h3>
+              <p>
+                Erkundung der alten Höhlenstadt Uplistsikhe, eine der ältesten
+                Städte Georgiens. Erlebe die Geschichte und die Faszination
+                dieser archäologischen Stätte.
+              </p>
+         
+
+              <h3>Tag 8: Fahrt nach Kutaissi</h3>
+              <p>
+                Besichtigung der zweitgrößten Stadt Georgiens. Besuch der
+                Bagrati-Kathedrale und der Gelati-Klöster, die zum
+                UNESCO-Weltkulturerbe gehören.
+              </p>
+         
+
+              <h3>Tag 9: Ausflug zum Prometheus-Höhlensystem</h3>
+              <p>
+                Entdecke die beeindruckenden Tropfsteinhöhlen von Prometheus,
+                ein Wunder der Natur mit unterirdischen Flüssen und beleuchteten
+                Formationen.
+              </p>
+         
+
+              <h3>Tag 10: Rückkehr nach Tiflis und Abreise</h3>
+              <p>
+                Rückfahrt nach Tiflis und Zeit zur freien Verfügung, bevor der
+                Rückflug nach Hause ansteht. Abschiedsessen und Transfer zum
+                Flughafen.
+              </p>
+           
+            </article>
+            </section>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleAnswer(this)">
+            <h3>Wie hoch sind die Gesamtkosten?</h3>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <section class="article-content">
+              <article>
+                <h3>Ablauf der Reise und Kosten</h3>
+                <p>Zunächst kaufen wir unsere Flugtickets selbst und jeder zahlt diese individuell. Schauen Sie den Artikel oben <strong>"Was kostet ein Flug nach Georgien aus Deutschland?"</strong>, um ein besseres Verständnis zu bekommen.</p> 
+                
+                
+                <div style="color: #555555;">Selbstverständlich verfüge ich über zuverlässige lokale Kontakte, die ich bei Bedarf nutzen kann, um die Reise zu organisieren. Falls Sie jedoch möchten, suchen wir gemeinsam eine Reiseagentur und prüfen deren Angebote. Wir besprechen die Bedingungen und das Programm, das sie anbieten, und entscheiden gemeinsam, ob uns der Preis und die Leistungen zusagen. </div>
+              
+<br>
+                
+                <h3>Buchung und Stornobedingungen</h3>
+                <div style="color: #555555;">
+                Nachdem wir uns darauf geeinigt haben, dass dieses Angebot passt, buchen wir die Reise über das Reisebüro. Natürlich zahlt jeder für sein eigenes Paket. Das Reisebüro hat in der Regel klare Stornobedingungen, die auch eine Rückerstattung ermöglichen, falls jemand von der Reise zurücktreten muss. Üblicherweise gibt es hierfür bestimmte Fristen, z. B. wenn man einige Tage vor dem Abflug absagt.</div>
+                <br>
+                
+                <h3>Fotoberatung und zusätzliche Unterstützung</h3> <div>
+               Zusätzlich begleichen Sie die Gebühr für meine persönlichen Fotoberatungsdienste. Ich begleite Sie während der gesamten Reise und gebe Ihnen individuelle Tipps und Anleitungen für Ihre Fotografie. Darüber hinaus sollten Sie wissen, dass in Ländern wie Georgien, Armenien, Kasachstan oder Kirgisistan viele Menschen Russisch sprechen. 
+              </div>
+              <br>
+              <div style="color: #555555;">
+                 Ich spreche fließend Deutsch, Englisch und Russisch,
+                  und Russisch ist meine Muttersprache, so kann ich Ihnen nicht nur bei der Fotografie, sondern auch bei der Kommunikation mit den Einheimischen behilflich sein. Das wird Ihnen ein Gefühl von Sicherheit geben. </div>
+                
+              <br>
+                <h3>Preise</h3>
+                <ul>
+                  <li>Flug nach Georgien: maximal 500 € (voraussichtlicher Preis, ohne Gewähr.)</li>
+                  <li>10-tägige Tour: ca. 1.500 € (ungefähre Kosten, ohne Gewähr.)</li>
+                  <li>Fotoguide-Dienstleistungen: 700 € (festgelegter Preis)</li>
+                </ul>
+                <br>
+                <br>
+               
+                
+                <p class="note">Wie Sie sehen, da wir direkt bei lokalen touristischen Unternehmen buchen, sind unsere Preise im Vergleich zu europäischen Reiseagenturen recht niedrig.</p>
+
+          </article>
+          </section>
+            
+          </div>
+        </div>
+      </section>
+ 
+      <style>
+  
+
+        .grid-container {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 10px;
+        }
+
+        .columnlist img {
+          width: 100%;
+          height: auto;
+          cursor: pointer;
+          transition: transform 0.3s ease;
+        }
+
+        /* Modal overlay */
+        .modal-overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.8);
+          display: none;
+          justify-content: center;
+          align-items: center;
+          z-index: 10;
+          flex-direction: column;
+        }
+
+        .modal-overlay img {
+          max-width: 90%;
+          max-height: 80%;
+        }
+
+        .modal-overlay.show {
+          display: flex;
+        }
+
+        .modal-overlay img {
+          animation: zoomIn 0.5s;
+        }
+
+        .modal-overlay .author-info {
+          color: #fff;
+          margin-top: 10px;
+          font-size: 16px;
+          text-align: center;
+        }
+
+        @keyframes zoomIn {
+          from {
+            transform: scale(0.8);
+            opacity: 0;
+          }
+          to {
+            transform: scale(1);
+            opacity: 1;
+          }
+        }
+      </style>
+<section class="grid-container">
+  <ul class="columnlist">
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=1234.webp">
+          <img alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten" height="400" loading="lazy" src="1234.webp" width="600"/>
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=222.webp">
+          <img alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten" height="400" loading="lazy" src="222.webp" width="600"/>
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=22.webp">
+          <img alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten" height="400" loading="lazy" src="22.webp" width="600"/>
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=23.webp">
+          <img alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten" height="400" loading="lazy" src="23.webp" width="600"/>
+        </a>
+      </section>
+    </li>
+  </ul>
+</section>
+
+    </main>
+    <section class="full-height-container" style="  background-color: #ffffff;">
+      <div class="image-block">
+        <div class="image-block">
+          <img src="f7dcb2817ad147c8b1d700ceb1d8cb28.gif" alt="Korneli Nastas" />
+        </div>
+      </div>
+      <div class="contact-info" style="  background-color: #ffffff;">
+        <div class="contact-data">
+          <div class="name">Korneli Nastas</div>
+          <div class="address">Winterhuder Weg 67, 22085 Hamburg</div>
+          <div class="phone">Telephone: 0157 381 81 756</div>
+
+          <a class="email" href="mailto:korneli.nastas@gmail.com"
+            >korneli.nastas@gmail.com</a
+          >
+
+          <section class="social-media">
+            <a
+              href="https://www.facebook.com/korneli.nastas/photos_by"
+              target="_blank"
+              class="social-icon fb"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a
+              href="https://x.com/KorneliNastas/media"
+              target="_blank"
+              class="social-icon twitter"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a
+              href="https://wa.me/49157 381 81 756"
+              target="_blank"
+              class="social-icon wa"
+            >
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a
+              href="skype:korneli_nastas?chat"
+              target="_blank"
+              class="social-icon skype"
+            >
+              <i class="fab fa-skype"></i>
+            </a>
+          </section>
+        </div>
+      </div>
+      <div class="image-block">
+        <div class="image-block">
+          <img src="Korneli_Nastas.jpg" width="600"
+          height="400" alt="Korneli Nastas" />
+        </div>
+      </div>
+
+      <div class="image-block">
+        <p class="grid22">
+          <div style="display: inline-block;">
+            <span style=" font-size: 4vw; padding-left: 2vw;" class="reisen1 ">ich</span>
+            <span style="font-size: 4vw; padding-left: 2vw;" class="photo1">mach</span>
+            <span style="font-size: 4vw; padding-left: 2vw;" class="photo">foto</span>
+            <span style="font-size: 4vw; padding-left: 2vw;" class="reisen">reisen</span>
+          </div>
+         
+        </p>
+      </div>
+    </section>
+    <br />
+    <section class="grid-container">
+      <ul class="columnlist">
+        <li class="modal">
+          <section>
+            <a href="photo-viewer.html?image=31.webp">
+              <img src="31.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy"/>
+            </a>
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <a href="photo-viewer.html?image=sw1.webp">
+              <img src="sw1.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy"/>
+            </a>
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <a href="photo-viewer.html?image=34.webp">
+              <img src="34.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy"/>
+            </a>
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <a href="photo-viewer.html?image=sw2.webp">
+              <img src="sw2.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy"/>
+            </a>
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <a href="photo-viewer.html?image=35.webp">
+              <img src="35.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy"/>
+            </a>
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <a href="photo-viewer.html?image=sw3.webp">
+              <img src="sw3.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy"/>
+            </a>
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <a href="photo-viewer.html?image=38.webp">
+              <img src="38.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy"/>
+            </a>
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <a href="photo-viewer.html?image=sw4.webp">
+              <img src="sw4.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy"/>
+            </a>
+          </section>
+        </li>
+      </ul>
+      
+      <ul class="columnlist">
+        <li class="modal">
+          <section>
+            <a href="photo-viewer.html?image=1234.webp">
+              <img src="1234.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy"/>
+            </a>
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <a href="photo-viewer.html?image=sw21.webp">
+              <img src="sw21.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy"/>
+            </a>
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <a href="photo-viewer.html?image=12.webp">
+              <img src="12.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy"/>
+            </a>
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <a href="photo-viewer.html?image=sw22.webp">
+              <img src="sw22.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy"/>
+            </a>
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <a href="photo-viewer.html?image=123.webp">
+              <img src="123.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy"/>
+            </a>
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <a href="photo-viewer.html?image=sw23.webp">
+              <img src="sw23.webp" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy"/>
+            </a>
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <a href="photo-viewer.html?image=12345.webp">
+              <img src="12345.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy"/>
+            </a>
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <a href="photo-viewer.html?image=sw24.webp">
+              <img src="sw24.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy"/>
+            </a>
+          </section>
+        </li>
+      </ul>
+      
+      <!-- Продолжение блока аналогично -->
+    </section>
+    
+    <div class="modal-overlay" id="modal">
+      <img alt="Vergrößertes Bild" />
+      <p class="author-info"></p>
+      <!-- Блок для текста с информацией об авторе -->
+    </div>
+   
+ <div style="background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('pngegg.webp'); background-size: cover; background-position: center; width: 100vw; box-sizing: border-box;" class="container22">
+  <br>
+  <p class="grid22">
+    <div style= "display: inline-block; " > <span style="padding-left: 1vw;" class="reisen1">noch</span><span style="padding-left: 1vw;" class="photo1">mehr</span></div>
+    
+<div style="display: inline-block; ">      <span class="photo">schnapp</span><span class="reisen">schüsse</span></div>
+    
+</p>
+  <br>
+</div>
+<section class="grid-container">
+  <ul class="columnlist">
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q1.webp">
+          <img src="q1.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q2.webp">
+          <img src="q2.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q3.webp">
+          <img src="q3.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q4.webp">
+          <img src="q4.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q5.webp">
+          <img src="q5.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q6.webp">
+          <img src="q6.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q7.webp">
+          <img src="q7.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q8.webp">
+          <img src="q8.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+  </ul>
+  
+  <ul class="columnlist">
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q9.webp">
+          <img src="q9.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q10.webp">
+          <img src="q10.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q11.webp">
+          <img src="q11.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q12.webp">
+          <img src="q12.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q13.webp">
+          <img src="q13.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q14.webp">
+          <img src="q14.webp" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q15.webp">
+          <img src="q15.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q16.webp">
+          <img src="q16.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+  </ul>
+  
+  <ul class="columnlist">
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q17.webp">
+          <img src="q17.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q18.webp">
+          <img src="q18.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q19.webp">
+          <img src="q19.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q20.webp">
+          <img src="q20.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q21.webp">
+          <img src="q21.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q22.webp">
+          <img src="q22.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q23.webp">
+          <img src="q23.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q24.webp">
+          <img src="q24.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+  </ul>
+  
+  <ul class="columnlist">
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q30.webp">
+          <img src="q30.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q25.webp">
+          <img src="q25.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q26.webp">
+          <img src="q26.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q27.webp">
+          <img src="q27.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q28.webp">
+          <img src="q28.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q29.webp">
+          <img src="q29.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q31.webp">
+          <img src="q31.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q32.webp">
+          <img src="q32.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+  </ul>
+  
+  <ul class="columnlist">
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q33.webp">
+          <img src="q33.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q34.webp">
+          <img src="q34.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q35.webp">
+          <img src="q35.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q36.webp">
+          <img src="q36.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q37.webp">
+          <img src="q37.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q38.webp">
+          <img src="q38.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q39.webp">
+          <img src="q39.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q40.webp">
+          <img src="q40.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+  </ul>
+
+  <ul class="columnlist">
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q41.webp">
+          <img src="q41.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q42.webp">
+          <img src="q42.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q43.webp">
+          <img src="q43.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q44.webp">
+          <img src="q44.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q45.webp">
+          <img src="q45.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q46.webp">
+          <img src="q46.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q47.webp">
+          <img src="q47.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=q48.webp">
+          <img src="q48.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+  </ul>
+</section>
+
+<section class="full-height-container" style="  background-color: #ffffff;">
+  <div class="image-block">
+    <div class="image-block">
+      <img src="f7dcb2817ad147c8b1d700ceb1d8cb28.gif" alt="Korneli Nastas" />
+    </div>
+  </div>
+  <div class="contact-info" style="  background-color: #ffffff;">
+    <div class="contact-data">
+      <div class="name">Korneli Nastas</div>
+      <div class="address">Winterhuder Weg 67, 22085 Hamburg</div>
+      <div class="phone">Telephone: 0157 381 81 756</div>
+
+      <a class="email" href="mailto:korneli.nastas@gmail.com"
+        >korneli.nastas@gmail.com</a
+      >
+
+      <section class="social-media">
+        <a
+          href="https://www.facebook.com/korneli.nastas/photos_by"
+          target="_blank"
+          class="social-icon fb"
+        >
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a
+          href="https://x.com/KorneliNastas/media"
+          target="_blank"
+          class="social-icon twitter"
+        >
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a
+          href="https://wa.me/49157 381 81 756"
+          target="_blank"
+          class="social-icon wa"
+        >
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a
+          href="skype:korneli_nastas?chat"
+          target="_blank"
+          class="social-icon skype"
+        >
+          <i class="fab fa-skype"></i>
+        </a>
+      </section>
+    </div>
+  </div>
+  <div class="image-block">
+    <div class="image-block">
+      <img src="Korneli_Nastas.jpg" width="600"
+      height="400" alt="Korneli Nastas" />
+    </div>
+  </div>
+
+  <div class="image-block">
+    <p class="grid22">
+      <div style="display: inline-block;">
+        <span style=" font-size: 4vw; padding-left: 2vw;" class="reisen1 ">♥lle</span>
+        <span style="font-size: 4vw; padding-left: 2vw;" class="photo1">lieben</span>
+        <span style="font-size: 4vw; padding-left: 2vw;" class="photo">foto</span>
+        <span style="font-size: 4vw; padding-left: 2vw;" class="reisen">reisen</span>
+      </div>
+     
+    </p>
+  </div>
+</section>
+<section class="grid-container">
+  <ul class="columnlist">
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w1.webp">
+          <img src="w1.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w2.webp">
+          <img src="w2.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w3.webp">
+          <img src="w3.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w4.webp">
+          <img src="w4.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w5.webp">
+          <img src="w5.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w6.webp">
+          <img src="w6.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w7.webp">
+          <img src="w7.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w8.webp">
+          <img src="w8.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+  </ul>
+  
+  <ul class="columnlist">
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w9.webp">
+          <img src="w9.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w10.webp">
+          <img src="w10.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w11.webp">
+          <img src="w11.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w12.webp">
+          <img src="w12.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w13.webp">
+          <img src="w13.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w14.webp">
+          <img src="w14.webp" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w15.webp">
+          <img src="w15.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w16.webp">
+          <img src="w16.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+  </ul>
+  
+  <ul class="columnlist">
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w17.webp">
+          <img src="w17.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w18.webp">
+          <img src="w18.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w19.webp">
+          <img src="w19.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w20.webp">
+          <img src="w20.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w21.webp">
+          <img src="w21.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w22.webp">
+          <img src="w22.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w23.webp">
+          <img src="w23.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w24.webp">
+          <img src="w24.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+  </ul>
+  
+  <ul class="columnlist">
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w25.webp">
+          <img src="w25.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w26.webp">
+          <img src="w26.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w27.webp">
+          <img src="w27.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w28.webp">
+          <img src="w28.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w29.webp">
+          <img src="w29.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w30.webp">
+          <img src="w30.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w31.webp">
+          <img src="w31.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w32.webp">
+          <img src="w32.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+  </ul>
+  
+  <ul class="columnlist">
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w33.webp">
+          <img src="w33.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w34.webp">
+          <img src="w34.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w35.webp">
+          <img src="w35.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w36.webp">
+          <img src="w36.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w37.webp">
+          <img src="w37.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w38.webp">
+          <img src="w38.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w39.webp">
+          <img src="w39.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w40.webp">
+          <img src="w40.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+  </ul>
+
+  <ul class="columnlist">
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w41.webp">
+          <img src="w41.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w42.webp">
+          <img src="w42.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w43.webp">
+          <img src="w43.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w44.webp">
+          <img src="w44.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w45.webp">
+          <img src="w45.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w46.webp">
+          <img src="w46.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w47.webp">
+          <img src="w47.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+    <li class="modal">
+      <section>
+        <a href="photo-viewer.html?image=w48.webp">
+          <img src="w48.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+        </a>
+      </section>
+    </li>
+  </ul>
+</section>
+
+<div style="background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('pngegg.webp'); background-size: cover; background-position: center; width: 100vw; box-sizing: border-box;" class="container22">
+  <br>
+  <p class="grid22">
+    <div style= "display: inline-block; " > <span style="padding-left: 1vw;" class="reisen1">ich</span><span style="padding-left: 1vw;" class="photo1">finde</span></div>
+    
+<div style="display: inline-block; ">      <span class="photo">das</span><span class="reisen">toll</span></div>
+    
+</p>
+  <br>
+</div>
+
+    <footer>
+
+   <br>
+   <p class="footer-copy">
+    &copy; 2024 Korneli Nastas. Alle Rechte vorbehalten.
+  </p>
+  <br>
+      <!-- <div class="footer-container">
+        <p class="footer-title">Rechtlicher Hinweis</p>
+        <p class="footer-text">
+          Diese Webseite ist ein studentisches Projekt und dient ausschließlich
+          zu Übungszwecken. Sie ist nicht für kommerzielle Nutzung bestimmt und
+          steht in keinerlei Verbindung zu kommerziellen oder professionellen
+          Dienstleistungen.
+        </p>
+        <p class="footer-text">
+          Alle Inhalte, einschließlich Texte, Bilder und Informationen, sind zu
+          Testzwecken erstellt und haben keine rechtliche Relevanz. Die Nutzung
+          dieser Webseite erfolgt auf eigene Gefahr. Für Schäden oder Verluste,
+          die durch die Nutzung dieser Webseite entstehen könnten, wird keine
+          Haftung übernommen.
+        </p>
+        <p class="footer-text">
+          Wenn Sie Fragen oder Bedenken haben, kontaktieren Sie bitte den
+          Entwickler dieser Webseite.
+        </p>
+        <p class="footer-copy">
+          &copy; 2024 Korneli Nastas. Alle Rechte vorbehalten.
+        </p>
+      </div> -->
+    </footer>
+    <script src="script.js" ></script>
+    <script>
+      const modal = document.getElementById('modal');
+      const modalImg = modal.querySelector('img');
+      const authorInfo = modal.querySelector('.author-info'); // Блок для текста с информацией об авторе
+      const images = document.querySelectorAll('.columnlist img');
+
+      images.forEach((image) => {
+        image.addEventListener('click', function () {
+          modalImg.src = this.src; // Устанавливаем изображение
+          authorInfo.textContent = this.alt; // Устанавливаем текст авторства
+          modal.classList.add('show');
+        });
+      });
+
+      modal.addEventListener('click', function () {
+        modal.classList.remove('show');
+      });
+    </script>
+    <script>
+      function toggleAnswer(element) {
+        const answer = element.nextElementSibling;
+
+        if (answer.style.display === 'block') {
+          answer.style.display = 'none';
+        } else {
+          answer.style.display = 'block';
+        }
+      }
+    </script>
+    <script>
+      const burgerMenu = document.querySelector('.burger-menu');
+      const nlist = document.querySelector('.nlist');
+
+      burgerMenu.addEventListener('click', () => {
+        burgerMenu.classList.toggle('active');
+        nlist.classList.toggle('open'); // Открываем меню при клике
+      });
+
+      var navbar = document.getElementById('navbar');
+
+      // Добавляем событие на прокрутку страницы
+      window.onscroll = function () {
+        stickyNavbar();
+      };
+
+      // Функция, которая управляет фиксированием навбара
+      function stickyNavbar() {
+        if (window.pageYOffset >= 200) {
+          navbar.classList.add('fixed');
+        } else {
+          navbar.classList.remove('fixed');
+        }
+      }
+    </script>
+    <script>
+     
+
+      // Получаем текущий URL-адрес
+      document.addEventListener('DOMContentLoaded', function () {
+        // Получаем текущий URL без параметров и якорей
+        let currentLocation = window.location.pathname.split('/').pop();
+
+        console.log('Current location:', currentLocation); // Вывод текущего URL
+
+        // Если на главной странице, то currentLocation будет пустым
+        if (currentLocation === '') {
+          currentLocation = 'index.html'; // Для главной страницы
+        }
+
+        // Находим все ссылки меню
+        const menuItems = document.querySelectorAll('.nlist li a');
+
+        // Проходимся по каждой ссылке и проверяем ее href
+        menuItems.forEach((item) => {
+          const href = item.getAttribute('href');
+          console.log('Checking href:', href); // Вывод каждого href
+
+          // Если текущий путь совпадает с href ссылки
+          if (href === currentLocation) {
+            console.log('Matched:', href); // Вывод при совпадении
+            item.classList.add('active');
+          } else {
+            item.classList.remove('active');
+          }
+        });
+      });
+    </script>
+    <script>
+      function showContent(sectionId) {
+  var sections = document.querySelectorAll('.content-section');
+  sections.forEach(function (section) {
+    section.classList.remove('active');
+  });
+  document.getElementById(sectionId).classList.add('active');
+}
+
+    </script>
+          <script>
+            const shopText = document.querySelectorAll('.shop');
+    
+    for (let i = 0; i < shopText.length; i++) {
+      shopText[i].innerHTML =
+        'Wir planen Ihre Foto-Reise, Sie halten die schönsten Momente fest!';
+    }
+          </script>
+
+<script>
+  function setActive(country, sectionId) {
+    // Меняем видимый контент
+    var sections = document.querySelectorAll('.content-section');
+    sections.forEach(function (section) {
+      section.classList.remove('active');
+    });
+    document.getElementById(sectionId).classList.add('active');
+
+    // Обновляем URL в адресной строке
+    const url = new URL(window.location);
+    url.searchParams.set('country', country); // Добавляем параметр ?country=Italien
+    window.history.pushState({}, '', url);
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const country = urlParams.get('country');
+
+    if (country === 'Italien') {
+      setActive('Italien', 'flexbox1');
+    } else if (country === 'Frankreich') {
+      setActive('Frankreich', 'flexbox2');
+    } else if (country === 'Myanmar') {
+      setActive('Myanmar', 'flexbox3');
+    } else if (country === 'Türkei') {
+      setActive('Türkei', 'flexbox4');
+    } else if (country === 'Portugal') {
+      setActive('Portugal', 'flexbox5');
+    }
+  });
+</script>
+<script>
+
+(function () {
+  window.onload = () => {
+    const obj = document.querySelector('#gallery');
+    const time = 10000;
+    function animStart() {
+      if (obj.classList.contains('active') == false) {
+        obj.classList.add('active');
+        setTimeout(() => {
+          animEnd();
+        }, time);
+      }
+    }
+    function animEnd() {
+      obj.classList.remove('active');
+      obj.offsetWidth;
+    }
+    document.addEventListener('scroll', function () {
+      // scroll or scrollend
+      animStart();
+    });
+    window.addEventListener('resize', animStart);
+    animStart();
+  };
+})();
+
+
+</script>
+<script>
+  function showAlert(event) {
+      event.preventDefault(); // Останавливаем стандартное поведение формы
+  
+      // Показываем дружелюбный alert
+      alert("Danke für Ihre Anmeldung! Wir schicken Ihnen nur die wichtigsten Neuigkeiten – und garantiert keinen Spam!");
+      
+      // Можно добавить логику для отправки формы через AJAX или дальше обработать данные
+  }
+
+  </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var modalImages = document.querySelectorAll('.modal img'); // Находим все изображения
+
+    modalImages.forEach(function(modalImg) {
+      // Отслеживаем клик по изображению
+      modalImg.addEventListener('click', function() {
+        var existingShareContainer = document.querySelector('.share-buttons');
+
+        // Если изображение уже увеличено (имеет класс fullscreen)
+        if (modalImg.classList.contains('fullscreen')) {
+          // Убираем класс fullscreen (уменьшаем изображение)
+          modalImg.classList.remove('fullscreen');
+
+          // Удаляем контейнер с кнопками, если он есть
+          if (existingShareContainer) {
+            existingShareContainer.remove(); // Немедленно удаляем контейнер с кнопками
+          }
+
+        } else {
+          // Удаляем кнопки с предыдущего изображения, если они остались
+          if (existingShareContainer) {
+            existingShareContainer.remove();
+          }
+
+          // Добавляем класс fullscreen для увеличения изображения
+          modalImg.classList.add('fullscreen');
+          
+          // Создаем контейнер с кнопками шаринга
+          var shareContainer = document.createElement('div');
+          shareContainer.className = 'share-buttons';
+
+          // URL изображения
+          var imgUrl = modalImg.src;
+
+          // Создаем кнопку для Facebook с иконкой
+          var facebookButton = document.createElement('a');
+          facebookButton.href = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(imgUrl);
+          facebookButton.target = '_blank';
+          facebookButton.innerHTML = '<i class="fab fa-facebook-f"></i>'; // Иконка Facebook
+
+          // Создаем кнопку для Twitter с иконкой
+          var twitterButton = document.createElement('a');
+          twitterButton.href = 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(imgUrl);
+          twitterButton.target = '_blank';
+          twitterButton.innerHTML = '<i class="fab fa-twitter"></i>'; // Иконка Twitter
+
+          // Создаем кнопку для Telegram с иконкой
+          var telegramButton = document.createElement('a');
+          telegramButton.href = 'https://t.me/share/url?url=' + encodeURIComponent(imgUrl);
+          telegramButton.target = '_blank';
+          telegramButton.innerHTML = '<i class="fab fa-telegram-plane"></i>'; // Иконка Telegram
+
+          // Создаем кнопку для Instagram (здесь просто ссылка на профиль или страницу)
+          var instagramButton = document.createElement('a');
+          instagramButton.href = 'https://www.instagram.com/?url=' + encodeURIComponent(imgUrl);
+          instagramButton.target = '_blank';
+          instagramButton.innerHTML = '<i class="fab fa-instagram"></i>'; // Иконка Instagram
+
+          // Добавляем кнопки в контейнер
+          shareContainer.appendChild(facebookButton);
+          shareContainer.appendChild(twitterButton);
+          shareContainer.appendChild(telegramButton);
+          shareContainer.appendChild(instagramButton);
+
+          // Стили для контейнера (делаем его фиксированным, чтобы он следовал за изображением)
+          shareContainer.style.position = 'fixed';
+          shareContainer.style.bottom = '20px';
+          shareContainer.style.left = '50%';
+          shareContainer.style.transform = 'translateX(-50%)';
+          shareContainer.style.background = 'rgba(0, 0, 0, 0.2)'; // Легкий черный фон для контраста
+          shareContainer.style.padding = '5px';
+          shareContainer.style.borderRadius = '5px';
+          shareContainer.style.zIndex = '1001';
+
+          // Стили для иконок (уменьшение размера и установка вашего цвета #1da1f2)
+          var iconButtons = [facebookButton, twitterButton, telegramButton, instagramButton];
+          iconButtons.forEach(function(button) {
+            button.style.marginRight = '10px';
+            button.style.color = '#1da1f2'; // Ваш голубой цвет
+            button.style.fontSize = '20px'; // Уменьшенный размер иконок
+          });
+
+          // Вставляем контейнер в body, чтобы кнопки были на экране при увеличении
+          document.body.appendChild(shareContainer);
+        }
+      });
+    });
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  </body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery with Modal</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      /* Flexbox для сетки изображений */
+      .grid-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .columnlist {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .columnlist li {
+        flex: 1 1 calc(25% - 10px); /* 4 колонки */
+        box-sizing: border-box;
+      }
+
+      .modal section img {
+        display: block;
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+        border: 3px solid #77c7f7; /* Добавляем рамку */
+        border-radius: 10px; /* Скругленные углы */
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
+      }
+
+      /* Модальное окно */
+      .modal-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        flex-direction: column; /* Добавляем, чтобы элементы размещались вертикально */
+      }
+
+      .modal-overlay.show {
+        display: flex;
+      }
+
+      .modal-content {
+        max-width: 90%;
+        max-height: 90vh;
+        border: 3px solid #77c7f7; /* Рамка для увеличенного изображения */
+        border-radius: 10px;
+      }
+
+      .close {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        font-size: 40px;
+        color: white;
+        cursor: pointer;
+      }
+
+      .author-info {
+        color: white;
+        margin-top: 10px;
+        font-size: 14px;
+        text-align: center; /* Выравниваем текст по центру под изображением */
+      }
+
+      /* Социальные иконки */
+      .social-icons {
+        text-align: center; /* Выравниваем иконки по центру */
+        margin-top: 15px;
+      }
+
+      .social-icons i {
+        margin: 0 10px;
+        color: #ffffff;
+        font-size: 24px;
+      }
+
+      .social-icons i:hover {
+        color: #00acee; /* Twitter Blue */
+      }
+    </style>
+  </head>
+  <body>
+    <section class="grid-container">
+      <ul class="columnlist">
+        <li class="modal">
+          <section>
+            <img
+              src="24.webp"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="45.webp"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <!-- Добавляем другие изображения аналогично -->
+      </ul>
+    </section>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal-overlay">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img class="modal-content" id="modalImage" />
+      <div class="author-info" id="modalAuthor"></div>
+      <!-- Теперь текст с автором под фото -->
+      <div class="social-icons">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+      </div>
+    </div>
+
+    <script>
+      const modal = document.getElementById('modal');
+      const modalImg = document.getElementById('modalImage');
+      const authorInfo = document.getElementById('modalAuthor');
+      const images = document.querySelectorAll('.columnlist img');
+
+      images.forEach((image) => {
+        image.addEventListener('click', function () {
+          modalImg.src = this.src;
+          authorInfo.textContent = this.alt;
+          modal.classList.add('show');
+        });
+      });
+
+      modal.addEventListener('click', function () {
+        modal.classList.remove('show');
+      });
+
+      function closeModal() {
+        modal.classList.remove('show');
+      }
+    </script>
+  </body>
+</html>

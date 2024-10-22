@@ -1,0 +1,1966 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YDYYVDE06J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YDYYVDE06J');
+</script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="apple-touch-icon.png" />
+    <meta
+    name="description"
+    content="Entdecken Sie die faszinierende Welt der Street-Fotografie und Fotoreisen – fangen Sie einzigartige Momente in Georgien, Armenien, Kasachstan, Usbekistan und der Mongolei ein."
+  />
+  <meta name="author" content="Korneli Nastas" />
+  <meta
+    name="keywords"
+    content="Street-Fotografie, Fotoreisen, Reisefotografie, Abenteuerreisen, Georgien, Armenien, Kasachstan, Usbekistan, Mongolei, Fotografie-Touren, Fotokurse, Landschaftsfotografie, urbane Fotografie, fotografische Expeditionen, Fotoworkshops, kreative Fotografie"
+  >
+  <title>Street-Fotografie und Abenteuerreisen</title>
+  
+
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+
+      .faq-block {
+        margin: 50px auto;
+        font-family: 'Titillium Web', sans-serif;
+        font-weight: 200;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        max-width: 100vw;
+        width: 80%;
+        background-color: #519ac542; /* Белый фон для блока с вопросами */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Легкая тень для объема */
+      }
+
+      .faq-item {
+        border-bottom: 1px solid #cccccc;
+        padding: 15px 0;
+        width: 100%;
+      }
+
+      .faq-question {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        font-weight: 600;
+        padding: 10px;
+        background-color: #03796c1a; /* Светло-серый фон для вопросов */
+        font-size: 1.1em;
+        color: #333333; /* Темный текст для вопросов */
+        text-align: left;
+        width: 100%;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      .faq-question:hover {
+        background-color: teal; /* Чуть более темный фон при наведении */
+      }
+
+      .faq-answer {
+        display: none;
+        padding: 15px;
+        font-size: 1em;
+        color: #000000; /* Самый темный текст для ответов */
+        background-color: #ffffff; /* Белый фон для ответов */
+        margin-top: 5px;
+        border-top: 1px solid #cccccc; /* Линия сверху для отделения ответа */
+        text-align: left;
+      }
+
+      .faq-question.active + .faq-answer {
+        display: block;
+      }
+
+      .fas.fa-chevron-down {
+        transition: transform 0.2s ease;
+        color: #333333; /* Темная стрелка для хорошей видимости */
+      }
+
+      .faq-question.active .fas.fa-chevron-down {
+        transform: rotate(180deg);
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--gap);
+        padding: var(--gap);
+        height: 100vh;
+        width: 100vw;
+        position: relative;
+        background: hsl(220, 35%, 5%);
+      }
+
+      .grid div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        padding: calc(var(--gap) * 1.5);
+        min-height: 160px;
+        color: #fff;
+        font-size: 1.1rem;
+        font-weight: 600;
+        background-color: teal;
+        background-image: url(52.webp);
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        transition-property: filter, backdrop-filter, opacity, color;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-out;
+      }
+
+      .grid div:hover {
+        color: #fff;
+        filter: brightness(1.2);
+      }
+
+      .grid div span:first-of-type {
+        z-index: 2;
+      }
+
+      .grid div .overlay {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        background: linear-gradient(
+          180deg,
+          hsl(0, 0%, 0%, 0) 5%,
+          hsl(0, 0%, 0%, 0.8)
+        );
+        backdrop-filter: blur(6px);
+        transition-property: opacity;
+        transition-duration: 0.4s;
+        transition-timing-function: ease-out;
+        z-index: -1;
+      }
+
+      .grid div .shop {
+        display: block;
+        color: tomato;
+        font-size: 0.8rem;
+        font-weight: 400;
+        margin-top: 8px;
+        margin-bottom: -25px;
+        opacity: 0;
+        transition-property: margin-bottom, opacity;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-out;
+        z-index: 2;
+      }
+
+      .grid div:hover > .overlay {
+        opacity: 1;
+      }
+
+      .grid div:hover > .shop {
+        opacity: 1;
+        margin-bottom: 0;
+      }
+
+      .grid > div:nth-of-type(1) {
+        grid-column: 1/3;
+      }
+
+      .grid > div:nth-of-type(2) {
+        grid-column: 3/5;
+        grid-row: 1/3;
+      }
+
+      .grid > div:nth-of-type(4) {
+        grid-column: 2/3;
+        grid-row: 2/5;
+      }
+
+      @media screen and (max-width: 840px) {
+        .grid {
+          height: auto;
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .grid div {
+          min-height: auto;
+          aspect-ratio: 1 / 1;
+          width: 100%;
+        }
+
+        .grid > div:nth-of-type(1),
+        .grid > div:nth-of-type(2),
+        .grid > div:nth-of-type(4) {
+          grid-column: auto;
+          grid-row: auto;
+        }
+      }
+      @media screen and (max-width: 1024px) {
+        .grid {
+          display: none; /* Скрываем весь блок .grid */
+        }
+      }
+
+      @import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+      @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;700&display=swap');
+      #modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Фон модального окна */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#modal.show {
+  display: flex; /* Модальное окно открывается как flex контейнер */
+}
+
+#modal img {
+  max-width: 90%;
+  max-height: 90vh; /* Изображение занимает до 90% высоты экрана */
+  object-fit: contain; /* Сохраняем пропорции изображения */
+}
+
+/* Стили для информации об авторе */
+.author-info {
+  color: white;
+  margin-top: 10px;
+  text-align: center;
+}
+
+    </style>
+  </head>
+
+  <!-- Header mit Navigation -->
+  <header>
+    <br>
+    <section >
+      <div style="background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('pngegg.webp'); background-size: cover; background-position: center; width: 100vw; box-sizing: border-box;" class="container22">
+        <br>
+        <p class="grid22">
+          <div style="display: inline-block; padding: 10px; border-radius: 18px;">
+            <span style="padding-left: 1vw;" class="reisen1">welt</span>
+            <span style="padding-left: 1vw;" class="photo1">weit</span>
+          </div>
+      
+          <div style="display: inline-block; padding: 10px; border-radius: 18px;">
+            <span  class="photo">foto</span>
+            <span class="reisen">reisen</span>
+          </div>
+        </p>
+        <br>
+      </div>
+      
+      
+      <nav class="navbar" id="navbar">
+        <div class="burger-menu">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <ul class="nlist">
+          <li>
+            <a href="index.html" class="nav-link" title="Startseite">Start</a>
+          </li>
+
+          <li>
+            <a href="reiseplan.html" class="nav-link" title="Reiseplan"
+              >Reiseplan</a
+            >
+          </li>
+
+          <li>
+            <a href="model.html" class="nav-link" title="Myanmar in Farben"
+              >Myanmar in Farben</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </section>
+  </header>
+
+  <br />
+  <section class="grid-container">
+    <ul class="columnlist">
+      <li class="modal">
+        <section>
+          <img
+            src="37.webp"
+            alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten"
+            loading="lazy"
+            width="600"
+            height="400"
+          />
+          <!-- <h2>
+                Lebendige Städte und die kulturellen Schätze Europas durch
+                unsere sorgfältig kuratierten Reisen.
+              </h2> -->
+          <!-- <p>
+                Lebendige Städte und die kulturellen Schätze Europas durch
+                unsere sorgfältig kuratierten Reisen.
+              </p> -->
+        </section>
+      </li>
+      <li class="modal">
+        <section>
+          <img
+            src="32.webp"
+            alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten"
+            loading="lazy"
+            width="600"
+            height="400"
+          />
+        </section>
+      </li>
+      <li class="modal">
+        <section>
+          <img
+            src="36.webp"
+            alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten"
+            loading="lazy"
+            width="600"
+            height="400"
+          />
+        </section>
+      </li>
+      <li class="modal">
+        <section>
+          <img
+            src="33.webp"
+            alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten"
+            loading="lazy"
+            width="600"
+            height="400"
+          />
+        </section>
+      </li>
+    </ul>
+  </section>
+  <body class="model-page">
+    <br />
+    <h6 id="myanmar-header">DIE FARBEN</h6>
+    <h6 id="myanmar-header-2">VON MYANMAR</h6>
+    <br />
+    <main>
+      <section class="video-section1">
+        <section class="video-section">
+          <div class="video-container">
+            <iframe
+              src="https://player.vimeo.com/video/249804333?h=3bd6698600"
+              frameborder="0"
+              allow="autoplay; fullscreen"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </section>
+      </section>
+
+      <section>
+        <div class="grid">
+          <div class="item-1">
+            <span>Reise</span>
+            <span class="shop"></span>
+            <div class="overlay"></div>
+          </div>
+          <div class="alt">
+            <span>Flughafen</span>
+            <span class="shop"></span>
+            <div class="overlay"></div>
+          </div>
+          <div class="item-1">
+            <span>Hotel</span>
+            <span class="shop"></span>
+            <div class="overlay"></div>
+          </div>
+          <div class="item-1">
+            <span>Reisepass</span>
+            <span class="shop"></span>
+            <div class="overlay"></div>
+          </div>
+          <div class="item-1">
+            <span>Gepäck</span>
+            <span class="shop"></span>
+            <div class="overlay"></div>
+          </div>
+          <div class="alt">
+            <span>Stadtführung</span>
+            <span class="shop"></span>
+            <div class="overlay"></div>
+          </div>
+          <div class="alt">
+            <span>Fahrkarte</span>
+            <span class="shop"></span>
+            <div class="overlay"></div>
+          </div>
+          <div class="">
+            <span>Accessories</span>
+            <span class="shop"></span>
+            <div class="overlay"></div>
+          </div>
+          <div class="alt">
+            <span>Reiseziele</span>
+            <span class="shop"></span>
+            <div class="overlay"></div>
+          </div>
+          <div class="item-1 alt">
+            <span>Mietwagen</span>
+            <span class="shop"></span>
+            <div class="overlay"></div>
+          </div>
+        </div>
+      </section>
+
+      <style>
+        body {
+          font-family: 'Titillium Web', sans-serif;
+          font-weight: 200;
+          background-color: #f7f7f7;
+          margin: 0;
+          padding: 0;
+          color: #0a0a0a;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .grid-container {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 10px;
+          width: 100%;
+        }
+
+        .columnlist img {
+          width: 100%;
+          height: auto;
+          cursor: pointer;
+          transition: transform 0.3s ease;
+        }
+
+        /* Modal overlay */
+        .modal-overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.8);
+          display: none;
+          justify-content: center;
+          align-items: center;
+          z-index: 10;
+          flex-direction: column;
+        }
+
+        .modal-overlay img {
+          max-width: 90%;
+          max-height: 80%;
+        }
+
+        .modal-overlay.show {
+          display: flex;
+        }
+
+        .modal-overlay img {
+          animation: zoomIn 0.5s;
+        }
+
+        .modal-overlay .author-info {
+          color: #fff;
+          margin-top: 10px;
+          font-size: 16px;
+          text-align: center;
+        }
+
+        @keyframes zoomIn {
+          from {
+            transform: scale(0.8);
+            opacity: 0;
+          }
+          to {
+            transform: scale(1);
+            opacity: 1;
+          }
+        }
+      </style>
+      <section class="grid-container">
+        <ul class="columnlist">
+          <li class="modal">
+            <section>
+              <img
+                src="31.webp"
+                alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten"
+                loading="lazy"
+                width="600"
+                height="400"
+              />
+              <!-- <h2>
+              Lebendige Städte und die kulturellen Schätze Europas durch
+              unsere sorgfältig kuratierten Reisen.
+            </h2> -->
+              <!-- <p>
+              Lebendige Städte und die kulturellen Schätze Europas durch
+              unsere sorgfältig kuratierten Reisen.
+            </p> -->
+            </section>
+          </li>
+          <li class="modal">
+            <section>
+              <img
+                src="34.webp"
+                alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten"
+                loading="lazy"
+                width="600"
+                height="400"
+              />
+            </section>
+          </li>
+          <li class="modal">
+            <section>
+              <img
+                src="35.webp"
+                alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten"
+                loading="lazy"
+                width="600"
+                height="400"
+              />
+            </section>
+          </li>
+          <li class="modal">
+            <section>
+              <img
+                src="38.webp"
+                alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten"
+                loading="lazy"
+                width="600"
+                height="400"
+              />
+              <!-- <h1>Frankreich erleben</h1>
+            <p>
+              Zu den romantischen Straßen von Paris – lassen Sie sich von der
+              Vielfalt dieses Landes verzaubern.
+            </p> -->
+            </section>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <section class="full-height-container" style="  background-color: #ffffff;">
+      <div class="image-block">
+        <div class="image-block">
+          <img src="f7dcb2817ad147c8b1d700ceb1d8cb28.gif" alt="Korneli Nastas" />
+        </div>
+      </div>
+      <div class="contact-info" style="  background-color: #ffffff;">
+        <div class="contact-data">
+          <div class="name">Korneli Nastas</div>
+          <div class="address">Winterhuder Weg 67, 22085 Hamburg</div>
+          <div class="phone">Telephone: 0157 381 81 756</div>
+
+          <a class="email" href="mailto:korneli.nastas@gmail.com"
+            >korneli.nastas@gmail.com</a
+          >
+
+          <section class="social-media">
+            <a
+              href="https://www.facebook.com/korneli.nastas/photos_by"
+              target="_blank"
+              class="social-icon fb"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a
+              href="https://x.com/KorneliNastas/media"
+              target="_blank"
+              class="social-icon twitter"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a
+              href="https://wa.me/49157 381 81 756"
+              target="_blank"
+              class="social-icon wa"
+            >
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a
+              href="skype:korneli_nastas?chat"
+              target="_blank"
+              class="social-icon skype"
+            >
+              <i class="fab fa-skype"></i>
+            </a>
+          </section>
+        </div>
+      </div>
+      <div class="image-block">
+        <div class="image-block">
+          <img src="Korneli_Nastas.jpg" width="600"
+          height="400" alt="Korneli Nastas" />
+        </div>
+      </div>
+
+      <div class="image-block">
+        <p class="grid22">
+          <div style="display: inline-block;">
+            <span style=" font-size: 4vw; padding-left: 2vw;" class="reisen1 ">ich</span>
+            <span style="font-size: 4vw; padding-left: 2vw;" class="photo1">mach</span>
+            <span style="font-size: 4vw; padding-left: 2vw;" class="photo">foto</span>
+            <span style="font-size: 4vw; padding-left: 2vw;" class="reisen">reisen</span>
+          </div>
+         
+        </p>
+      </div>
+    </section>
+
+    <section class="grid-container">
+      <ul class="columnlist">
+        <li class="modal">
+          <section>
+            <img
+              src="31.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="sw1.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="34.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="sw2.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="35.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="sw3.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="38.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="sw4.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+      </ul>
+
+      <ul class="columnlist">
+        <li class="modal">
+          <section>
+            <img
+              src="1234.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="sw21.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="12.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="sw22.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="123.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="sw23.webp"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="12345.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="sw24.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+      </ul>
+
+      <ul class="columnlist">
+        <li class="modal">
+          <section>
+            <img
+              src="37.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="sw25.webp "
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="32.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="sw26.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="36.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="sw27.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="33.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="sw28.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+      </ul>
+
+      <ul class="columnlist">
+        <li class="modal">
+          <section>
+            <img
+              src="48.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="sw29.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="45.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="sw31.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="49.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="sw32.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="47.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="sw33.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+      </ul>
+
+      <ul class="columnlist">
+        <li class="modal">
+          <section>
+            <img
+              src="1234567.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="sw34.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="123456789.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="sw35.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="12345678.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="sw36.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="1234567890.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="sw37.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+      </ul>
+
+      <ul class="columnlist">
+        <li class="modal">
+          <section>
+            <img
+              src="51.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="sw38.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="52.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="sw39.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="53.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="sw41.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="DSCF0263.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="sw42.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+      </ul>
+    </section>
+    <section class="custom-section">
+      <div class="custom-pop" id="pop">
+        <div class="custom-quote quote">
+          <h1>
+            Es gibt drei Reaktionen auf eine Kreation: <br />Ja, Nein und Wow.
+          </h1>
+        </div>
+        <div class="custom-author author">
+          <strong>Milton Glaser</strong> <i><small>für Time Magazine</small></i>
+          <div class="social">
+            <i class="fas fa-heart"></i>
+            <!-- Иконка сердечка -->
+            <i class="fab fa-twitter"></i>
+            <!-- Иконка Twitter -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="grid-container">
+      <ul class="columnlist">
+        <li class="modal">
+          <section>
+            <img src="q1.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="q2.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="q3.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="q4.webp"width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="q5.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="q6.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="q7.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="q8.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+      </ul>
+      
+      <ul class="columnlist">
+        <li class="modal">
+          <section>
+            <img src="q9.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="q10.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="q11.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="q12.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="q13.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="q14.webp"  alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="q15.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="q16.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+      </ul>
+      
+      <ul class="columnlist">
+        <li class="modal">
+          <section>
+            <img src="q17.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="q18.webp " width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="q19.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="q20.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="q21.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="q22.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="q23.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="q24.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+      </ul>
+      
+      <ul class="columnlist">
+        <li class="modal">
+          <section>
+            <img src="q30.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="q25.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="q26.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="q27.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="q28.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="q29.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+      
+        <li class="modal">
+          <section>
+            <img src="q31.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="q32.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+      </ul>
+      
+      <ul class="columnlist">
+        <li class="modal">
+          <section>
+            <img src="q33.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="q34.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="q35.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="q36.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="q37.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="q38.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="q39.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="q40.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+      </ul>
+    
+      <ul class="columnlist">
+        <li class="modal">
+          <section>
+            <img src="q41.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="q42.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="q43.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="q44.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="q45.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="q46.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="q47.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="q48.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+      </ul>
+    </section>
+    <section class="full-height-container" style="  background-color: #ffffff;">
+  
+      <div class="image-block">
+        <div class="image-block">
+          <img src="fotoreisen.2ix.webp" width="600"
+          height="400" alt="Korneli Nastas" />
+        </div>
+      </div>
+      <div class="contact-info" style="  background-color: #ffffff;">
+        <div class="contact-data">
+          <div class="name">Korneli Nastas</div>
+          <div class="address">Winterhuder Weg 67, 22085 Hamburg</div>
+          <div class="phone">Telephone: 0157 381 81 756</div>
+    
+          <a class="email" href="mailto:korneli.nastas@gmail.com"
+            >korneli.nastas@gmail.com</a
+          >
+    
+          <section class="social-media">
+            <a
+              href="https://www.facebook.com/korneli.nastas/photos_by"
+              target="_blank"
+              class="social-icon fb"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a
+              href="https://x.com/KorneliNastas/media"
+              target="_blank"
+              class="social-icon twitter"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a
+              href="https://wa.me/49157 381 81 756"
+              target="_blank"
+              class="social-icon wa"
+            >
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a
+              href="skype:korneli_nastas?chat"
+              target="_blank"
+              class="social-icon skype"
+            >
+              <i class="fab fa-skype"></i>
+            </a>
+          </section>
+        </div>
+      </div>
+      <div class="image-block">
+        <div class="image-block">
+          <img src="travel.gif" alt="Korneli Nastas" />
+        </div>
+      </div>
+    
+      <div class="image-block">
+        <p class="grid22">
+          <div style="display: inline-block;">
+            <span style=" font-size: 4vw; padding-left: 2vw;" class="reisen1 ">♥lle</span>
+            <span style="font-size: 4vw; padding-left: 2vw;" class="photo1">lieben</span>
+            <span style="font-size: 4vw; padding-left: 2vw;" class="photo">foto</span>
+            <span style="font-size: 4vw; padding-left: 2vw;" class="reisen">reisen</span>
+          </div>
+         
+        </p>
+      </div>
+    </section>
+    <section class="grid-container">
+      <ul class="columnlist">
+        <li class="modal">
+          <section>
+            <img src="w1.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="w2.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="w3.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="w4.webp"width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="w5.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="w6.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="w7.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="w8.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+      </ul>
+      
+      <ul class="columnlist">
+        <li class="modal">
+          <section>
+            <img src="w9.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="w10.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="w11.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="w12.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="w13.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="w14.webp"  alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="w15.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="w16.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+      </ul>
+      
+      <ul class="columnlist">
+        <li class="modal">
+          <section>
+            <img src="w17.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="w18.webp " width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="w19.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="w20.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="w21.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="w22.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="w23.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="w24.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+      </ul>
+      
+      <ul class="columnlist">
+        <li class="modal">
+          <section>
+            <img src="w25.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="w26.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="w27.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="w28.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="w29.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="w30.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="w31.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="w32.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+      </ul>
+      
+      <ul class="columnlist">
+        <li class="modal">
+          <section>
+            <img src="w33.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="w34.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="w35.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="w36.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="w37.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="w38.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="w39.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="w40.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+      </ul>
+    
+      <ul class="columnlist">
+        <li class="modal">
+          <section>
+            <img src="w41.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="w42.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="w43.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="w44.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="w45.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="w46.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="w47.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="w48.webp" width="600" height="400" alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten." loading="lazy" />
+          </section>
+        </li>
+      </ul>
+    </section>
+    <div style="background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('pngegg.webp'); background-size: cover; background-position: center; width: 100vw; box-sizing: border-box;" class="container22">
+     
+      <p class="grid22" style="text-align: center;">
+        <div style="display: inline-block; position: relative; font-size: 4vw; line-height: 1.5;">
+          <span style="padding-left: 1vw;" class="reisen1"> ja</span>
+          <span style="padding-left: 1vw;" class="photo1">,</span> <span style="padding-left: 1vw;" class="reisen1">nein</span>
+        </div>
+    
+        <div style="display: inline-block; position: relative; font-size: 4vw; line-height: 1.5;">
+          <span class="photo"></span>
+          <span class="reisen">wow</span>
+        </div>
+      </p>
+     
+      <section style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+        <div style="flex: 1 1 33%; padding: 10px; box-sizing: border-box; min-width: 520px;">
+          <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fkorneli.nastas%2Fposts%2Fpfbid0AQBKQgMvvCceqCNEGDQJ2hxkx3HdBAPTkAtsfbkURhu3CVZWtbx9r9ngih7Dsbjgl&show_text=true&width=500" width="500" height="616" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        </div>
+        <div style="flex: 1 1 33%; padding: 10px; box-sizing: border-box; min-width: 520px;">
+          <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Ffotoreisen.2ix.de%2Fposts%2Fpfbid02GCmVXfbGxW5q3UhcnR7Xa4aCifUQP2Rmowhi5WAsBtQkrviNJJeCSx3Un6hQLcHjl&show_text=true&width=500" width="500" height="696" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        </div>
+        <div style="flex: 1 1 33%; padding: 10px; box-sizing: border-box; min-width: 520px;">
+            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Ffotoreisen.2ix.de%2Fposts%2Fpfbid028GLHqdbLiPiXcY4bGKWQrZ5R1BmiHZt5yfzth9FZYno7FXmzyrpZykFEh4tZkqail&show_text=true&width=500" width="100%" height="657" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        </div>
+    </section>
+    
+    
+    </div>
+ 
+  
+  
+  
+  
+  
+        <footer>
+    
+       <br>
+       <p class="footer-copy">
+        &copy; 2024 Korneli Nastas. Alle Rechte vorbehalten.
+      </p>
+      <br>
+          <!-- <div class="footer-container">
+            <p class="footer-title">Rechtlicher Hinweis</p>
+            <p class="footer-text">
+              Diese Webseite ist ein studentisches Projekt und dient ausschließlich
+              zu Übungszwecken. Sie ist nicht für kommerzielle Nutzung bestimmt und
+              steht in keinerlei Verbindung zu kommerziellen oder professionellen
+              Dienstleistungen.
+            </p>
+            <p class="footer-text">
+              Alle Inhalte, einschließlich Texte, Bilder und Informationen, sind zu
+              Testzwecken erstellt und haben keine rechtliche Relevanz. Die Nutzung
+              dieser Webseite erfolgt auf eigene Gefahr. Für Schäden oder Verluste,
+              die durch die Nutzung dieser Webseite entstehen könnten, wird keine
+              Haftung übernommen.
+            </p>
+            <p class="footer-text">
+              Wenn Sie Fragen oder Bedenken haben, kontaktieren Sie bitte den
+              Entwickler dieser Webseite.
+            </p>
+            <p class="footer-copy">
+              &copy; 2024 Korneli Nastas. Alle Rechte vorbehalten.
+            </p>
+          </div> -->
+        </footer>
+    <div class="modal-overlay" id="modal">
+      <img alt="Vergrößertes Bild" />
+      <p class="author-info"></p>
+      <!-- Блок для текста с информацией об авторе -->
+    </div>
+    <script>
+      const modal = document.getElementById('modal');
+      const modalImg = modal.querySelector('img');
+      const authorInfo = modal.querySelector('.author-info'); // Блок для текста с информацией об авторе
+      const images = document.querySelectorAll('.columnlist img');
+
+      images.forEach((image) => {
+        image.addEventListener('click', function () {
+          modalImg.src = this.src; // Устанавливаем изображение
+          authorInfo.textContent = this.alt; // Устанавливаем текст авторства
+          modal.classList.add('show');
+        });
+      });
+
+      modal.addEventListener('click', function () {
+        modal.classList.remove('show');
+      });
+    </script>
+
+ 
+    <script src="script.js"></script>
+    <script>
+      function toggleAnswer(element) {
+        const answer = element.nextElementSibling;
+
+        if (answer.style.display === 'block') {
+          answer.style.display = 'none';
+        } else {
+          answer.style.display = 'block';
+        }
+      }
+    </script>
+    <script>
+      const burgerMenu = document.querySelector('.burger-menu');
+      const nlist = document.querySelector('.nlist');
+
+      burgerMenu.addEventListener('click', () => {
+        burgerMenu.classList.toggle('active');
+        nlist.classList.toggle('open'); // Открываем меню при клике
+      });
+
+      var navbar = document.getElementById('navbar');
+
+      // Добавляем событие на прокрутку страницы
+      window.onscroll = function () {
+        stickyNavbar();
+      };
+
+      // Функция, которая управляет фиксированием навбара
+      function stickyNavbar() {
+        if (window.pageYOffset >= 200) {
+          navbar.classList.add('fixed');
+        } else {
+          navbar.classList.remove('fixed');
+        }
+      }
+    </script>
+    <script>
+      const shopText = document.querySelectorAll('.shop');
+
+      for (let i = 0; i < shopText.length; i++) {
+        shopText[i].innerHTML =
+          'Wir planen Ihre Foto-Reise, Sie halten die schönsten Momente fest!';
+      }
+    </script>
+    <script>
+      const modal = document.getElementById('modal');
+      const modalImg = modal.querySelector('img');
+      const images = document.querySelectorAll('.columnlist img');
+
+      images.forEach((image) => {
+        image.addEventListener('click', function () {
+          modalImg.src = this.src;
+          modal.classList.add('show');
+        });
+      });
+
+      modal.addEventListener('click', function () {
+        modal.classList.remove('show');
+      });
+      document.addEventListener('DOMContentLoaded', function () {
+        // Получаем текущий URL без параметров и якорей
+        let currentLocation = window.location.pathname.split('/').pop();
+
+        // Если на главной странице, то currentLocation будет пустым
+        if (currentLocation === '') {
+          currentLocation = 'index.html'; // Для главной страницы
+        }
+
+        // Находим все ссылки меню
+        const menuItems = document.querySelectorAll('.nlist li a');
+
+        // Проходимся по каждой ссылке и проверяем ее href
+        menuItems.forEach((item) => {
+          const href = item.getAttribute('href');
+
+          // Если текущий путь совпадает с href ссылки
+          if (href === currentLocation) {
+            item.classList.add('active');
+          } else {
+            item.classList.remove('active');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

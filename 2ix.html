@@ -1,0 +1,2114 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <header>
+      <br>
+      <section class="index-page">
+        <div class="container22 ">
+          <br>
+           <p class="grid22">
+             <div style= "display: inline-block; " > <span style="padding-left: 1vw;" class="reisen1">welt</span><span style="padding-left: 1vw;" class="photo1">weit</span></div>
+             
+     <div style="display: inline-block; ">      <span class="photo">foto</span><span class="reisen">reisen</span></div>
+             
+     </p>
+   
+       <br>
+     </div> 
+        <nav class="navbar" id="navbar">
+          <div class="burger-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <ul class="nlist">
+            <li>
+              <a href="index.html" class="nav-link" title="Startseite">Start</a>
+            </li>
+
+            <li>
+              <a href="reiseplan.html" class="nav-link" title="Reiseplan"
+                >Reiseplan</a
+              >
+            </li>
+
+            <li>
+              <a href="model.html" class="nav-link" title="Myanmar in Farben"
+                >Myanmar in Farben</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+      body {
+        font-family: 'Titillium Web', sans-serif;
+        font-weight: 200;
+        line-height: 1.6;
+        margin: 20px;
+      }
+      .question {
+        font-weight: bold;
+        margin-top: 30px;
+        font-size: larger;
+        color: dodgerblue;
+      }
+      .answer {
+        display: block;
+        margin: 5px 0;
+      }
+      .correct {
+        color: darkcyan;
+      }
+      .incorrect {
+        color: red;
+      }
+      .question-block {
+        margin: 20px 0;
+        padding: 10px;
+        border: 1px solid #ccc;
+      }
+      .hidden {
+        display: none;
+      }
+      #content {
+        display: none;
+      }
+    </style>
+    <title>Q&A-Suche</title>
+  </head>
+  <body>
+    <h1 style="font-size: xx-large">Q&A-Suche</h1>
+    <p style="color: darkcyan">
+      Die Suchmaschine durchsucht Fragen und Antworten in Echtzeit und zeigt nur
+      die passenden Ergebnisse an, basierend auf dem eingegebenen Suchbegriff.
+      Nicht zutreffende Inhalte werden ausgeblendet.
+    </p>
+
+    <div id="passwordPrompt">
+      <label for="password">Passwort eingeben:</label>
+      <input type="password" id="password" />
+      <button onclick="checkPassword()">Eingeben</button>
+    </div>
+
+    <div id="content">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Suche..."
+        onkeyup="searchQuestions()"
+      />
+
+      <div id="questions">
+        <title>Q&A-Suche</title>
+     
+ 
+    
+      
+          <div class="question-block">
+            <p class="question">
+              1. Wie definieren Sie in einem HTML5-Formular einen Schieberegler?
+            </p>
+            <p class="answer incorrect">❌ &lt;input type="switch" /&gt;</p>
+            <p class="answer incorrect">❌ &lt;input type="meter" /&gt;</p>
+            <p class="answer correct">✔ &lt;input type="range" /&gt;</p>
+            <p class="answer incorrect">❌ &lt;input type="control" /&gt;</p>
+            <p class="answer incorrect">❌ &lt;input type="slider" /&gt;</p>
+          </div>
+    
+          <!-- Question 2 -->
+          <div class="question-block">
+            <p class="question">
+              2. Mit welchem Attribut im &lt;video&gt;-Tag können Sie bestimmen,
+              dass ein Video von allein startet?
+            </p>
+            <p class="answer correct">✔ autoplay</p>
+            <p class="answer incorrect">❌ auto</p>
+            <p class="answer incorrect">❌ play</p>
+            <p class="answer incorrect">❌ start</p>
+            <p class="answer incorrect">❌ autostart</p>
+          </div>
+    
+          <!-- Question 3 -->
+          <div class="question-block">
+            <p class="question">
+              3. Was ist in HTML der Unterschied zwischen Block-Level- und
+              Inline-Elementen?
+            </p>
+            <p class="answer correct">
+              ✔ Block-Level-Elemente sind Tags, die im Browser die gesamte
+              verfügbare Breite einnehmen und automatisch einen Absatz erzeugen.
+            </p>
+            <p class="answer incorrect">
+              ❌ Inline-Elemente sind Tags, die im Browser die gesamte verfügbare
+              Breite einnehmen und automatisch einen Absatz erzeugen.
+            </p>
+            <p class="answer incorrect">
+              ❌ Block-Level-Elemente sind Tags, die im laufenden Fließtext
+              angewendet werden können und keinen Absatz erzeugen.
+            </p>
+            <p class="answer correct">
+              ✔ Inline-Elemente sind Tags, die im laufenden Fließtext angewendet
+              werden können und keinen Absatz erzeugen.
+            </p>
+          </div>
+    
+          <!-- Question 4 -->
+          <div class="question-block">
+            <p class="question">
+              4. Welche der folgenden Grafikformate können mit Hilfe des
+              &lt;img&gt;-Tags in HTML-Seiten eingebunden werden?
+            </p>
+            <p class="answer correct">✔ JPEG</p>
+            <p class="answer correct">✔ SVG</p>
+            <p class="answer correct">✔ GIF</p>
+            <p class="answer correct">✔ PNG</p>
+          </div>
+    
+          <!-- Question 5 -->
+          <div class="question-block">
+            <p class="question">
+              5. Mit welchem HTML-Attribut im &lt;video&gt;-Tag können Sie ein Video
+              in einer Endlosschleife abspielen?
+            </p>
+            <p class="answer incorrect">❌ autostart</p>
+            <p class="answer incorrect">❌ endless</p>
+            <p class="answer incorrect">❌ autoplay</p>
+            <p class="answer correct">✔ loop</p>
+            <p class="answer incorrect">❌ repeat</p>
+          </div>
+    
+          <!-- Question 6 -->
+          <div class="question-block">
+            <p class="question">
+              6. Welche Aussagen zu den HTML-Tags &lt;p&gt;&lt;/p&gt; (Absatz) und
+              &lt;br /&gt; (Zeilenumbruch) treffen zu?
+            </p>
+            <p class="answer correct">
+              ✔ Nach beiden Tags beginnt der nachfolgende Text in einer neuen Zeile.
+            </p>
+            <p class="answer correct">
+              ✔ Das Tag &lt;p&gt;&lt;/p&gt; fügt einen zusätzlichen Abstand nach
+              oben und unten ein (Leerzeile).
+            </p>
+            <p class="answer correct">
+              ✔ Der Zeilenumbruch &lt;br /&gt; zählt zu den Inline-Elementen.
+            </p>
+            <p class="answer correct">
+              ✔ Das Tag &lt;p&gt;&lt;/p&gt; zählt zu den Block-Level-Elementen.
+            </p>
+          </div>
+    
+          <!-- Question 7 -->
+          <div class="question-block">
+            <p class="question">
+              7. Wie stellen Sie sicher, dass eine verlinkte Seite im gewünschten
+              iFrame geöffnet wird?
+            </p>
+            <p class="answer incorrect">
+              ❌ Mit Hilfe des Attributs iframe im &lt;head&gt;.
+            </p>
+            <p class="answer incorrect">
+              ❌ Mit Hilfe des Attributs name im &lt;a&gt;-Tag.
+            </p>
+            <p class="answer correct">
+              ✔ Mit Hilfe des Attributs name im &lt;iframe&gt;-Tag.
+            </p>
+            <p class="answer incorrect">
+              ❌ Mit Hilfe des Attributs target im &lt;iframe&gt;-Tag.
+            </p>
+            <p class="answer correct">
+              ✔ Mit Hilfe des Attributs target im &lt;a&gt;-Tag.
+            </p>
+          </div>
+    
+          <!-- Question 8 -->
+          <div class="question-block">
+            <p class="question">8. Wie können Sie das Zeichen &lt; maskieren?</p>
+            <p class="answer incorrect">❌ &amp;brace;</p>
+            <p class="answer correct">✔ &amp;lt;</p>
+            <p class="answer incorrect">❌ &amp;bracket;</p>
+            <p class="answer incorrect">❌ &amp;gt;</p>
+            <p class="answer incorrect">❌ &amp;amp;</p>
+          </div>
+    
+          <!-- Question 9 -->
+          <div class="question-block">
+            <p class="question">
+              9. Wie erzeugen Sie in HTML ein mehrzeiliges Textfeld?
+            </p>
+            <p class="answer incorrect">
+              ❌ &lt;input type="text" multiple="multiple" /&gt;
+            </p>
+            <p class="answer incorrect">
+              ❌ &lt;input type="textarea"&gt;&lt;/input&gt;
+            </p>
+            <p class="answer incorrect">❌ &lt;input type="text" /&gt;</p>
+            <p class="answer correct">✔ &lt;textarea&gt;&lt;/textarea&gt;</p>
+          </div>
+    
+          <!-- Question 10 -->
+    
+          <div class="question-block">
+            <p class="question">
+              10. Wie erzeugen Sie in HTML eine Bildunterschrift?
+            </p>
+            <p class="answer incorrect">
+              ❌ &lt;figcaption&gt; &lt;img src="bild.jpg" alt="..." /&gt;
+              Bildunterschrift &lt;/figcaption&gt;
+            </p>
+            <p class="answer incorrect">
+              ❌ &lt;img src="bild.jpg" alt="..." figcaption="Bildunterschrift"
+              /&gt;
+            </p>
+            <p class="answer correct">
+              ✔ &lt;figure&gt; &lt;img src="bild.jpg" alt="..." /&gt;
+              &lt;figcaption&gt;Bildunterschrift&lt;/figcaption&gt; &lt;/figure&gt;
+            </p>
+            <p class="answer incorrect">
+              ❌ &lt;img src="bild.jpg" alt="..."
+              /&gt;&lt;caption&gt;Bildunterschrift&lt;/caption&gt;
+            </p>
+            <p class="answer incorrect">
+              ❌ &lt;figure&gt; &lt;img src="bild.jpg" alt="..." /&gt;
+              &lt;caption&gt;Bildunterschrift&lt;/caption&gt; &lt;/figure&gt;
+            </p>
+          </div>
+    
+          <!-- Question 11 -->
+          <div class="question-block">
+            <p class="question">
+              11. Wie kennzeichnen Sie in HTML ein Formularfeld als Pflichtfeld?
+            </p>
+            <p class="answer correct">✔ &lt;input type="text" required /&gt;</p>
+            <p class="answer incorrect">
+              ❌ &lt;input type="text" required="*" /&gt;
+            </p>
+            <p class="answer incorrect">
+              ❌ &lt;input type="text" required="true" /&gt;
+            </p>
+            <p class="answer correct">
+              ✔ &lt;input type="text" required="required" /&gt;
+            </p>
+          </div>
+    
+          <!-- Question 12 -->
+          <div class="question-block">
+            <p class="question">
+              12. Mit welchem Attribut können Sie in einem HTML5-Formular in einem
+              Textfeld einen Standardtext vorgeben, der automatisch verschwindet,
+              wenn man in das Textfeld eigenen Text eingibt?
+            </p>
+            <p class="answer incorrect">
+              ❌ &lt;input type="text" label="Standardtext" /&gt;
+            </p>
+            <p class="answer incorrect">
+              ❌ &lt;input type="text" value="Standardtext" /&gt;
+            </p>
+            <p class="answer incorrect">
+              ❌ &lt;input type="text" name="Standardtext" /&gt;
+            </p>
+            <p class="answer correct">
+              ✔ &lt;input type="text" placeholder="Standardtext" /&gt;
+            </p>
+            <p class="answer incorrect">
+              ❌ &lt;input type="text" default="Standardtext" /&gt;
+            </p>
+          </div>
+    
+          <!-- Question 13 -->
+          <div class="question-block">
+            <p class="question">
+              13. Wie können Sie bewirken, dass sich ein Link in einem neuen
+              Browserfenster oder Tab öffnet?
+            </p>
+            <p class="answer incorrect">
+              ❌ Mit dem Attribut target="_self" im a-Tag.
+            </p>
+            <p class="answer incorrect">
+              ❌ Mit dem Attribut href="_new" im a-Tag.
+            </p>
+            <p class="answer incorrect">
+              ❌ Mit dem Attribut href="_tab" im a-Tag.
+            </p>
+            <p class="answer correct">
+              ✔ Mit dem Attribut target="_blank" im a-Tag.
+            </p>
+          </div>
+    
+          <!-- Question 14 -->
+          <div class="question-block">
+            <p class="question">
+              14. Mit welchem Tag kennzeichnen Sie in HTML ein Zitat?
+            </p>
+            <p class="answer incorrect">❌ &lt;quote&gt;Text&lt;/quote&gt;</p>
+            <p class="answer incorrect">❌ &lt;cite&gt;Text&lt;/cite&gt;</p>
+            <p class="answer correct">
+              ✔ &lt;blockquote&gt;Text&lt;/blockquote&gt;
+            </p>
+            <p class="answer correct">✔ &lt;q&gt;Text&lt;/q&gt;</p>
+          </div>
+    
+          <!-- Question 15 -->
+          <div class="question-block">
+            <p class="question">
+              15. Wie referenzieren Sie eine Grafik namens grafik.gif, die im selben
+              Verzeichnis wie die HTML-Datei liegt?
+            </p>
+            <p class="answer correct">✔ &lt;img src="./grafik.gif" /&gt;</p>
+            <p class="answer correct">✔ &lt;img src="grafik.gif" /&gt;</p>
+            <p class="answer incorrect">❌ &lt;img src=".grafik.gif" /&gt;</p>
+            <p class="answer incorrect">❌ &lt;img src="../grafik.gif" /&gt;</p>
+            <p class="answer incorrect">❌ &lt;img src="..grafik.gif" /&gt;</p>
+          </div>
+    
+          <!-- Question 16 -->
+          <div class="question-block">
+            <p class="question">
+              16. Wie stellen Sie in HTML sicher, dass von einer Gruppe von
+              Radiobuttons immer nur einer ausgewählt werden kann?
+            </p>
+            <p class="answer incorrect">
+              ❌ Alle Radiobuttons müssen im selben fieldset-Tag stehen.
+            </p>
+            <p class="answer incorrect">
+              ❌ Alle Radiobuttons erhalten dieselbe id.
+            </p>
+            <p class="answer correct">
+              ✔ Alle Radiobuttons erhalten dasselbe name-Attribut.
+            </p>
+            <p class="answer incorrect">
+              ❌ Alle Radiobuttons erhalten dasselbe radiogroup-Attribut.
+            </p>
+          </div>
+    
+          <!-- Question 17 -->
+          <div class="question-block">
+            <p class="question">
+              17. Mit welchem HTML-Code hinterlegen Sie eine Kurzbeschreibung Ihrer
+              Seiten für Suchmaschinen?
+            </p>
+            <p class="answer incorrect">
+              ❌ &lt;meta description="Beschreibungstext" /&gt;
+            </p>
+            <p class="answer correct">
+              ✔ &lt;meta name="description" content="Beschreibungstext" /&gt;
+            </p>
+            <p class="answer incorrect">
+              ❌ &lt;meta http-equiv="content-type" content="description"
+              description="Beschreibungstext" /&gt;
+            </p>
+            <p class="answer incorrect">❌ &lt;meta="Beschreibungstext" /&gt;</p>
+            <p class="answer incorrect">
+              ❌ &lt;meta index="Beschreibungstext" /&gt;
+            </p>
+          </div>
+    
+          <!-- Question 18 -->
+          <div class="question-block">
+            <p class="question">
+              18. Wie definieren Sie eine nummerierte Liste, die mit der Zahl 6
+              beginnt?
+            </p>
+            <p class="answer incorrect">❌ &lt;ol init="6"&gt;</p>
+            <p class="answer incorrect">❌ &lt;ol type="6"&gt;</p>
+            <p class="answer incorrect">❌ &lt;ol number="6"&gt;</p>
+            <p class="answer correct">✔ &lt;ol start="6"&gt;</p>
+            <p class="answer incorrect">❌ &lt;ol value="6"&gt;</p>
+          </div>
+          <!-- Question 19 -->
+          <div class="question-block">
+            <p class="question">
+              19. Wie erzeugen Sie in HTML eine Liste mit Spiegelpunkten
+              (Bullet-Liste)?
+            </p>
+            <p class="answer incorrect">
+              ❌ &lt;dl&gt; &lt;li&gt;...&lt;/li&gt; &lt;li&gt;...&lt;/li&gt;
+              &lt;/dl&gt;
+            </p>
+            <p class="answer correct">
+              ✔ &lt;ul&gt; &lt;li&gt;...&lt;/li&gt; &lt;li&gt;...&lt;/li&gt;
+              &lt;/ul&gt;
+            </p>
+            <p class="answer incorrect">
+              ❌ &lt;bl&gt; &lt;li&gt;...&lt;/li&gt; &lt;li&gt;...&lt;/li&gt;
+              &lt;/bl&gt;
+            </p>
+            <p class="answer incorrect">
+              ❌ &lt;ol&gt; &lt;li&gt;...&lt;/li&gt; &lt;li&gt;...&lt;/li&gt;
+              &lt;/ol&gt;
+            </p>
+          </div>
+    
+          <!-- Question 20 -->
+          <div class="question-block">
+            <p class="question">
+              20. Mit welcher Software können Sie HTML-Quellcode erstellen und
+              bearbeiten?
+            </p>
+            <p class="answer incorrect">
+              ❌ Nur mit speziellen grafischen HTML-Editoren.
+            </p>
+            <p class="answer correct">
+              ✔ Mit jedem beliebigen Texteditor, der reine Textdateien speichern
+              kann.
+            </p>
+            <p class="answer incorrect">
+              ❌ Mit jedem beliebigen Textverarbeitungsprogramm, das Word-Dateien
+              speichern kann.
+            </p>
+            <p class="answer incorrect">
+              ❌ Mit jedem beliebigen Layout-Programm, das EPS-Dateien speichern
+              kann.
+            </p>
+          </div>
+    
+          <!-- Question 21 -->
+          <div class="question-block">
+            <p class="question">
+              21. Welche Zeichen sollten Sie bei Dateinamen für Webprojekte
+              vermeiden?
+            </p>
+            <p class="answer correct">✔ Umlaute</p>
+            <p class="answer correct">✔ Leerzeichen</p>
+            <p class="answer correct">✔ Das scharfe ß</p>
+            <p class="answer incorrect">❌ Zahlen</p>
+          </div>
+    
+          <!-- Question 22 -->
+          <div class="question-block">
+            <p class="question">
+              22. Warum muss nach dem W3C-Standard bei der Einbindung einer Grafik
+              immer das Attribut alt verwendet werden?
+            </p>
+            <p class="answer correct">
+              ✔ Screenreader erkennen den alt-Text der Grafiken und können dadurch
+              den Benutzer/innen mitteilen, was auf der Seite zu sehen ist.
+            </p>
+            <p class="answer correct">
+              ✔ Der Inhalt des alt-Attributs wird angezeigt, wenn Bilder im Browser
+              nicht angezeigt werden können.
+            </p>
+            <p class="answer incorrect">
+              ❌ Der Inhalt des alt-Attributs wird beim Überfahren mit der Maus als
+              Tooltip angezeigt und informiert die Benutzer/innen darüber, was auf
+              dem Bild zu sehen ist.
+            </p>
+            <p class="answer incorrect">
+              ❌ Das alt-Attribut verweist auf eine alternative Version der Grafik
+              mit niedriger Auflösung.
+            </p>
+          </div>
+    
+          <!-- Question 23 -->
+          <div class="question-block">
+            <p class="question">23. Was versteht man unter Hypertext?</p>
+            <p class="answer incorrect">
+              ❌ Hypertext ist die Auszeichnungssprache, in der Webseiten erstellt
+              werden.
+            </p>
+            <p class="answer incorrect">
+              ❌ Hypertext ist eine Technologie, die von Sehbehinderten genutzt
+              wird, um Websites als gesprochenen Text auszugeben.
+            </p>
+            <p class="answer incorrect">
+              ❌ Hypertext ist eine veraltete Technologie. In den frühen 1990er
+              Jahren wurden damit Websites erstellt.
+            </p>
+            <p class="answer correct">
+              ✔ Hypertext ist die nonlineare Organisation von Informationen, die
+              durch Links miteinander verknüpft sind.
+            </p>
+          </div>
+    
+          <!-- Question 24 -->
+          <div class="question-block">
+            <p class="question">
+              24. Was ist der Unterschied zwischen einer relativen und einer
+              absoluten Pfadangabe?
+            </p>
+            <p class="answer incorrect">
+              ❌ Absolute Pfadangaben gehen von der HTML-Datei aus, in der die
+              Referenzierung erfolgt.
+            </p>
+            <p class="answer correct">
+              ✔ Relative Pfadangaben gehen von der HTML-Datei aus, in der die
+              Referenzierung erfolgt.
+            </p>
+            <p class="answer correct">
+              ✔ Absolute Pfadangaben gehen immer vom konfigurierten Stammverzeichnis
+              des Webservers aus, unabhängig vom Speicherort der HTML-Datei.
+            </p>
+            <p class="answer incorrect">
+              ❌ Relative Pfadangaben gehen immer vom konfigurierten
+              Stammverzeichnis des Webservers aus, unabhängig vom Speicherort der
+              HTML-Datei.
+            </p>
+          </div>
+    
+          <!-- Question 25 -->
+          <div class="question-block">
+            <p class="question">
+              25. Welche Rendering Engine benutzt Safari auf macOS und iOS?
+            </p>
+            <p class="answer incorrect">❌ Blink</p>
+            <p class="answer incorrect">❌ Trident</p>
+            <p class="answer incorrect">❌ Gecko</p>
+            <p class="answer correct">✔ WebKit</p>
+            <p class="answer incorrect">❌ Presto</p>
+          </div>
+    
+          <!-- Question 26 -->
+          <div class="question-block">
+            <p class="question">
+              26. Durch welches HTML-Tag wird der Text in den allermeisten Browsern
+              kursiv dargestellt?
+            </p>
+            <p class="answer correct">✔ &lt;em&gt;...&lt;/em&gt;</p>
+            <p class="answer correct">✔ &lt;i&gt;...&lt;/i&gt;</p>
+            <p class="answer incorrect">❌ &lt;b&gt;...&lt;/b&gt;</p>
+            <p class="answer incorrect">❌ &lt;oblique&gt;...&lt;/oblique&gt;</p>
+            <p class="answer incorrect">❌ &lt;strong&gt;...&lt;/strong&gt;</p>
+          </div>
+    
+          <!-- Question 27 -->
+          <div class="question-block">
+            <p class="question">27. Was bedeutet das HTML-Attribut rowspan="3"?</p>
+            <p class="answer correct">
+              ✔ Drei Tabellenzellen werden vertikal verbunden.
+            </p>
+            <p class="answer incorrect">
+              ❌ Eine Tabellenzeile erstreckt sich über drei HTML-Seiten.
+            </p>
+            <p class="answer incorrect">
+              ❌ Eine Tabellenzeile erstreckt sich über drei Bildschirme.
+            </p>
+            <p class="answer incorrect">
+              ❌ Drei Tabellenzellen werden horizontal verbunden.
+            </p>
+          </div>
+    
+          <!-- Question 28 -->
+          <div class="question-block">
+            <p class="question">
+              28. Wie erzeugen Sie in einem HTML5-Formular ein einzeiliges Textfeld
+              zur Eingabe einer E-Mail-Adresse?
+            </p>
+            <p class="answer incorrect">❌ &lt;input type="submit" /&gt;</p>
+            <p class="answer correct">✔ &lt;input type="email" /&gt;</p>
+            <p class="answer incorrect">❌ &lt;input type="address" /&gt;</p>
+            <p class="answer incorrect">
+              ❌ &lt;input type="text" mailto="true" /&gt;
+            </p>
+            <p class="answer incorrect">❌ &lt;input type="mailto" /&gt;</p>
+          </div>
+    
+          <!-- Question 29 -->
+          <div class="question-block">
+            <p class="question">
+              29. Wie teilen Sie dem Browser mit, welche Zeichenkodierung Sie in
+              Ihrem Dokument verwendet haben?
+            </p>
+            <p class="answer incorrect">
+              ❌ &lt;meta name="content-type" content="charset=utf-8" /&gt;
+            </p>
+            <p class="answer incorrect">
+              ❌ &lt;meta name="charset" content="utf-8" /&gt;
+            </p>
+            <p class="answer correct">✔ &lt;meta charset="utf-8" /&gt;</p>
+            <p class="answer incorrect">
+              ❌ &lt;meta http-equiv="charset" content="utf-8" /&gt;
+            </p>
+          </div>
+    
+          <!-- Question 30 -->
+          <div class="question-block">
+            <p class="question">30. Was sind iFrames?</p>
+            <p class="answer incorrect">
+              ❌ Mit iFrames können Navigationen für Websites erstellt werden, die
+              auch auf Touchscreens bedienbar sind.
+            </p>
+            <p class="answer correct">
+              ✔ Mit iFrames können Bereiche auf einer Webseite definiert werden, in
+              denen eine andere Webseite angezeigt wird.
+            </p>
+            <p class="answer incorrect">
+              ❌ iFrames sind JavaScript-Polyfills, um Videos plattformübergreifend
+              in HTML5-Dokumente einzubinden.
+            </p>
+            <p class="answer incorrect">
+              ❌ iFrames sind Frameworks zur Erstellung von Websites für das iPhone.
+            </p>
+            <p class="answer incorrect">
+              ❌ iFrames sind hochwertige Grafik-Vorlagen von Apple, um Fotos mit
+              verschiedenen Bilderrahmen zu versehen.
+            </p>
+          </div>
+    
+          <!-- Question 31 -->
+          <div class="question-block">
+            <p class="question">
+              31. Identifizieren Sie den korrekten HTML-Code, der eine Tabelle mit
+              zwei Spalten und zwei Reihen erzeugt.
+            </p>
+            <p class="answer correct">
+              ✔ &lt;table&gt; &lt;tr&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt;
+              &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt;
+              &lt;/tr&gt; &lt;/table&gt;
+            </p>
+            <p class="answer incorrect">
+              ❌ &lt;table&gt; &lt;tr&gt; &lt;td&gt;&lt;/td&gt;
+              &lt;td&gt;&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;&lt;/td&gt;
+              &lt;td&gt;&lt;/td&gt; &lt;/table&gt;
+            </p>
+            <p class="answer incorrect">
+              ❌ &lt;table&gt; &lt;tr&gt; &lt;td&gt;&lt;/td&gt;
+              &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt;
+              &lt;/tr&gt; &lt;/table&gt;
+            </p>
+            <p class="answer incorrect">
+              ❌ &lt;table&gt; &lt;tr&gt; &lt;td&gt;&lt;/td&gt; &lt;/tr&gt;
+              &lt;tr&gt; &lt;td&gt;&lt;/td&gt; &lt;/tr&gt; &lt;/table&gt;
+            </p>
+            <p class="answer incorrect">
+              ❌ &lt;table&gt; &lt;tr&gt; &lt;td&gt;&lt;/td&gt; &lt;/tr&gt;
+              &lt;tr&gt; &lt;td&gt;&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt;
+              &lt;td&gt;&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;&lt;/td&gt;
+              &lt;/tr&gt; &lt;/table&gt;
+            </p>
+          </div>
+          <!-- Question 32 -->
+          <div class="question-block">
+            <p class="question">
+              32. Wie können Sie die Nummerierung innerhalb einer geordneten Liste
+              ändern?
+            </p>
+            <p class="answer incorrect">❌ &lt;ol start="..."&gt;;</p>
+            <p class="answer incorrect">❌ &lt;ol start="..."&gt;</p>
+            <p class="answer correct">✔ &lt;li value="..."&gt;</p>
+            <p class="answer incorrect">❌ &lt;li value="..."&gt;</p>
+          </div>
+    
+          <!-- Question 33 -->
+          <div class="question-block">
+            <p class="question">
+              33. Wie können Sie in HTML Formularfelder beschriften?
+            </p>
+            <p class="answer incorrect">❌ Mit dem Attribut name.</p>
+            <p class="answer incorrect">❌ Mit dem Attribut id.</p>
+            <p class="answer incorrect">❌ Mit dem Tag caption.</p>
+            <p class="answer correct">✔ Mit dem Tag label.</p>
+            <p class="answer incorrect">❌ Mit dem Attribut description.</p>
+          </div>
+    
+          <!-- Question 34 -->
+          <div class="question-block">
+            <p class="question">
+              34. Welcher der folgenden Video-Codecs ist im MP4-Format erlaubt?
+            </p>
+            <p class="answer incorrect">❌ VP8</p>
+            <p class="answer correct">✔ H.264</p>
+            <p class="answer incorrect">❌ Theora</p>
+            <p class="answer incorrect">❌ VP9</p>
+          </div>
+    
+          <!-- Question 35 -->
+          <div class="question-block">
+            <p class="question">35. Was sind die Vorteile von Markdown?</p>
+            <p class="answer correct">
+              ✔ Alle Formatierungen sind im Text sichtbar, es gibt keine versteckten
+              Formatierungen.
+            </p>
+            <p class="answer incorrect">
+              ❌ Mit Markdown können auf einfache Weise Weblayouts erstellt und
+              gestaltet werden.
+            </p>
+            <p class="answer correct">
+              ✔ Markdown ist nicht an eine bestimmte Software oder ein proprietäres
+              Dateiformat gebunden.
+            </p>
+            <p class="answer correct">
+              ✔ Markdown ist nicht an bestimmte Layout- und Designvorgaben gebunden.
+            </p>
+          </div>
+    
+          <!-- Question 36 -->
+          <div class="question-block">
+            <p class="question">
+              36. Welche Zeichen müssen Sie nach dem Muster &amp;xyz; auch dann
+              maskieren, wenn Sie in Ihrem HTML-Dokument UTF-8 als Zeichenkodierung
+              verwenden?
+            </p>
+            <p class="answer correct">✔ &lt;</p>
+            <p class="answer incorrect">❌ &quot;</p>
+            <p class="answer incorrect">❌ →</p>
+            <p class="answer incorrect">❌ @</p>
+            <p class="answer correct">✔ &amp;</p>
+          </div>
+    
+          <!-- Question 37 -->
+          <div class="question-block">
+            <p class="question">
+              37. Wie sieht das universelle Grundgerüst einer HTML-Seite aus?
+            </p>
+            <p class="answer correct">
+              ✔ &lt;html&gt; &lt;head&gt; &lt;title&gt;Titel&lt;/title&gt;
+              &lt;/head&gt; &lt;body&gt; Inhalte &lt;/body&gt; &lt;/html&gt;
+            </p>
+            <p class="answer incorrect">
+              ❌ &lt;head&gt; &lt;title&gt;Titel&lt;/title&gt; &lt;/head&gt;
+              &lt;body&gt; Inhalte &lt;/body&gt;
+            </p>
+            <p class="answer incorrect">
+              ❌ &lt;html&gt; &lt;body&gt; &lt;title&gt;Titel&lt;/title&gt; Inhalte
+              &lt;/body&gt; &lt;/html&gt;
+            </p>
+            <p class="answer incorrect">
+              ❌ &lt;html&gt; &lt;header&gt; &lt;title&gt;Titel&lt;/title&gt;
+              &lt;/header&gt; &lt;body&gt; Inhalte &lt;/body&gt; &lt;/html&gt;
+            </p>
+          </div>
+    
+          <!-- Question 38 -->
+          <div class="question-block">
+            <p class="question">
+              38. Wie können Sie in HTML ein geschütztes Leerzeichen erzeugen?
+            </p>
+            <p class="answer incorrect">❌ &gt;</p>
+            <p class="answer incorrect">❌ &lt;</p>
+            <p class="answer incorrect">❌ &amp;</p>
+            <p class="answer correct">✔ &amp;nbsp;</p>
+          </div>
+    
+          <!-- Question 39 -->
+          <div class="question-block">
+            <p class="question">
+              39. Wie muss der korrekte Quellcode für folgende Referenzierung
+              aussehen?
+            </p>
+            <p class="answer incorrect">❌ &lt;img src="seiten/grafik.jpg" /&gt;</p>
+            <p class="answer incorrect">❌ &lt;img src="bilder/grafik.jpg" /&gt;</p>
+            <p class="answer incorrect">
+              ❌ &lt;img src="../seiten/grafik.jpg" /&gt;
+            </p>
+            <p class="answer correct">✔ &lt;img src="../bilder/grafik.jpg" /&gt;</p>
+          </div>
+    
+          <!-- Question 40 -->
+          <div class="question-block">
+            <p class="question">
+              40. Was versteht man unter einer Rendering Engine?
+            </p>
+            <p class="answer incorrect">
+              ❌ Die Softwarekomponente eines Webbrowsers, die dafür sorgt, dass
+              fehlerhafter HTML-, CSS- und JavaScript-Code nicht dargestellt bzw.
+              ausgeführt wird.
+            </p>
+            <p class="answer correct">
+              ✔ Die Softwarekomponente eines Webbrowsers, die verantwortlich ist für
+              die Interpretation und formatierte Ausgabe von HTML-, CSS- und
+              JavaScript-Code.
+            </p>
+            <p class="answer incorrect">
+              ❌ Ein Plug-in für Webbrowser von Adobe für die Darstellung von
+              3D-Modellen im Web.
+            </p>
+            <p class="answer incorrect">
+              ❌ Eine Software von Microsoft zur einfachen Erstellung von Websites.
+            </p>
+          </div>
+    
+          <!-- Question 41 -->
+          <div class="question-block">
+            <p class="question">41. Wie viele Überschriften gibt es in HTML?</p>
+            <p class="answer incorrect">
+              ❌ Es gibt insgesamt 4 Überschriften, von &lt;h1&gt;&lt;/h1&gt; bis
+              &lt;h4&gt;&lt;/h4&gt;.
+            </p>
+            <p class="answer incorrect">
+              ❌ Es gibt insgesamt 5 Überschriften, von &lt;h1&gt;&lt;/h1&gt; bis
+              &lt;h5&gt;&lt;/h5&gt;.
+            </p>
+            <p class="answer incorrect">
+              ❌ Es gibt insgesamt 7 Überschriften, von &lt;h1&gt;&lt;/h1&gt; bis
+              &lt;h7&gt;&lt;/h7&gt;.
+            </p>
+            <p class="answer correct">
+              ✔ Es gibt insgesamt 6 Überschriften, von &lt;h1&gt;&lt;/h1&gt; bis
+              &lt;h6&gt;&lt;/h6&gt;.
+            </p>
+          </div>
+    
+          <!-- Question 42 -->
+          <div class="question-block">
+            <p class="question">
+              42. Wo legen Sie fest, was mit den in ein HTML-Formular eingegebenen
+              Daten geschehen soll, nachdem der Anwender auf Absenden geklickt hat?
+            </p>
+            <p class="answer incorrect">
+              ❌ Mit einer URL im Attribut href im einleitenden form-Tag.
+            </p>
+            <p class="answer incorrect">
+              ❌ Mit einer URL im Attribut action im Absenden-Button.
+            </p>
+            <p class="answer incorrect">
+              ❌ Mit einer URL im Attribut href im Absenden-Button.
+            </p>
+            <p class="answer correct">
+              ✔ Mit einer URL im Attribut action im einleitenden form-Tag.
+            </p>
+          </div>
+    
+          <!-- Question 43 -->
+          <div class="question-block">
+            <p class="question">
+              43. Auf der obersten Ebene Ihres Webservers (im document root)
+              befindet sich die Startseite namens index.html. Daneben liegt ein
+              Ordner namens seiten. In diesem Ordner befindet sich ein Unterordner
+              namens kontakt. Darin liegt die Seite kontakt.html. Wie erzeugen Sie
+              von der Seite kontakt.html einen Hyperlink zurück zur Startseite?
+            </p>
+            <p class="answer incorrect">
+              ❌ &lt;a href="../../../index.html"&gt;Startseite&lt;/a&gt;
+            </p>
+            <p class="answer correct">
+              ✔ &lt;a href="../../index.html"&gt;Startseite&lt;/a&gt;
+            </p>
+            <p class="answer incorrect">
+              ❌ &lt;a href="../index.html"&gt;Startseite&lt;/a&gt;
+            </p>
+            <p class="answer incorrect">
+              ❌ &lt;a href="index.html"&gt;Startseite&lt;/a&gt;
+            </p>
+          </div>
+    
+          <!-- Question 44 -->
+          <div class="question-block">
+            <p class="question">44. Was bedeutet &lt;ol type="a"&gt;?</p>
+            <p class="answer incorrect">
+              ❌ Die Liste wird mit armenischer Zahlschrift durchgezählt (Ա, Բ, Գ,
+              …).
+            </p>
+            <p class="answer incorrect">
+              ❌ Die Liste wird mit griechischen Kleinbuchstaben durchgezählt
+              (alpha, beta, gamma, …).
+            </p>
+            <p class="answer correct">
+              ✔ Die Liste wird in lateinischen Kleinbuchstaben durchgezählt (a, b,
+              c, …).
+            </p>
+            <p class="answer incorrect">
+              ❌ Die enthaltenen Listenelemente werden als Hyperlinks dargestellt.
+            </p>
+          </div>
+    
+          <!-- Question 45 -->
+          <div class="question-block">
+            <p class="question">45. Was sind Auszeichnungssprachen?</p>
+            <p class="answer incorrect">
+              ❌ Auszeichnungssprachen sind von Adobe entwickelte Technologien, um
+              Websites auf unterschiedlichen Druckern auszugeben.
+            </p>
+            <p class="answer correct">
+              ✔ Auszeichnungssprachen werden zur Strukturierung von Dokumenten mit
+              Hilfe von Tags genutzt.
+            </p>
+            <p class="answer incorrect">
+              ❌ Auszeichnungssprachen werden beim Responsive Webdesign genutzt, um
+              das Layout von Websites an verschiedene Bildschirmgrößen anzupassen.
+            </p>
+            <p class="answer incorrect">
+              ❌ Auszeichnungssprachen werden in Online-Shops verwendet, um die
+              Preise in verschiedenen Währungen anzuzeigen.
+            </p>
+          </div>
+          <div class="question-block">
+            <p class="question">
+              1. Wie können Sie in folgendem Codebeispiel nur den zweiten Absatz auswählen?
+            </p>
+            <p class="answer incorrect">❌ p:nth-of-type(3)</p>
+            <p class="answer incorrect">❌ p:first-child</p>
+            <p class="answer incorrect">❌ p:nth-child(2)</p>
+            <p class="answer correct">✔ p:nth-child(3)</p>
+            <p class="answer correct">✔ p:nth-of-type(2)</p>
+        </div>
+        <div class="question-block">
+          <p class="question">
+            2. Wie können Sie die Textauswahlfarbe für das gesamte Dokument auf rot stellen?
+          </p>
+          <p class="answer incorrect">❌ .selection { color: #f00; }</p>
+          <p class="answer incorrect">❌ body { selection-color: #f00; }</p>
+          <p class="answer correct">✔ ::selection { background-color: #f00; }</p>
+          <p class="answer incorrect">❌ p::selection { background-color: #f00; }</p>
+      </div>
+      <div class="question-block">
+        <p class="question">
+          3. Wie setzen Sie die Grafik smiley.gif aus dem Ordner images automatisch vor jede h1-Überschrift?
+        </p>
+        <p class="answer incorrect">❌ h1 { before:: content(images/smiley.gif); }</p>
+        <p class="answer correct">✔ h1::before { content: url(images/smiley.gif); }</p>
+        <p class="answer incorrect">❌ h1::before { url: content(images/smiley.gif); }</p>
+        <p class="answer incorrect">❌ h1 { before: url(images/smiley.gif); }</p>
+    </div>
+    <div class="question-block">
+      <p class="question">
+        4. Wie können Sie in folgendem Codebeispiel nur den zweiten Absatz auswählen?
+      </p>
+      <p class="answer incorrect">❌ p:first-child</p>
+      <p class="answer correct">✔ p:nth-of-type(2)</p>
+      <p class="answer incorrect">❌ p:nth-of-type(3)</p>
+      <p class="answer incorrect">❌ p:nth-child(2)</p>
+      <p class="answer correct">✔ p:nth-child(3)</p>
+  </div>
+  <div class="question-block">
+    <p class="question">
+      5. Wie setzen Sie die Grafik smiley.gif aus dem Ordner images automatisch vor jede h1-Überschrift?
+    </p>
+    <p class="answer incorrect">❌ h1 { before: url(images/smiley.gif); }</p>
+    <p class="answer incorrect">❌ h1::before { url: content(images/smiley.gif); }</p>
+    <p class="answer incorrect">❌ h1 { before:: content(images/smiley.gif); }</p>
+    <p class="answer correct">✔ h1::before { content: url(images/smiley.gif); }</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    6. Wie können Sie die Textauswahlfarbe für das gesamte Dokument auf rot stellen?
+  </p>
+  <p class="answer incorrect">❌ .selection { color: #f00; }</p>
+  <p class="answer incorrect">❌ p::selection { background-color: #f00; }</p>
+  <p class="answer correct">✔ ::selection { background-color: #f00; }</p>
+  <p class="answer incorrect">❌ body { selection-color: #f00; }</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    7. Welche der nachfolgenden Elemente sind Parent-Elemente von &lt;em&gt;?
+  </p>
+  <p class="answer incorrect">❌ &lt;p&gt; und &lt;div&gt; sind Elternelemente von &lt;em&gt;.</p>
+  <p class="answer incorrect">❌ &lt;a&gt; und &lt;p&gt; sind Elternelemente von &lt;em&gt;.</p>
+  <p class="answer incorrect">❌ &lt;a&gt;, &lt;p&gt; und &lt;div&gt; sind Elternelemente von &lt;em&gt;.</p>
+  <p class="answer correct">✔ Nur &lt;a&gt; ist ein Elternelement von &lt;em&gt;.</p>
+  <p class="answer incorrect">❌ Nur &lt;div&gt; ist ein Elternelement von &lt;em&gt;.</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    8. Wie ändern Sie die Schriftgröße eines einzelnen &lt;p&gt;-Tags mit Inline-CSS?
+  </p>
+  <p class="answer incorrect">❌ &lt;p font-size="20px"&gt;...&lt;/p&gt;</p>
+  <p class="answer incorrect">❌ &lt;p css="font-size: 20px;"&gt;...&lt;/p&gt;</p>
+  <p class="answer incorrect">❌ &lt;p font-size: 20px&gt;...&lt;/p&gt;</p>
+  <p class="answer correct">✔ &lt;p style="font-size: 20px;"&gt;...&lt;/p&gt;</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    9. Wie können Sie die Textauswahlfarbe für das gesamte Dokument auf rot stellen?
+  </p>
+  <p class="answer incorrect">❌ body { selection-color: #f00; }</p>
+  <p class="answer incorrect">❌ .selection { color: #f00; }</p>
+  <p class="answer correct">✔ ::selection { background-color: #f00; }</p>
+  <p class="answer incorrect">❌ p::selection { background-color: #f00; }</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    10. Welche Aussagen treffen auf die Darstellung des untenstehenden HTML-Beispieltextes zu, der mit dem nachfolgenden CSS formatiert wurde?
+  </p>
+  <p class="answer correct">✔ Der Text ist unterstrichen.</p>
+  <p class="answer correct">✔ Die Textfarbe ist rot.</p>
+  <p class="answer correct">✔ Der Text wird fett dargestellt.</p>
+  <p class="answer incorrect">❌ Der Text ist grün.</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    11. Welche HTML-Elemente im nachfolgenden Codebeispiel erhalten durch folgende CSS-Angabe eine rote Textfarbe?
+  </p>
+  <p class="answer incorrect">❌ Der dritte Absatz und das &lt;div&gt;.</p>
+  <p class="answer correct">✔ Der zweite, dritte und fünfte Absatz.</p>
+  <p class="answer incorrect">❌ Alle Absätze.</p>
+  <p class="answer incorrect">❌ Der erste, zweite und vierte Absatz.</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    12. Wie erzeugen Sie einen vertikalen Verlauf von oben (gelb) nach unten (orange)?
+  </p>
+  <p class="answer correct">✔ background-image: linear-gradient(yellow, orange);</p>
+  <p class="answer correct">✔ background-image: linear-gradient(180deg, yellow, orange);</p>
+  <p class="answer incorrect">❌ background-image: linear-gradient(0deg, yellow, orange);</p>
+  <p class="answer incorrect">❌ background-image: linear-gradient(90deg, yellow, orange);</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    13. Wie setzen Sie die Schriftgröße eines Absatzes auf 1.6rem?
+  </p>
+  <p class="answer incorrect">❌ p { font-size = 1.6 rem; }</p>
+  <p class="answer correct">✔ p { font-size: 1.6rem; }</p>
+  <p class="answer incorrect">❌ p { font-size: 1,6rem; }</p>
+  <p class="answer incorrect">❌ &lt;p&gt; { font-size: 1.6rem; }</p>
+  <p class="answer incorrect">❌ &lt;p&gt; { font-size: "1.6rem"; }</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    14. Wie definieren Sie blaue Textfarbe für einen Absatz?
+  </p>
+  <p class="answer correct">✔ p { color: #0000ff; }</p>
+  <p class="answer correct">✔ p { color: blue; }</p>
+  <p class="answer correct">✔ p { color: rgb(0, 0, 255); }</p>
+  <p class="answer correct">✔ p { color: #00f; }</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    15. Wie erzeugen Sie eine schwarze Kontur um einen Absatz?
+  </p>
+  <p class="answer correct">✔ p { border-width: 1px; border-style: solid; border-color: black; }</p>
+  <p class="answer correct">✔ p { border: 1px dotted black; }</p>
+  <p class="answer correct">✔ p { border: 1px solid black; }</p>
+  <p class="answer incorrect">❌ p { border-style: 1px solid black; }</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    16. Welche der folgenden dezimalen CSS-Farbwerte entsprechen der Farbe #f00?
+  </p>
+  <p class="answer correct">✔ rgb(255, 0, 0)</p>
+  <p class="answer incorrect">❌ rgb(0, 255, 255)</p>
+  <p class="answer incorrect">❌ rgba(0, 255, 255, 255)</p>
+  <p class="answer correct">✔ rgba(255, 0, 0, 1)</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    17. Was bewirkt die CSS-Eigenschaft position: absolute?
+  </p>
+  <p class="answer incorrect">❌ Die absolute Positionierung erlaubt das Verschieben von Elementen mit den Eigenschaften left, top, bottom und right, ausgehend von ihrer ursprünglichen Position. Benachbarte Elemente werden dabei weiterhin verdrängt.</p>
+  <p class="answer correct">✔ Die absolute Positionierung nimmt ein Element aus dem normalen Objektfluss heraus und setzt es auf eine neue Ebene, sodass es benachbarte Elemente nicht mehr verdrängen kann. Das Element scrollt jedoch weiterhin mit.</p>
+  <p class="answer incorrect">❌ Die absolute Positionierung ist die Standardeinstellung. Auf diese Weise positionierte Elemente liegen alle auf derselben Ebene und verdrängen sich gegenseitig.</p>
+  <p class="answer incorrect">❌ Die absolute Positionierung nimmt ein Element aus dem normalen Objektfluss heraus und setzt es auf eine neue Ebene, sodass es beim Scrollen des Viewports stehenbleibt.</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    18. Wie binden Sie CSS-Vorgaben in Ihr Dokument ein, die nur für die Bildschirmdarstellung gelten sollen?
+  </p>
+  <p class="answer incorrect">❌ &lt;style media="computer"&gt;&lt;/style&gt;</p>
+  <p class="answer incorrect">❌ &lt;style media="monitor"&gt;&lt;/style&gt;</p>
+  <p class="answer incorrect">❌ &lt;style media="device"&gt;&lt;/style&gt;</p>
+  <p class="answer correct">✔ &lt;style media="screen"&gt;&lt;/style&gt;</p>
+  <p class="answer incorrect">❌ &lt;style media="display"&gt;&lt;/style&gt;</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    19. Wie können Sie in folgendem Codebeispiel nur den zweiten Absatz auswählen?
+  </p>
+  <p class="answer incorrect">❌ p:first-child</p>
+  <p class="answer incorrect">❌ p:nth-of-type(3)</p>
+  <p class="answer correct">✔ p:nth-child(3)</p>
+  <p class="answer correct">✔ p:nth-of-type(2)</p>
+  <p class="answer incorrect">❌ p:nth-child(2)</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    20. Welche CSS-Eigenschaft steuert den Zeilenabstand?
+  </p>
+  <p class="answer incorrect">❌ margin</p>
+  <p class="answer incorrect">❌ text-distance</p>
+  <p class="answer correct">✔ line-height</p>
+  <p class="answer incorrect">❌ leading</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    21. Wie erzeugen Sie mit CSS Scrollbalken für ein Element?
+  </p>
+  <p class="answer incorrect">❌ overflow: visible</p>
+  <p class="answer correct">✔ overflow: scroll</p>
+  <p class="answer correct">✔ overflow: auto</p>
+  <p class="answer incorrect">❌ overflow: hidden</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    22. Welche Zustände (Pseudoklassen) gibt es für Hyperlinks in CSS?
+  </p>
+  <p class="answer incorrect">❌ :current</p>
+  <p class="answer correct">✔ :active</p>
+  <p class="answer correct">✔ :focus</p>
+  <p class="answer correct">✔ :visited</p>
+  <p class="answer correct">✔ :hover</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    23. Welcher der folgenden Hex-Werte erzeugt die Farbe Gelb?
+  </p>
+  <p class="answer incorrect">❌ #f00</p>
+  <p class="answer incorrect">❌ #f0f</p>
+  <p class="answer incorrect">❌ #0ff</p>
+  <p class="answer correct">✔ #ff0</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    24. Wie können Sie die Listenpunkte einer &lt;ul&gt; durch einen Smiley ersetzen?
+  </p>
+  <p class="answer incorrect">❌ ul { list-style-type: url(images/smiley.png); }</p>
+  <p class="answer correct">✔ ul li::marker { content: "\1F642"; }</p>
+  <p class="answer incorrect">❌ ul { list-style-type: "\1F642"; }</p>
+  <p class="answer correct">✔ ul li::marker { content: url(images/smiley.png); }</p>
+  <p class="answer correct">✔ ul { list-style-image: url(images/smiley.png); }</p>
+  <p class="answer incorrect">❌ ul.li::marker { content: "\1F642"; }</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    25. Wie können Sie das folgende HTML-Element mit CSS auswählen?
+  </p>
+  <p class="answer incorrect">❌ h3 .box_heading { ... }</p>
+  <p class="answer correct">✔ h3.box_heading { ... }</p>
+  <p class="answer incorrect">❌ h3 box_heading { ... }</p>
+  <p class="answer incorrect">❌ box_heading { ... }</p>
+  <p class="answer correct">✔ .box_heading { ... }</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    26. Wie setzen Sie die Grafik smiley.gif aus dem Ordner images automatisch vor jede h1-Überschrift?
+  </p>
+  <p class="answer correct">✔ h1::before { content: url(images/smiley.gif); }</p>
+  <p class="answer incorrect">❌ h1 { before:: content(images/smiley.gif); }</p>
+  <p class="answer incorrect">❌ h1 { before: url(images/smiley.gif); }</p>
+  <p class="answer incorrect">❌ h1::before { url: content(images/smiley.gif); }</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    27. Was bewirkt die CSS-Eigenschaft position: fixed?
+  </p>
+  <p class="answer incorrect">❌ Die fixierte Positionierung ist die Standardeinstellung. Auf diese Weise positionierte Elemente liegen alle auf derselben Ebene und verdrängen sich gegenseitig.</p>
+  <p class="answer correct">✔ Die fixierte Positionierung nimmt ein Element aus dem normalen Objektfluss heraus und setzt es auf eine neue Ebene, sodass es beim Scrollen des Viewports stehenbleibt.</p>
+  <p class="answer incorrect">❌ Die fixierte Positionierung nimmt ein Element aus dem normalen Objektfluss heraus und setzt es auf eine neue Ebene, sodass es benachbarte Elemente nicht mehr verdrängen kann. Das Element scrollt jedoch weiterhin mit.</p>
+  <p class="answer incorrect">❌ Die fixierte Positionierung erlaubt das Verschieben von Elementen mit den Eigenschaften left, top, bottom und right, ausgehend von ihrer ursprünglichen Position. Benachbarte Elemente werden dabei weiterhin verdrängt.</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    28. Welche Schriftformate werden von allen aktuellen Browsern (Edge, Firefox, Safari, Chrome, Opera) voll unterstützt?
+  </p>
+  <p class="answer correct">✔ WOFF</p>
+  <p class="answer incorrect">❌ EOT</p>
+  <p class="answer incorrect">❌ PostScript</p>
+  <p class="answer incorrect">❌ SVG</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    29. Wie weisen Sie einem Absatz die Schriftart Courier New zu?
+  </p>
+  <p class="answer incorrect">❌ p { font-family: CourierNew; }</p>
+  <p class="answer incorrect">❌ p { font-family: Courier-New; }</p>
+  <p class="answer correct">✔ p { font-family: "Courier New"; }</p>
+  <p class="answer correct">✔ p { font-family: 'Courier New'; }</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    30. Welche Beschleunigungsarten (Timing Functions) können Sie einer transition zuweisen?
+  </p>
+  <p class="answer correct">✔ ease-out</p>
+  <p class="answer correct">✔ ease</p>
+  <p class="answer correct">✔ ease-in</p>
+  <p class="answer correct">✔ ease-in-out</p>
+  <p class="answer incorrect">❌ ease-out-in</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    31. Was bewirkt die CSS-Eigenschaft transition?
+  </p>
+  <p class="answer incorrect">❌ Sie bestimmt die Position eines Elements auf der Seite.</p>
+  <p class="answer incorrect">❌ Sie ermöglicht es, ein Element zu drehen oder zu skalieren.</p>
+  <p class="answer correct">✔ Sie erzeugt weiche Übergänge zwischen zwei Zuständen eines Elements.</p>
+  <p class="answer incorrect">❌ Sie steuert die Deckkraft eines Elements.</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    32. Welche Elemente im nachfolgenden Codebeispiel sind Child-Elemente von &lt;div&gt;?
+  </p>
+  <p class="answer incorrect">❌ Keines der Elemente ist ein Kindelement von &lt;div&gt;.</p>
+  <p class="answer incorrect">❌ Nur der Hyperlink &lt;a&gt; ist ein Kindelement von &lt;div&gt;.</p>
+  <p class="answer correct">✔ Nur der Absatz &lt;p&gt; ist ein Kindelement von &lt;div&gt;.</p>
+  <p class="answer incorrect">❌ Sowohl &lt;p&gt; als auch &lt;a&gt; sind Kindelemente von &lt;div&gt;.</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    33. Wie können Sie mehreren Selektoren gleichzeitig Eigenschaften zuweisen?
+  </p>
+  <p class="answer incorrect">❌ p; h1; h2 {...}</p>
+  <p class="answer correct">✔ p, h1, h2 {...}</p>
+  <p class="answer incorrect">❌ p + h1 + h2 {...}</p>
+  <p class="answer incorrect">❌ p h1 h2 {...}</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    34. Sie möchten allen Absätzen &lt;p&gt; in der folgenden Tabelle eine blaue Textfarbe zuweisen. Welche/r Selektor/en ist/sind korrekt?
+  </p>
+  <p class="answer correct">✔ td p { color: blue; }</p>
+  <p class="answer correct">✔ td &gt; p { color: blue; }</p>
+  <p class="answer correct">✔ table p { color: blue; }</p>
+  <p class="answer incorrect">❌ table &gt; p { color: blue; }</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    35. Was bedeuten Präfixe wie -webkit und -moz in CSS-Eigenschaften und -Werten?
+  </p>
+  <p class="answer incorrect">❌ Solche Eigenschaften und Werte sind offizielle W3C-Empfehlungen für bestimmte Hersteller.</p>
+  <p class="answer incorrect">❌ Solche Eigenschaften und Werte werden nur von Touchscreen-Geräten des jeweiligen Herstellers erkannt.</p>
+  <p class="answer incorrect">❌ Solche Eigenschaften und Werte werden zwingend benötigt, um Websites auf Mobilgeräten anzuzeigen.</p>
+  <p class="answer correct">✔ Solche Eigenschaften und Werte werden nur von Browsern erkannt, die die jeweilige Rendering-Engine verwenden.</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    36. Wie weisen Sie dem body eines HTML-Dokuments das Hintergrundbild bg.gif zu, sodass es nicht kachelt und beim Scrollen stehenbleibt?
+  </p>
+  <p class="answer incorrect">❌ body { background-image: url(bg.gif) no-repeat fixed; }</p>
+  <p class="answer correct">✔ body { background-image: url(bg.gif); background-repeat: no-repeat; background-attachment: fixed; }</p>
+  <p class="answer correct">✔ body { background: url(bg.gif) no-repeat fixed; }</p>
+  <p class="answer incorrect">❌ body { background: bg.png no-repeat fixed; }</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    37. Welche Schriftgröße haben die Texte in den DIVs im folgenden Beispiel, wenn man als Grundschriftgröße 16px ansetzt?
+  </p>
+  <p class="answer incorrect">❌ Beide Texte sind 40px groß.</p>
+  <p class="answer incorrect">❌ Beide Texte sind 100px groß.</p>
+  <p class="answer correct">✔ Text 1 ist 40px groß, Text 2 100px.</p>
+  <p class="answer incorrect">❌ Text 1 ist 16px groß, Text 2 40px.</p>
+  <p class="answer incorrect">❌ Text 1 ist 100px groß, Text 2 250px.</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    38. Wie können Sie das Hintergrundbild olivenbaeume.jpg so einpassen, dass es das Element auf jeden Fall vollständig ausfüllt, und wenn nötig der linke und untere Bereich abgeschnitten wird?
+  </p>
+  <p class="answer incorrect">❌ div { background: url(olivenbaeume.jpg) no-repeat left bottom; background-size: contain; }</p>
+  <p class="answer incorrect">❌ div { background: url(olivenbaeume.jpg) no-repeat right top; background-size: contain; }</p>
+  <p class="answer correct">✔ div { background: url(olivenbaeume.jpg) no-repeat right top; background-size: cover; }</p>
+  <p class="answer incorrect">❌ div { background: url(olivenbaeume.jpg) no-repeat left bottom; background-size: cover; }</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    39. Identifizieren Sie Serif- und Sans-Serif-Schriften:
+  </p>
+  <p class="answer correct">✔ Serif-Schriften sind Schriften mit kleinen Linien oder Verzierungen am Ende der Buchstabenstriche, wie Times New Roman und Georgia.</p>
+  <p class="answer correct">✔ Sans-Serif-Schriften sind Schriften ohne diese Verzierungen, wie Arial und Helvetica.</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    40. Was ist die dezimale Entsprechung für den Hex-Wert ff?
+  </p>
+  <p class="answer incorrect">❌ 256</p>
+  <p class="answer incorrect">❌ 0</p>
+  <p class="answer incorrect">❌ 2</p>
+  <p class="answer correct">✔ 255</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    41. Wie binden Sie die Schriftdatei scriptum.woff in Ihre Website ein?
+  </p>
+  <p class="answer incorrect">❌ @font-face { font-family: url(scriptum.woff); format: "woff"; }</p>
+  <p class="answer incorrect">❌ @font-family { font-face: url(scriptum.woff); format: "woff"; }</p>
+  <p class="answer correct">✔ @font-face { font-family: MyFont; src: url(scriptum.woff) format("woff"); }</p>
+  <p class="answer correct">✔ @font-face { font-family: Scriptum; src: url(scriptum.woff) format("woff"); }</p>
+  <p class="answer incorrect">❌ @font-family { font-face: MyFont; src: url(scriptum.woff) format("woff"); }</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    42. Mit welcher CSS-Eigenschaft bestimmen Sie, dass ein Element von allen nachfolgenden Elementen links umflossen wird?
+  </p>
+  <p class="answer incorrect">❌ selektor { float: left; }</p>
+  <p class="answer correct">✔ selektor { float: right; }</p>
+  <p class="answer incorrect">❌ selektor { wrap: left; }</p>
+  <p class="answer incorrect">❌ selektor { wrap: right; }</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    43. Welche der folgenden Maßeinheiten stehen in CSS zur Verfügung?
+  </p>
+  <p class="answer correct">✔ px</p>
+  <p class="answer correct">✔ deg</p>
+  <p class="answer incorrect">❌ m</p>
+  <p class="answer correct">✔ rem</p>
+  <p class="answer correct">✔ vw</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    44. Welche der folgenden CSS-Selektoren wählen ein Element mit der ID my-id aus?
+  </p>
+  <p class="answer incorrect">❌ .my-id</p>
+  <p class="answer incorrect">❌ div.my-id</p>
+  <p class="answer correct">✔ div#my-id</p>
+  <p class="answer correct">✔ #my-id</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    45. Mit welcher Eigenschaft erzeugen Sie einen Innenabstand zum Inhalt eines Elements?
+  </p>
+  <p class="answer incorrect">❌ spacing</p>
+  <p class="answer correct">✔ padding</p>
+  <p class="answer incorrect">❌ indent</p>
+  <p class="answer incorrect">❌ margin</p>
+  <p class="answer incorrect">❌ offset</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    46. Wie können Sie in HTML einem Absatz die Klassen highlighted und centered gleichzeitig zuweisen?
+  </p>
+  <p class="answer incorrect">❌ &lt;p class="highlighted" class="centered"&gt;Text&lt;/p&gt;</p>
+  <p class="answer correct">✔ &lt;p class="highlighted centered"&gt;Text&lt;/p&gt;</p>
+  <p class="answer incorrect">❌ &lt;p class="highlighted &amp; centered"&gt;Text&lt;/p&gt;</p>
+  <p class="answer incorrect">❌ &lt;p class="highlighted + centered"&gt;Text&lt;/p&gt;</p>
+  <p class="answer incorrect">❌ &lt;p class="highlighted, centered"&gt;Text&lt;/p&gt;</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    47. Was bewirkt die CSS-Eigenschaft position: relative?
+  </p>
+  <p class="answer correct">✔ Die relative Positionierung erlaubt das Verschieben von Elementen mit den Eigenschaften left, top, bottom und right, ausgehend von ihrer ursprünglichen Position. Benachbarte Elemente werden dabei weiterhin verdrängt.</p>
+  <p class="answer incorrect">❌ Die relative Positionierung nimmt ein Element aus dem normalen Objektfluss heraus und setzt es auf eine neue Ebene, sodass es benachbarte Elemente nicht mehr verdrängen kann. Das Element scrollt jedoch weiterhin mit.</p>
+  <p class="answer incorrect">❌ Die relative Positionierung ist die Standardeinstellung. Auf diese Weise positionierte Elemente liegen alle auf derselben Ebene und verdrängen sich gegenseitig.</p>
+  <p class="answer incorrect">❌ Die relative Positionierung nimmt ein Element aus dem normalen Objektfluss heraus und setzt es auf eine neue Ebene, sodass es beim Scrollen des Viewports stehenbleibt.</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    48. Wie bestimmen Sie, dass eine Tabellenzeile beim Überfahren mit der Maus einen grauen Hintergrund bekommt?
+  </p>
+  <p class="answer incorrect">❌ th:hover { background-color: gray; }</p>
+  <p class="answer incorrect">❌ td:hover { background-color: gray; }</p>
+  <p class="answer incorrect">❌ table:hover { background-color: gray; }</p>
+  <p class="answer correct">✔ tr:hover { background-color: gray; }</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    49. Mit welchem Farbsystem arbeitet jeder Computermonitor?
+  </p>
+  <p class="answer correct">✔ RGB</p>
+  <p class="answer incorrect">❌ Lab</p>
+  <p class="answer incorrect">❌ HSB</p>
+  <p class="answer incorrect">❌ CMYK</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    50. Wie werden interne Stylesheets in den Dateikopf von HTML-Seiten eingebettet?
+  </p>
+  <p class="answer incorrect">❌ &lt;script media="screen"&gt; /* CSS-Vorgaben */ &lt;/script&gt;</p>
+  <p class="answer incorrect">❌ &lt;css media="screen"&gt; /* CSS-Vorgaben */ &lt;/css&gt;</p>
+  <p class="answer correct">✔ &lt;style media="screen"&gt; /* CSS-Vorgaben */ &lt;/style&gt;</p>
+  <p class="answer incorrect">❌ &lt;link media="screen"&gt; /* CSS-Vorgaben */ &lt;/link&gt;</p>
+</div>
+<div class="question-block">
+  <p class="question">
+    51. Wozu dienen Feature Queries mit @supports?
+  </p>
+  <p class="answer correct">✔ Mit Feature Queries kann überprüft werden, ob ein Browser eine bestimmte CSS-Eigenschaft unterstützt.</p>
+  <p class="answer correct">✔ Mit Feature Queries kann überprüft werden, ob ein Browser einen bestimmten Wert einer CSS-Eigenschaft unterstützt.</p>
+  <p class="answer incorrect">❌ Mit Feature Queries kann überprüft werden, ob ein Browser ein bestimmtes HTML-Tag unterstützt.</p>
+  <p class="answer incorrect">❌ Mit Feature Queries kann überprüft werden, ob ein Browser Videos abspielen kann.</p>
+  <p class="answer incorrect">❌ Mit Feature Queries kann überprüft werden, ob einem Element in HTML eine bestimmte CSS-Klasse zugewiesen wurde.</p>
+</div>
+<div class="question-block">
+  <p class="question">Mit welcher CSS-Eigenschaft definieren Sie eine mehrzeilige Flexbox?</p>
+  <p class="answer incorrect">❌ flex-wrap: flex-break</p>
+  <p class="answer correct">✔ flex-wrap: wrap</p>
+  <p class="answer correct">✔ flex-wrap: wrap-reverse</p>
+  <p class="answer incorrect">❌ flex-wrap: rows</p>
+</div>
+<div class="question-block">
+  <p class="question">Wie legen Sie mit CSS den Transformationspunkt eines Elements auf die linke obere Ecke fest?</p>
+  <p class="answer correct">✔ transform-origin: 0% 0%;</p>
+  <p class="answer correct">✔ transform-origin: left top;</p>
+  <p class="answer correct">✔ transform-origin: left 0%;</p>
+  <p class="answer correct">✔ transform-origin: 0% top;</p>
+</div>
+<div class="question-block">
+  <p class="question">Mit welcher CSS-Deklaration können Sie ein HTML-Element um 10px weichzeichnen?</p>
+  <p class="answer incorrect">❌ blur-filter: 10px;</p>
+  <p class="answer incorrect">❌ blur: 10px;</p>
+  <p class="answer correct">✔ filter: blur(10px);</p>
+  <p class="answer incorrect">❌ filter: blur 10px;</p>
+</div>
+<div class="question-block">
+  <p class="question">Welche Voraussetzung benötigt eine Pixelgrafik, die Sie als Bildmaske verwenden möchten?</p>
+  <p class="answer incorrect">❌ Sie muss weiße Bereiche enthalten.</p>
+  <p class="answer correct">✔ Sie muss transparente Bereiche enthalten.</p>
+  <p class="answer incorrect">❌ Sie muss schwarze Bereiche enthalten.</p>
+  <p class="answer incorrect">❌ Sie muss im GIF-Format vorliegen.</p>
+</div>
+<div class="question-block">
+  <p class="question">Was bewirkt die CSS-Eigenschaft perspective?</p>
+  <p class="answer correct">✔ Sie bestimmt die Entfernung des Elements vom Betrachter.</p>
+  <p class="answer incorrect">❌ Sie ermöglicht es, dass man durch ein Element hindurch auf die dahinterliegenden Elemente sehen kann.</p>
+  <p class="answer incorrect">❌ Sie bestimmt den Blickwinkel auf ein Element mit Werten wie birds-eye-view, worms-eye-view, top-shot oder dutch-angle.</p>
+  <p class="answer incorrect">❌ Sie macht die Rückseite eines 3D-Elements unsichtbar.</p>
+</div>
+<div class="question-block">
+  <p class="question">Wie definieren Sie in CSS eine Rotation um -75 Grad um die z-Achse?</p>
+  <p class="answer incorrect">❌ transform: rotation(-75deg);</p>
+  <p class="answer incorrect">❌ transform: z-rotate(-75°);</p>
+  <p class="answer correct">✔ transform: rotate(-75deg);</p>
+  <p class="answer correct">✔ transform: rotateZ(-75deg);</p>
+  <p class="answer incorrect">❌ transform: rotationZ(-75deg);</p>
+</div>
+<div class="question-block">
+  <p class="question">Welche der folgenden Einzel-Eigenschaften sind in der Sammel-Eigenschaft animation enthalten?</p>
+  <p class="answer incorrect">❌ animation-steps</p>
+  <p class="answer correct">✔ animation-duration</p>
+  <p class="answer correct">✔ animation-timing-function</p>
+  <p class="answer correct">✔ animation-direction</p>
+  <p class="answer correct">✔ animation-iteration-count</p>
+</div>
+<div class="question-block">
+  <p class="question">Wie legen Sie fest, dass eine Animation rückwärts abgespielt werden soll?</p>
+  <p class="answer incorrect">❌ animation-direction: to-left;</p>
+  <p class="answer correct">✔ animation-direction: reverse;</p>
+  <p class="answer incorrect">❌ animation-direction: backwards;</p>
+  <p class="answer incorrect">❌ animation-direction: back;</p>
+  <p class="answer incorrect">❌ animation-direction: opposite;</p>
+</div>
+<div class="question-block">
+  <p class="question">Wie definieren Sie in CSS die Keyframes für eine Animation, bei der ein Element nach und nach eingeblendet werden soll?</p>
+  <p class="answer correct">✔ @keyframes fadein {
+     from {
+         opacity: 0;
+     }
+     
+     to {
+         opacity: 1;
+     }
+  }</p>
+  <p class="answer correct">✔ @keyframes fadein {
+     0% {
+         opacity: 0;
+     }
+     
+     100% {
+         opacity: 1;
+     }
+  }</p>
+  <p class="answer incorrect">❌ @keyframes fadein {
+     from {
+         visibility: hidden;
+     }
+     
+     to {
+         visibility: visible;
+     }
+  }</p>
+  <p class="answer incorrect">❌ @keyframes fadein {
+     0% {
+         display: none;
+     }
+     
+     100% {
+         display: block;
+     }
+  }</p>
+</div>
+<div class="question-block">
+  <p class="question">Was ist in CSS ein Keyframe?</p>
+  <p class="answer correct">✔ Ein manuell festgelegter Zeitpunkt im Verlauf einer Animation, an dem Änderungen definiert werden.</p>
+  <p class="answer incorrect">❌ Ein Zeitpunkt in einer Animation, in dem JavaScript-Code platziert werden kann.</p>
+  <p class="answer incorrect">❌ Ein Einzelbild innerhalb einer Animation, die nur aus Pixelbildern besteht.</p>
+  <p class="answer incorrect">❌ Ein automatisch berechneter Zwischenschritt innerhalb einer Animation.</p>
+  <p class="answer incorrect">❌ Ein Keyframe erlaubt es, Bildteile transparent zu machen.</p>
+</div>
+<div class="question-block">
+  <p class="question">Was ist im folgenden Ausdruck falsch?</p>
+  <p class="answer correct">✔ Bei dem Wert 500 fehlt die Maßeinheit.</p>
+  <p class="answer correct">✔ Zwischen calc und der runden Klammer darf kein Leerzeichen stehen.</p>
+  <p class="answer incorrect">❌ Es muss mindestens ein Pixelwert enthalten sein.</p>
+  <p class="answer correct">✔ Vor und nach dem Minuszeichen müssen Leerzeichen stehen.</p>
+</div>
+<div class="question-block">
+  <p class="question">Welche der folgenden Ausdrücke für calc() sind korrekt?</p>
+  <p class="answer correct">✔ calc(2em + 15px + 75%)</p>
+  <p class="answer correct">✔ calc(var(--default-width) / 2)</p>
+  <p class="answer incorrect">❌ calc(30px-90%)</p>
+  <p class="answer incorrect">❌ calc (30pt + 15px)</p>
+  <p class="answer correct">✔ calc(100vh / 2 - 20rem / 2)</p>
+</div>
+<div class="question-block">
+  <p class="question">Was sind die Besonderheiten von Viewports mobiler Browser auf Touchscreens?</p>
+  <p class="answer incorrect">❌ Übergroße Webseiten werden standardmäßig abgeschnitten. Die Besucher/innen haben keine Möglichkeit, die ausgeblendeten Inhalte zu sehen.</p>
+  <p class="answer correct">✔ Übergroße Webseiten werden standardmäßig verkleinert, sodass möglichst viel davon zu sehen ist.</p>
+  <p class="answer incorrect">❌ Übergroße Webseiten werden auf mobilen Browsern nicht angezeigt.</p>
+  <p class="answer incorrect">❌ Auf mobilen Browsern kann man Webseiten nicht scrollen.</p>
+</div>
+<div class="question-block">
+  <p class="question">Welche der folgenden Angaben sind gültige CSS-Media-Queries?</p>
+  <p class="answer correct">✔ @media only screen and (min-width: 1024px)</p>
+  <p class="answer correct">✔ @media (min-width: 1024px)</p>
+  <p class="answer correct">✔ @media screen and (min-device-width: 1024px)</p>
+  <p class="answer incorrect">❌ @media screen and (min-viewport-width: 1024px)</p>
+</div>
+<div class="question-block">
+  <p class="question">Wie binden Sie die CSS-Datei styles-mq.css, die Media Queries enthält, in Ihr HTML-Dokument ein?</p>
+  <p class="answer incorrect">❌ <code>&lt;link href="styles-mq.css" rel="viewport" media="touch" /&gt;</code></p>
+  <p class="answer correct">✔ <code>&lt;link href="styles-mq.css" rel="stylesheet" media="screen" /&gt;</code></p>
+  <p class="answer incorrect">❌ <code>&lt;link href="styles-mq.css" rel="stylesheet" media="viewport" /&gt;</code></p>
+  <p class="answer incorrect">❌ <code>&lt;link href="styles-mq.css" rel="viewport" media="screen" /&gt;</code></p>
+  <p class="answer incorrect">❌ <code>&lt;link href="styles-mq.css" rel="media-queries" media="touch" /&gt;</code></p>
+</div>
+<div class="question-block">
+  <p class="question">Wie können Sie mit CSS das nachfolgend abgebildete Raster erzeugen, in dem die mittlere Spalte doppelt so breit ist wie die äußeren? (Konturen nur zur Visualisierung.)</p>
+  
+  <p class="answer incorrect">❌ <code>.grid-container { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto auto; }</code></p>
+  
+  <p class="answer correct">✔ <code>.grid-container { display: grid; grid-template-columns: 1fr 2fr 1fr; grid-template-rows: repeat(2, auto); }</code></p>
+  
+  <p class="answer incorrect">❌ <code>.grid-container { display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, auto); }</code></p>
+  
+  <p class="answer incorrect">❌ <code>.grid-container { display: grid; grid-template-columns: 1fr auto 1fr; grid-template-rows: auto auto; }</code></p>
+  
+  <p class="answer correct">✔ <code>.grid-container { display: grid; grid-template-columns: 25% 50% 25%; grid-template-rows: auto; }</code></p>
+</div>
+<div class="question-block">
+  <p class="question">Welche der nachfolgenden HTML-Snippets erzeugen mit folgendem CSS-Code die hier abgebildete Flexbox?</p>
+  
+  <p class="answer correct">✔ <code>&lt;nav&gt;
+  &lt;ul class="flex"&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Text&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Text&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></p>
+  
+  <p class="answer correct">✔ <code>&lt;p class="flex"&gt;
+  Text
+  &lt;a href="#"&gt;Text&lt;/a&gt;
+&lt;/p&gt;</code></p>
+  
+  <p class="answer correct">✔ <code>&lt;article&gt;
+  &lt;div class="flex"&gt;
+      &lt;h1&gt;Text&lt;/h1&gt;
+      Text
+  &lt;/div&gt;
+&lt;/article&gt;</code></p>
+  
+  <p class="answer correct">✔ <code>&lt;header class="flex"&gt;
+  &lt;a href="#"&gt;Text&lt;/a&gt;
+  &lt;button type="button"&gt;Text&lt;/button&gt;
+&lt;/header&gt;</code></p>
+</div>
+<div class="question-block">
+  <p class="question">Welche Fragen sollte eine Navigation beantworten?</p>
+  
+  <p class="answer correct">✔ Wie komme ich wieder zurück?</p>
+  
+  <p class="answer correct">✔ Woher komme ich?</p>
+  
+  <p class="answer correct">✔ Wohin kann ich gehen?</p>
+  
+  <p class="answer correct">✔ Wo befinde ich mich gerade?</p>
+</div>
+<div class="question-block">
+  <p class="question">Was versteht man unter einem konzeptionellen Leitmotiv, einer Main Idea?</p>
+  
+  <p class="answer incorrect">❌ Die Main Idea versucht, die zentrale Eigenschaft einer Website in einem 3D-Modell darzustellen.</p>
+  
+  <p class="answer incorrect">❌ Die Main Idea vergleicht die zentrale Eigenschaft einer Website mit einer bekannten Fernsehserie.</p>
+  
+  <p class="answer correct">✔ Die Main Idea versucht, die zentrale Eigenschaft einer Website in wenigen Sätzen metaphorisch zusammenzufassen.</p>
+  
+  <p class="answer incorrect">❌ Die Main Idea versucht, durch den Einsatz einer möglichst detailreichen und realitätsnahen Geschichte eine Website für die Zielgruppe emotional aufzuladen.</p>
+</div>
+<div class="question-block">
+  <p class="question">Welche der folgenden Bestandteile einer Website sind typische Quellen für User Generated Content?</p>
+  
+  <p class="answer incorrect">❌ Newsletter</p>
+  
+  <p class="answer correct">✔ Blog-Kommentare</p>
+  
+  <p class="answer correct">✔ Sterne-Bewertungen</p>
+  
+  <p class="answer incorrect">❌ Kontaktformular</p>
+  
+  <p class="answer correct">✔ Produkt-Rezensionen</p>
+</div>
+<div class="question-block">
+  <p class="question">Welche der folgenden Aussagen definiert am ehesten den Begriff »Bedarf«?</p>
+  
+  <p class="answer incorrect">❌ Bedarfe sind identisch mit der Nachfrage.</p>
+  
+  <p class="answer incorrect">❌ Bedarf ist die Anzahl der Interessenten eines bestimmten Produktes.</p>
+  
+  <p class="answer incorrect">❌ Bedarfe sind die Bedürfnisse der potenziellen Kunden.</p>
+  
+  <p class="answer correct">✔ Bedarfe sind mit Kaufkraft ausgestattete Bedürfnisse.</p>
+</div>
+<div class="question-block">
+  <p class="question">Was ist ein Styleguide?</p>
+  
+  <p class="answer correct">✔ Ein Styleguide gibt das Corporate Design eines Unternehmens vor.</p>
+  
+  <p class="answer incorrect">❌ Ein Styleguide enthält Verhaltensregeln für die Mitarbeiter/innen eines Unternehmens gegenüber den Kunden.</p>
+  
+  <p class="answer correct">✔ Ein Styleguide enthält Gestaltungsvorgaben für Farben, Formen oder die zu verwendenden Schriftarten.</p>
+  
+  <p class="answer incorrect">❌ Ein Styleguide enthält den Dresscode für die Mitarbeiter/innen eines Unternehmens.</p>
+</div>
+<div class="question-block">
+  <p class="question">Was kennzeichnet eine lineare Informationsarchitektur?</p>
+  
+  <p class="answer incorrect">❌ Bei einer linearen Seitenstruktur werden alle Informationen gemeinsam auf einer Seite angezeigt, weshalb sie nicht miteinander verlinkt sind.</p>
+  
+  <p class="answer correct">✔ Bei einer linearen Seitenstruktur ist ein fester Ablauf vorgegeben, man gelangt von einem Schritt zum nächsten.</p>
+  
+  <p class="answer incorrect">❌ Bei einer linearen Seitenstruktur werden die Themen hierarchisch in Kategorien gegliedert. Gleichwertige Themen werden jeweils auf einer Ebene angeordnet.</p>
+  
+  <p class="answer incorrect">❌ Bei einer linearen Seitenstruktur ist jede Seite einer Website mit jeder anderen verlinkt.</p>
+</div>
+<div class="question-block">
+  <p class="question">Was sollte im Hinblick auf die Usability bei der Konzeption von Fehlermeldungen berücksichtigt werden?</p>
+  
+  <p class="answer incorrect">❌ Fehlermeldungen sollten das Problem nicht beschreiben, um das Problem nicht öffentlich bekannt zu machen.</p>
+  
+  <p class="answer incorrect">❌ Fehlermeldungen sollten den betreffenden Programmcode anzeigen, damit der Besucher ihn dem Support-Center mitteilen kann.</p>
+  
+  <p class="answer incorrect">❌ Fehlermeldungen sollten nicht als solche gekennzeichnet werden, um die Besucher nicht zu verunsichern.</p>
+  
+  <p class="answer correct">✔ Fehlermeldungen sollten das Problem exakt und in einfachen Worten beschreiben.</p>
+  
+  <p class="answer correct">✔ Fehlermeldungen sollten eine Lösung des Problems vorschlagen.</p>
+</div>
+<div class="question-block">
+  <p class="question">Welche Darstellungsform ist für die Modellierung von Prozessen wie z. B. einem Online-Buchungstunnel besonders geeignet?</p>
+  
+  <p class="answer incorrect">❌ XML</p>
+  
+  <p class="answer incorrect">❌ Tabellen</p>
+  
+  <p class="answer correct">✔ UML</p>
+  
+  <p class="answer incorrect">❌ Sitemaps</p>
+</div>
+<div class="question-block">
+  <p class="question">Identifizieren Sie die Richtlinien für barrierefreie Websites, die in den Web Content Accessibility Guidelines (WCAG 2.0) festgelegt wurden.</p>
+  
+  <p class="answer correct">✔ Tabellen sollten nur für die Darstellung von Daten, nicht als Gestaltungsraster verwendet werden.</p>
+  
+  <p class="answer correct">✔ Die Webseite sollte auch ohne CSS gelesen werden können.</p>
+  
+  <p class="answer correct">✔ Alle durch Farbe gekennzeichneten Informationen sollten auch ohne Farbe wahrgenommen, unterschieden und verstanden werden können.</p>
+  
+  <p class="answer incorrect">❌ Webseiten sollten kein JavaScript beinhalten.</p>
+</div>
+<div class="question-block">
+  <p class="question">Was sind die Haupteigenschaften des Flat Designs?</p>
+  
+  <p class="answer correct">✔ Minimalistisches Design</p>
+  
+  <p class="answer incorrect">❌ Sehr kleine Schriftgrößen</p>
+  
+  <p class="answer correct">✔ Viel Leerraum</p>
+  
+  <p class="answer incorrect">❌ Verwendung fotorealistischer Elemente</p>
+  
+  <p class="answer correct">✔ Einheitliche, stark gesättigte Farbflächen</p>
+</div>
+<div class="question-block">
+  <p class="question">Was sind die Vorteile von Dropdown-Menüs?</p>
+  
+  <p class="answer correct">✔ Sie lassen sich sowohl in der Länge als auch in der Breite (mehrspaltige Menüs) erweitern.</p>
+  
+  <p class="answer correct">✔ Sie benötigen keinen zusätzlichen Platz im Layout, da sie erst bei Bedarf über dem eigentlichen Inhalt aufklappen.</p>
+  
+  <p class="answer correct">✔ Sie sind vielen Nutzern bereits von ihrem Betriebssystem vertraut.</p>
+  
+  <p class="answer incorrect">❌ Sie sind die einzige Menüführung, die für Touchscreens optimiert ist.</p>
+</div>
+<div class="question-block">
+  <p class="question">Was sind die möglichen Nachteile eines monochromen Farbschemas für ein Web-Layout?</p>
+  
+  <p class="answer correct">✔ Das Design kann eintönig und langweilig erscheinen.</p>
+  
+  <p class="answer incorrect">❌ Das monochrome Farbschema kann einen sogenannten Simultankontrast erzeugen.</p>
+  
+  <p class="answer incorrect">❌ Das Layout kann zu bunt wirken.</p>
+  
+  <p class="answer incorrect">❌ Eine Farbe kann eine andere Farbe hervorheben und sie dominant erscheinen lassen.</p>
+</div>
+<div class="question-block">
+  <p class="question">Was versteht man in der Typografie unter der Laufweite?</p>
+  
+  <p class="answer correct">✔ Die Laufweite bezeichnet den Abstand der Buchstaben insgesamt zueinander.</p>
+  
+  <p class="answer incorrect">❌ Die Laufweite bezeichnet den Abstand von Grundlinie zu Grundlinie.</p>
+  
+  <p class="answer incorrect">❌ Die Laufweite bezeichnet den optischen, nicht gedruckten Zwischenraum zwischen zwei Zeilen.</p>
+  
+  <p class="answer incorrect">❌ Die Laufweite ist ein veralteter, aus der Gutenberg-Buchdruckerzeit stammender Begriff für einen Zeilenumbruch.</p>
+  
+  <p class="answer incorrect">❌ Die Laufweite bezeichnet die sichtbare Strichhöhe von Buchstaben, die über die Höhe der Kleinbuchstaben hinausreicht.</p>
+</div>
+<div class="question-block">
+  <p class="question">Welche Hauptkriterien können Sie zur Bestimmung der Usability-Qualität von Websites heranziehen?</p>
+  
+  <p class="answer correct">✔ Wie viele Fehler macht der Besucher?</p>
+  
+  <p class="answer correct">✔ Wie schnell und vollständig kann der Besucher seine Ziele erreichen?</p>
+  
+  <p class="answer correct">✔ Wie zufrieden fühlt sich ein Benutzer beim Besuch der Website?</p>
+  
+  <p class="answer incorrect">❌ Wie viele Produkte hat der Benutzer nach dem Besuch der Website gekauft?</p>
+  
+  <p class="answer correct">✔ Wie schnell findet sich ein Besucher wieder auf der Website zurecht, nachdem er eine Zeitlang nicht da war?</p>
+</div>
+<div class="question-block">
+  <p class="question">Identifizieren Sie die am ehesten zutreffende Definition des Begriffes »User Generated Content«.</p>
+  
+  <p class="answer correct">✔ User Generated Content sind Inhalte, die die Website-Besucher beisteuern und publizieren.</p>
+  
+  <p class="answer incorrect">❌ User Generated Content sind Inhalte, die der Website-Betreiber von Content Brokern einkauft.</p>
+  
+  <p class="answer incorrect">❌ User Generated Content sind Inhalte, die Online-Redakteure im Auftrag des Webseitenbetreibers erstellen.</p>
+  
+  <p class="answer incorrect">❌ User Generated Content sind Pressemitteilungen, die die PR-Abteilung des Unternehmens im News-Bereich der Website veröffentlicht.</p>
+</div>
+<div class="question-block">
+  <p class="question">Was sind Skeuomorphismen?</p>
+  
+  <p class="answer incorrect">❌ Geometrische Formen in Weblayouts, die mit HTML und CSS nur schwer erzeugt werden können.</p>
+  
+  <p class="answer incorrect">❌ Layoutelemente unterschiedlicher Größe, Farbe und Form, die zu einer Komposition zusammengeführt werden.</p>
+  
+  <p class="answer correct">✔ Gestaltungselemente, die Aussehen und Form eines anderen oder älteren Gegenstandes nachahmen.</p>
+  
+  <p class="answer incorrect">❌ Gestaltungselemente, die vollständig auf realistische Elemente wie Texturen, Schlagschatten und dreidimensionale Effekte verzichten.</p>
+</div>
+<div class="question-block">
+  <p class="question">Warum sollten Sie auf Websites darauf verzichten, Texte zu unterstreichen?</p>
+  
+  <p class="answer correct">✔ Da unterstrichene Texte für Hyperlinks gehalten werden können.</p>
+  
+  <p class="answer correct">✔ Da Unterstreichungen die Buchstaben teilweise verdecken.</p>
+  
+  <p class="answer incorrect">❌ Da Unterstreichungen auf dem Bildschirm schlecht darstellbar sind.</p>
+  
+  <p class="answer incorrect">❌ Da unterstrichene Texte von Screenreadern nicht interpretiert werden können.</p>
+</div>
+<div class="question-block">
+  <p class="question">Was ist ein triadisches Farbschema?</p>
+  
+  <p class="answer incorrect">❌ Eine Kombination aus Farben, die sich im Farbkreis direkt gegenüberliegen.</p>
+  
+  <p class="answer incorrect">❌ Eine Kombination aus Farben, die im Farbkreis direkt nebeneinanderliegen.</p>
+  
+  <p class="answer incorrect">❌ Eine Kombination aus drei Farbtönen, die nur aus Schattierungen einer einzigen Farbe bestehen.</p>
+  
+  <p class="answer correct">✔ Eine Kombination aus drei Farben, die im Farbkreis gleich weit voneinander entfernt liegen.</p>
+</div>
+<div class="question-block">
+  <p class="question">In einschlägigen Foren liest man öfters die Aussage »Websites, die Javascript verwenden, sind nicht barrierefrei.« Stimmt das?</p>
+  
+  <p class="answer incorrect">❌ Nein. Wenn im &lt;head&gt; des HTML-Dokuments das Meta-Tag &lt;meta http-equiv="content-type" content="text/javascript"&gt; vorhanden ist, spricht nichts dagegen.</p>
+  
+  <p class="answer incorrect">❌ Nein. JavaScript wurde von der ECMA speziell für Screenreader und Braille-Lesegeräte komplett neu entwickelt.</p>
+  
+  <p class="answer incorrect">❌ Nein. Wenn im HTML-Dokument der korrekte &lt;!DOCTYPE html&gt; vorhanden ist, spricht nichts dagegen.</p>
+  
+  <p class="answer correct">✔ Nein. Wenn die Inhalte auch ohne Javascript zugänglich sind, spricht nichts dagegen.</p>
+</div>
+<div class="question-block">
+  <p class="question">Worin liegen bei der Erarbeitung eines Grundlayouts für eine Website die Vorteile eines Gestaltungsrasters?</p>
+  
+  <p class="answer correct">✔ Ein Gestaltungsraster macht die eigene Arbeit effektiver.</p>
+  
+  <p class="answer correct">✔ Ein Gestaltungsraster hilft, die Informationen systematisch zu ordnen und zu gliedern.</p>
+  
+  <p class="answer incorrect">❌ Das Gestaltungsraster ersetzt die Navigationsarchitektur.</p>
+  
+  <p class="answer correct">✔ Ein Gestaltungsraster hilft, die Fläche zu organisieren und zu strukturieren.</p>
+</div>
+<div class="question-block">
+  <p class="question">Welche Wirkung trifft tendenziell eher auf Serifenschriften zu?</p>
+  
+  <p class="answer incorrect">❌ progressiv</p>
+  
+  <p class="answer incorrect">❌ aufgeschlossen</p>
+  
+  <p class="answer correct">✔ konservativ</p>
+  
+  <p class="answer correct">✔ seriös</p>
+  
+  <p class="answer incorrect">❌ modern</p>
+</div>
+<div class="question-block">
+  <p class="question">Welche Elemente sollte die Startseite (Homepage) eines Online-Shops auf jeden Fall enthalten?</p>
+  
+  <p class="answer correct">✔ Das Logo und den Namen des Unternehmens / der Organisation</p>
+  
+  <p class="answer correct">✔ Navigation und Metanavigation</p>
+  
+  <p class="answer incorrect">❌ Ein Foto des Geschäftsführers / der Geschäftsführerin</p>
+  
+  <p class="answer correct">✔ Aktuelles, neue Meldungen/Angebote</p>
+  
+  <p class="answer correct">✔ Ein Suchfeld</p>
+</div>
+<div class="question-block">
+  <p class="question">Welche Maßnahmen eignen sich dafür, entstehende Bedürfnisse bzw. Bedarfe frühzeitig zu erkennen?</p>
+  
+  <p class="answer correct">✔ Durch das Ausdenken von Szenarien, mit denen man die Auswirkungen neuer Technologien zu ergründen sucht (Scenario Building).</p>
+  
+  <p class="answer correct">✔ Durch regelmäßige Meetings, in denen ein Brainstorming zur Identifikation neuer Bedürfnisse durchgeführt wird.</p>
+  
+  <p class="answer correct">✔ Durch den Versuch, zukünftige Bedürfnisse vorauszusagen (Forecasting).</p>
+  
+  <p class="answer incorrect">❌ Durch Analyse des Bedarfs der vergangenen 5 Jahre (Backcasting).</p>
+</div>
+<div class="question-block">
+  <p class="question">Was versteht man unter der Corporate Identity?</p>
+  
+  <p class="answer incorrect">❌ Die Corporate Identity ist der Eintrag eines Unternehmens im Unternehmensregister mit einer eindeutigen ID.</p>
+  
+  <p class="answer correct">✔ Die Corporate Identity ist der Ersatz für den persönlichen Kontakt zwischen einem Unternehmen und seinen Kunden.</p>
+  
+  <p class="answer correct">✔ Die Corporate Identity ist das Äquivalent eines Unternehmens zum Erscheinungsbild einer Einzelperson.</p>
+  
+  <p class="answer incorrect">❌ Die Corporate Identity ist eine einfach zu verstehende Außendarstellung eines Unternehmens speziell für Jugendliche und junge Erwachsene.</p>
+</div>
+<div class="question-block">
+  <p class="question">Welches Symbol hat sich — vor allem auf Mobilgeräten — für die Kennzeichnung von Navigationen etabliert?</p>
+  
+  <p class="answer correct">✔ Das sogenannte Hamburger-Symbol (drei horizontale Linien)</p>
+</div>
+<div class="question-block">
+  <p class="question">Warum kann ein konzeptionelles Leitmotiv zum Erfolg einer Website beitragen?</p>
+  
+  <p class="answer correct">✔ Weil es die Identifikation der Kunden mit der Website erleichtert.</p>
+  
+  <p class="answer correct">✔ Weil es eine emotionale Bindung weckt und sich die Inhalte der Website dadurch leichter einprägen lassen.</p>
+  
+  <p class="answer incorrect">❌ Weil es sicherstellt, dass die Website auch auf Mobilgeräten betrachtet werden kann.</p>
+  
+  <p class="answer correct">✔ Weil es den Wiedererkennungswert der Website erhöht.</p>
+</div>
+<div class="question-block">
+  <p class="question">Welche CSS-Ausgabe erzeugt folgender SCSS-Code?</p>
+  <p class="answer incorrect">❌ p { font-size: 10px; }</p>
+  <p class="answer incorrect">❌ p { font-size: 73px; }</p>
+  <p class="answer correct">✔ p { font-size: $zahl + 3px; }</p>
+  <p class="answer incorrect">❌ p { font-size: unquote("$zahl + 3px"); }</p>
+  <p class="answer incorrect">❌ p { font-size: 7 + 3px; }</p>
+</div>
+<div class="question-block">
+  <p class="question">Welche der folgenden SCSS-Mixin-Definitionen sind korrekt?</p>
+  <p class="answer incorrect">❌ @mixin box($color, $bgcolor) { color: $color; background-color: $bgcolor; border: 3px solid $color; }</p>
+  <p class="answer correct">✔ $mixin box { color: #fff; background-color: #a00; border: 3px solid #fff; }</p>
+  <p class="answer incorrect">❌ $mixin box(@color, @bgcolor) { color: @color; background-color: @bgcolor; border: 3px solid @color; }</p>
+  <p class="answer correct">✔ @mixin box { color: #fff; background-color: #a00; border: 3px solid #fff; }</p>
+</div>
+<div class="question-block">
+  <p class="question">Welcher CSS-Code entsteht beim Kompilieren von folgendem SCSS-Code?</p>
+  <p class="answer incorrect">❌ a > :hover { color: #38f; }</p>
+  <p class="answer incorrect">❌ a  :hover { color: #38f; }</p>
+  <p class="answer correct">✔ a:hover { color: #38f; }</p>
+  <p class="answer incorrect">❌ a::hover { color: #38f; }</p>
+  <p class="answer incorrect">❌ a { :hover { color: #38f; } }</p>
+</div>
+<div class="question-block">
+  <p class="question">Wie definieren Sie in SCSS eine Variable mit dem Namen color und dem Wert #0a60ff?</p>
+  <p class="answer incorrect">❌ @color { #0a60ff; }</p>
+  <p class="answer incorrect">❌ $color = #0a60ff;</p>
+  <p class="answer incorrect">❌ @color: #0a60ff;</p>
+  <p class="answer correct">✔ $color: #0a60ff;</p>
+  <p class="answer incorrect">❌ .color { #0a60ff; }</p>
+</div>
+<div class="question-block">
+  <p class="question">Was sind Partials in Sass?</p>
+  <p class="answer correct">✔ Partials sind SCSS-Dateien, die nicht selbst kompiliert, sondern in eine andere Datei importiert werden.</p>
+  <p class="answer incorrect">❌ Partials sind SCSS-Master-Dateien, in die alle anderen Dateien importiert werden.</p>
+  <p class="answer incorrect">❌ Partials sind SCSS-Dateien, die nur teilweise kompiliert werden. Es werden nur die enthaltenen Variablen und Mixins kompiliert, nicht jedoch der übrige SCSS-Code.</p>
+  <p class="answer incorrect">❌ Partials sind reine CSS-Dateien (Dateiendung .css), die keinen Sass-spezifischen Code enthalten, aber in SCSS-Dateien importiert werden.</p>
+</div>
+<div class="question-block">
+  <p class="question">Wie können Sie in Sass die Deckkraft von Schwarz um 80% verringern?</p>
+  <p class="answer correct">✔ rgba(#000, 0.2)</p>
+  <p class="answer incorrect">❌ opacity(#000, 0.2)</p>
+  <p class="answer correct">✔ fade-out(#000, 0.8)</p>
+  <p class="answer correct">✔ transparentize(#000, 0.8)</p>
+</div>
+<div class="question-block">
+  <p class="question">Sie möchten die Dateien _variables.scss und _mixins.scss in Ihre Master-Datei importieren. Welchen Code können Sie dafür verwenden?</p>
+  <p class="answer correct">✔ @import "_variables";<br> @import "_mixins";</p>
+  <p class="answer correct">✔ @import "_variables.scss";<br> @import "_mixins.scss";</p>
+  <p class="answer correct">✔ @import "variables.scss";<br> @import "mixins.scss";</p>
+  <p class="answer correct">✔ @import "variables";<br> @import "mixins";</p>
+</div>
+<div class="question-block">
+  <p class="question">Sie haben in SCSS folgendes Mixin erzeugt. Wie können Sie es dem Selektor header zuweisen?</p>
+  <p class="answer correct">✔ header { @include set-color(#ec0); }</p>
+  <p class="answer incorrect">❌ header { $include set-color(#ec0); }</p>
+  <p class="answer incorrect">❌ header { $include set-color; }</p>
+  <p class="answer correct">✔ header { @include set-color; }</p>
+</div>
+<div class="question-block">
+  <p class="question">Wie lässt sich in SCSS folgender Selektor noch darstellen?</p>
+  <p class="answer incorrect">❌ nav { ul { li { &:nth-child { &(odd) { //Eigenschaften } } } } }</p>
+  <p class="answer correct">✔ nav { ul li:nth-child(odd) { //Eigenschaften } }</p>
+  <p class="answer correct">✔ nav { ul { li { &:nth-child(odd) { //Eigenschaften } } } }</p>
+  <p class="answer correct">✔ nav { ul { li:nth-child(odd) { //Eigenschaften } } }</p>
+</div>
+<div class="question-block">
+  <p class="question">Mit welchem SCSS-Loop können Sie die folgende CSS-Ausgabe erreichen?</p>
+  <p class="answer correct">✔ $flowers: rose, tulip, lily, iris;<br> @each $flower in $flowers {<br> .bg-#{$flower} {<br> background-image: url(images/#{$flower}.jpg);<br> }<br> }</p>
+  <p class="answer correct">✔ @each $flower in rose, tulip, lily, iris {<br> .bg-#{$flower} {<br> background-image: url(images/#{$flower}.jpg);<br> }<br> }</p>
+  <p class="answer incorrect">❌ $flowers: rose, tulip, lily, iris;<br> @for $i from 1 through $flowers {<br> .bg-#{$i} {<br> background-image: url(images/#{$i}.jpg);<br> }<br> }</p>
+</div>
+<div class="question-block">
+  <p class="question">Welche Schreibweisen für Kommentare sind in SCSS erlaubt?</p>
+  <p class="answer incorrect">❌ <!-- Dies ist ein Kommentar --></p>
+  <p class="answer correct">✔ // Dies ist ein Kommentar</p>
+  <p class="answer correct">✔ /* Dies ist ein Kommentar */</p>
+  <p class="answer incorrect">❌ # Dies ist ein Kommentar</p>
+</div>
+<div class="question-block">
+  <p class="question">Welche der nachfolgenden SCSS-Regeln erzeugt den hier gezeigten CSS-Code?</p>
+  <p class="answer incorrect">❌ $animal: cat; <br> .$animal-icon { <br> background-image: url("images/$animal.png"); <br> }</p>
+  <p class="answer incorrect">❌ $animal: cat; <br> .#{$animal}-icon { <br> background-image: url("images/$animal.png"); <br> }</p>
+  <p class="answer correct">✔ $animal: cat; <br> .#{$animal}-icon { <br> background-image: url("images/#{$animal}.png"); <br> }</p>
+  <p class="answer incorrect">❌ $animal: cat; <br> .$animal-icon { <br> background-image: url("images/#{$animal}.png"); <br> }</p>
+</div>
+<div class="question-block">
+  <p class="question">Welche Schreibweise für Kommentare müssen sie in SCSS benutzen, wenn ein Kommentar auch in der kompilierten CSS-Datei erhalten bleiben soll?</p>
+  <p class="answer incorrect">❌ # Dies ist ein Kommentar</p>
+  <p class="answer incorrect">❌ // Dies ist ein Kommentar</p>
+  <p class="answer incorrect">❌ <!-- Dies ist ein Kommentar --></p>
+  <p class="answer correct">✔ /* Dies ist ein Kommentar */</p>
+</div>
+<div class="question-block">
+  <p class="question">Welchen CSS-Code erzeugt die folgende SCSS-Schleife?</p>
+  <p class="answer correct">✔ .border-1 {<br> border: solid #666 1px;<br> }<br> .border-2 {<br> border: solid #666 2px;<br> }</p>
+  <p class="answer incorrect">❌ .border-1 {<br> border: solid #666 1px;<br> }<br> .border-2 {<br> border: solid #666 2px;<br> }<br> .border-3 {<br> border: solid #666 3px;<br> }</p>
+  <p class="answer correct">✔ .border-1 {<br> border: solid #111 1px;<br> }<br> .border-2 {<br> border: solid #222 2px;<br> }<br> .border-3 {<br> border: solid #333 3px;<br> }</p>
+  <p class="answer incorrect">❌ .border-1 {<br> border: solid #111 1px;<br> }<br> .border-2 {<br> border: solid #222 2px;<br> }</p>
+</div>
+<div class="question-block">
+  <p class="question">Was unterscheidet in Sass eine globale Variable von einer lokalen Variablen?</p>
+  <p class="answer correct">✔ Globale Variablen stehen außerhalb von Selektoren und können überall verwendet werden.</p>
+  <p class="answer incorrect">❌ Globale Variablen stehen innerhalb von Selektoren und gelten nur dort.</p>
+  <p class="answer incorrect">❌ Globale Variablen müssen mit dem Präfix @global als solche gekennzeichnet werden.</p>
+  <p class="answer incorrect">❌ Namen von globalen Variablen müssen nicht mit dem Dollar-Zeichen $ beginnen.</p>
+</div>
+<div class="question-block">
+  <p class="question">Sie möchten Ihrem Projekt zusätzlich zu Bootstrap ein eigenes Sass-Partial namens _our-variables.scss hinzufügen. Darin überschreiben Sie einige Bootstrap-SCSS-Variablen. Wie importieren Sie beide Dateien in Ihre ›Master-Datei‹?</p>
+  <p class="answer incorrect">❌ @import "bootstrap/bootstrap.scss";<br> @import "_our-variables.scss";</p>
+  <p class="answer correct">✔ @import "our-variables";<br> @import "bootstrap/bootstrap";</p>
+  <p class="answer correct">✔ @import "_our-variables.scss";<br> @import "bootstrap/bootstrap.scss";</p>
+  <p class="answer incorrect">❌ @import "bootstrap/bootstrap";<br> @import "our-variables";</p>
+</div>
+<div class="question-block">
+  <p class="question">Wie setzen Sie mit Bootstrap 5 die Textfarbe einer Überschrift auf die ›Primärfarbe‹?</p>
+  <p class="answer incorrect">❌ &lt;h1 class="tc-p"&gt;Text&lt;/h1&gt;</p>
+  <p class="answer incorrect">❌ &lt;h1 class="t-p"&gt;Text&lt;/h1&gt;</p>
+  <p class="answer incorrect">❌ &lt;h1 class="text-color-primary"&gt;Text&lt;/h1&gt;</p>
+  <p class="answer correct">✔ &lt;h1 class="text-primary"&gt;Text&lt;/h1&gt;</p>
+</div>
+<div class="question-block">
+  <p class="question">Wie erzeugen Sie in Bootstrap 5 ein responsives Layout mit drei Spalten, die auf kleinen Viewports (small) untereinanderstehen?</p>
+  <p class="answer incorrect">❌ &lt;div class="row"&gt;<br> &lt;div class="col-sm"&gt;Spalte 1&lt;/div&gt;<br> &lt;div class="col-sm"&gt;Spalte 2&lt;/div&gt;<br> &lt;div class="col-sm"&gt;Spalte 3&lt;/div&gt;<br> &lt;/div&gt;</p>
+  <p class="answer correct">✔ &lt;div class="row"&gt;<br> &lt;div class="col-md"&gt;Spalte 1&lt;/div&gt;<br> &lt;div class="col-md"&gt;Spalte 2&lt;/div&gt;<br> &lt;div class="col-md"&gt;Spalte 3&lt;/div&gt;<br> &lt;/div&gt;</p>
+  <p class="answer correct">✔ &lt;div class="row"&gt;<br> &lt;div class="col-md-4"&gt;Spalte 1&lt;/div&gt;<br> &lt;div class="col-md-4"&gt;Spalte 2&lt;/div&gt;<br> &lt;div class="col-md-4"&gt;Spalte 3&lt;/div&gt;<br> &lt;/div&gt;</p>
+  <p class="answer incorrect">❌ &lt;div class="row"&gt;<br> &lt;div class="col"&gt;Spalte 1&lt;/div&gt;<br> &lt;div class="col"&gt;Spalte 2&lt;/div&gt;<br> &lt;div class="col"&gt;Spalte 3&lt;/div&gt;<br> &lt;/div&gt;</p>
+  <p class="answer incorrect">❌ &lt;div class="row"&gt;<br> &lt;div class="col-sm-4"&gt;Spalte 1&lt;/div&gt;<br> &lt;div class="col-sm-4"&gt;Spalte 2&lt;/div&gt;<br> &lt;div class="col-sm-4"&gt;Spalte 3&lt;/div&gt;<br> &lt;/div&gt;</p>
+</div>
+<div class="question-block">
+  <p class="question">Welche Klasse benötigen Sie in Bootstrap 5 als Wrapper für die gesamte Navigationsleiste?</p>
+  <p class="answer incorrect">❌ &lt;nav class="nav-link"&gt;...&lt;/nav&gt;</p>
+  <p class="answer incorrect">❌ &lt;nav class="nav-navbar"&gt;...&lt;/nav&gt;</p>
+  <p class="answer incorrect">❌ &lt;nav class="navbar-expand"&gt;...&lt;/nav&gt;</p>
+  <p class="answer correct">✔ &lt;nav class="navbar"&gt;...&lt;/nav&gt;</p>
+  <p class="answer incorrect">❌ &lt;nav class="nav-item"&gt;...&lt;/nav&gt;</p>
+</div>
+<div class="question-block">
+  <p class="question">Wie zentrieren Sie mit Bootstrap 5 einen Text nur auf kleinen Viewports (≤ small)? Auf ›mittelgroßen‹ Viewports (medium) und größer soll der Text linksbündig stehen.</p>
+  <p class="answer correct">✔ &lt;p class="text-center text-md-start"&gt;Text&lt;/p&gt;</p>
+  <p class="answer incorrect">❌ &lt;p class="text-sm-center"&gt;Text&lt;/p&gt;</p>
+  <p class="answer incorrect">❌ &lt;p class="text-sm text-center"&gt;Text&lt;/p&gt;</p>
+  <p class="answer incorrect">❌ &lt;p class="text-sm-center text-md-start"&gt;Text&lt;/p&gt;</p>
+  <p class="answer incorrect">❌ &lt;p class="text-sm-center-md-start"&gt;Text&lt;/p&gt;</p>
+</div>
+<div class="question-block">
+  <p class="question">Wie geben Sie in Bootstrap 5 einem div ein margin-bottom von 1rem?</p>
+  <p class="answer incorrect">❌ &lt;div class="mgb-3"&gt;&lt;/div&gt;</p>
+  <p class="answer incorrect">❌ &lt;div class="m-3"&gt;&lt;/div&gt;</p>
+  <p class="answer incorrect">❌ &lt;div class="margin-bottom-3"&gt;&lt;/div&gt;</p>
+  <p class="answer correct">✔ &lt;div class="mb-3"&gt;&lt;/div&gt;</p>
+  <p class="answer incorrect">❌ &lt;div class="m-b-3"&gt;&lt;/div&gt;</p>
+</div>
+<div class="question-block">
+  <p class="question">Wie gestalten Sie in Bootstrap 5 ein Element visuell als Fehlermeldung (standardmäßig eine rote Hinweisbox)?</p>
+  <p class="answer correct">✔ &lt;div class="alert alert-danger"&gt;Fehler!&lt;/div&gt;</p>
+  <p class="answer incorrect">❌ &lt;div class="error error-alert"&gt;Fehler!&lt;/div&gt;</p>
+  <p class="answer incorrect">❌ &lt;div class="warning warning-error"&gt;Fehler!&lt;/div&gt;</p>
+  <p class="answer incorrect">❌ &lt;div class="danger danger-error"&gt;Fehler!&lt;/div&gt;</p>
+</div>
+<div class="question-block">
+  <p class="question">Was bewirkt in Bootstrap 5 die Klasse navbar-dark in einer Navigationsleiste?</p>
+  <p class="answer incorrect">❌ Sie ändert die Textfarbe der Navigation. Bei navbar-dark ist die Textfarbe hell.</p>
+  <p class="answer correct">✔ Sie ändert die Hintergrundfarbe der Navigation. Bei navbar-dark ist die Hintergrundfarbe weiß.</p>
+  <p class="answer incorrect">❌ Sie ändert die Hintergrundfarbe der Navigation. Bei navbar-dark ist die Hintergrundfarbe schwarz.</p>
+  <p class="answer incorrect">❌ Sie ändert die Textfarbe der Navigation. Bei navbar-dark ist die Textfarbe dunkel.</p>
+</div>
+<div class="question-block">
+  <p class="question">Welche Klasse kennzeichnet in Bootstrap 5 einen Link in der Navigationsleiste?</p>
+  <p class="answer incorrect">❌ &lt;a href="#" class="nav-item"&gt;Link&lt;/a&gt;</p>
+  <p class="answer incorrect">❌ &lt;a href="#" class="nav-menu"&gt;Link&lt;/a&gt;</p>
+  <p class="answer incorrect">❌ &lt;a href="#" class="nav-active"&gt;Link&lt;/a&gt;</p>
+  <p class="answer incorrect">❌ &lt;a href="#" class="nav-toggle"&gt;Link&lt;/a&gt;</p>
+  <p class="answer correct">✔ &lt;a href="#" class="nav-link"&gt;Link&lt;/a&gt;</p>
+</div>
+<div class="question-block">
+  <p class="question">Wie geben Sie in Bootstrap 5 einem div ein responsives padding-top von 0.5rem nur auf großen Viewports (large)?</p>
+  <p class="answer incorrect">❌ &lt;div class="pt-lg-2"&gt;&lt;/div&gt;</p>
+  <p class="answer correct">✔ &lt;div class="p-lg-2"&gt;&lt;/div&gt;</p>
+  <p class="answer incorrect">❌ &lt;div class="lg-pt-2"&gt;&lt;/div&gt;</p>
+  <p class="answer incorrect">❌ &lt;div class="p-t-lg-2"&gt;&lt;/div&gt;</p>
+  <p class="answer incorrect">❌ &lt;div class="lg-p-t-2"&gt;&lt;/div&gt;</p>
+</div>
+<div class="question-block">
+  <p class="question">Wie erzeugen Sie in Bootstrap 5 ein responsives Grid mit folgenden Eigenschaften?</p>
+  <p class="answer correct">✔ &lt;div class="row"&gt;<br> &lt;div class="col-sm-6 col-lg-4"&gt;<br> ...</p>
+  <p class="answer incorrect">❌ &lt;div class="row"&gt;<br> &lt;div class="col-sm-2 col-md-4 col-lg-6"&gt;<br> ...</p>
+  <p class="answer incorrect">❌ &lt;div class="row"&gt;<br> &lt;div class="col-sm-2 col-md-2 col-lg-3"&gt;<br> ...</p>
+  <p class="answer incorrect">❌ &lt;div class="row"&gt;<br> &lt;div class="col-md-6 col-lg-4"&gt;<br> ...</p>
+</div>
+
+
+        </div>
+   
+   
+
+    <script>
+      function checkPassword() {
+        const enteredPassword = document.getElementById('password').value;
+        const correctPassword = 'pfetten98'; // Задай свое пароль здесь
+
+        if (enteredPassword === correctPassword) {
+          document.getElementById('passwordPrompt').style.display = 'none';
+          document.getElementById('content').style.display = 'block';
+        } else {
+          alert('Falsches Passwort. Bitte erneut versuchen.');
+        }
+      }
+
+      function searchQuestions() {
+        const input = document
+          .getElementById('searchInput')
+          .value.toLowerCase();
+        const questionBlocks = document.querySelectorAll('.question-block');
+
+        questionBlocks.forEach((block) => {
+          const question = block
+            .querySelector('.question')
+            .textContent.toLowerCase();
+          const answers = Array.from(block.querySelectorAll('.answer')).map(
+            (a) => a.textContent.toLowerCase()
+          );
+          const combinedText = [question, ...answers].join(' ');
+
+          if (combinedText.includes(input)) {
+            block.classList.remove('hidden');
+          } else {
+            block.classList.add('hidden');
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

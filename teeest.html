@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fotoreisen mit Korneli Nastas</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <style>
+      /* Основная сетка галереи */
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(
+          4,
+          1fr
+        ); /* 4 колонки на больших экранах */
+        gap: 20px; /* Отступы между карточками */
+        padding: 10px;
+        align-items: stretch;
+      }
+
+      .columnlist {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: contents; /* Отменяет стандартное поведение ul/li */
+      }
+
+      .modal {
+        background: #0b365c;
+        padding: 10px;
+        border-radius: 8px;
+        transition: transform 0.2s, box-shadow 0.2s;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+      }
+
+      .modal:hover {
+        transform: scale(1.03); /* Легкое увеличение при наведении */
+        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      /* Настройка изображений для одинакового размера */
+      img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+      /* Модальное окно */
+      .modal-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8); /* Тёмный фон */
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        flex-direction: column;
+      }
+
+      .modal-overlay.show {
+        display: flex;
+      }
+
+      .modal-content {
+        max-width: 90%;
+        max-height: 90vh;
+        object-fit: contain; /* Сохраняем пропорции изображения */
+      }
+
+      .author-info {
+        color: white;
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      /* Социальные иконки */
+      .share-buttons {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+      }
+
+      .share-buttons a {
+        color: #1da1f2;
+        margin: 0 10px;
+        font-size: 20px;
+        text-decoration: none;
+      }
+
+      /* Адаптивная сетка */
+      @media (max-width: 1200px) {
+        .grid-container {
+          grid-template-columns: repeat(
+            3,
+            1fr
+          ); /* 3 колонки на средних экранах */
+        }
+      }
+
+      @media (max-width: 900px) {
+        .grid-container {
+          grid-template-columns: repeat(
+            2,
+            1fr
+          ); /* 2 колонки на маленьких экранах */
+        }
+      }
+
+      @media (max-width: 600px) {
+        .grid-container {
+          grid-template-columns: 1fr; /* 1 колонка на мобильных устройствах */
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Сетка изображений -->
+    <section class="grid-container">
+      <ul class="columnlist">
+        <li class="modal">
+          <section>
+            <img
+              src="24.webp"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten"
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="45.webp"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten"
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="49.webp"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten"
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="44.webp"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten"
+              loading="lazy"
+            />
+          </section>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal-overlay">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img class="modal-content" id="modalImage" />
+      <div class="author-info" id="modalAuthor"></div>
+      <div class="share-buttons">
+        <a href="https://www.facebook.com/sharer/sharer.php" target="_blank"
+          ><i class="fab fa-facebook"></i
+        ></a>
+        <a href="https://twitter.com/intent/tweet" target="_blank"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a href="https://telegram.me/share" target="_blank"
+          ><i class="fab fa-telegram"></i
+        ></a>
+        <a href="https://www.instagram.com" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+      </div>
+    </div>
+
+    <!-- JavaScript для модального окна -->
+    <script>
+      const modal = document.getElementById('modal');
+      const modalImg = document.getElementById('modalImage');
+      const authorInfo = document.getElementById('modalAuthor');
+      const images = document.querySelectorAll('.columnlist img');
+
+      images.forEach((image) => {
+        image.addEventListener('click', function () {
+          modalImg.src = this.src;
+          authorInfo.textContent = this.alt;
+          modal.classList.add('show');
+        });
+      });
+
+      function closeModal() {
+        modal.classList.remove('show');
+      }
+
+      modal.addEventListener('click', function (event) {
+        if (event.target === modal || event.target === modalImg) {
+          closeModal();
+        }
+      });
+    </script>
+  </body>
+</html>

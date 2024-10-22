@@ -1,0 +1,1500 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- Подключение Font Awesome через официальный CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css">
+
+  </head>
+  <style>
+  @import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+
+  
+
+    /* Секция с фиксированной высотой и красным фоном */
+    .custom-section {
+      width: 100%; /* Ширина секции на весь экран */
+      height: 400px; /* Высота секции */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #b74c54; /* Красный фон для секции */
+      font-family: 'Lato', sans-serif;
+      margin: 0;
+      padding: 0;
+      
+    }
+
+    .custom-pop {
+      background-color: #b74c54; /* Красный фон для блока */
+      background: url(http://riccardotartaglia.it/img/milton_glaser.jpg);
+      background-size: cover;
+      background-position: center center;
+      box-shadow: 0px 30px 30px -20px rgba(0, 0, 0, 1),
+        inset 0 0 0 1000px rgba(10, 37, 84, 0.8);
+      width: 150px;
+      height: 150px;
+      border-radius: 100%;
+      transition: all 0.35s cubic-bezier(0.37, 0.26, 0.35, 1);
+      position: relative;
+    }
+
+    .custom-pop:after {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      content: '\f10d'; /* Unicode для стрелки вниз */
+      font-size: 40px;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      text-align: center;
+      color: #00d2ff;
+      text-shadow: 0px 7px 5px rgba(0, 0, 0, 0.4);
+      transition: all 0.65s cubic-bezier(0.37, 0.26, 0.35, 1);
+    }
+
+    .custom-pop:hover {
+      width: 530px;
+      height: 335px;
+      border-radius: 0;
+      box-shadow: 0px 30px 30px -20px rgba(0, 0, 0, 1),
+        inset 0 0 0 1000px rgba(10, 37, 84, 0.55);
+    }
+
+    .custom-pop:hover:after {
+      top: -30px;
+      opacity: 0;
+    }
+
+    .custom-quote h1 {
+      margin: 0;
+      padding: 0;
+      font-size: 2.3em;
+    }
+
+    .custom-quote {
+      opacity: 0;
+      position: absolute;
+      left: 30px;
+      top: 0;
+      width: 80%;
+      color: #fff;
+      text-transform: uppercase;
+      transition: all 0.5s cubic-bezier(0.37, 0.26, 0.35, 1);
+    }
+
+    .custom-pop:hover .custom-quote {
+      animation: quoteAn 0.5s forwards;
+      animation-timing-function: cubic-bezier(0.37, 0.26, 0.35, 1);
+      animation-direction: alternate;
+      animation-delay: 0.3s;
+    }
+
+    .custom-author {
+      opacity: 0;
+      position: absolute;
+      right: 0px;
+      bottom: 20px;
+      color: #fff;
+      transition: all 0.25s cubic-bezier(0.37, 0.26, 0.35, 1);
+    }
+
+    .custom-pop:hover .custom-author {
+      animation: authorAn 0.25s forwards;
+      animation-timing-function: cubic-bezier(0.37, 0.26, 0.35, 1);
+      animation-direction: alternate;
+      animation-delay: 0.9s;
+    }
+
+    .custom-pop:hover .author .social {
+      text-align: right;
+      margin-top: 10px;
+    }
+
+    .custom-pop:hover .author .social .fa {
+      margin-left: 9px;
+      cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.37, 0.26, 0.35, 1);
+    }
+
+    .custom-pop:hover .author .social .fa:hover {
+      color: #00d2ff;
+    }
+
+    .custom-pop:hover .author strong {
+      color: #00d2ff;
+    }
+
+    @keyframes quoteAn {
+      0% {
+        opacity: 0;
+        top: 10px;
+      }
+      100% {
+        opacity: 1;
+        top: 70px;
+      }
+    }
+
+    @keyframes authorAn {
+      0% {
+        opacity: 0;
+        right: 10px;
+      }
+      100% {
+        opacity: 1;
+        right: 30px;
+      }
+    }
+    img.vertical {
+  width: auto; /* Чтобы изображение не растягивалось по ширине */
+  height: 100%; /* Растягиваем вертикальные изображения по высоте контейнера */
+}
+
+      
+.content-section {
+  display: none; /* Все статьи будут скрыты */
+}
+
+.content-section.active {
+  display: block; /* Только активная статья будет показана */
+}
+
+.article-right {
+  display: flex;
+  flex-direction: row-reverse; /* Изображение будет справа */
+}
+
+.article {
+  display: flex;
+  flex-direction: row; /* Изображение будет слева */
+}
+
+.article img {
+  margin-right: 20px;
+}
+
+.article-right img {
+  margin-left: 20px;
+}
+
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--gap);
+        padding: var(--gap);
+        height: 100vh;
+        width: 100vw;
+        position: relative;
+        background: hsl(220, 35%, 5%);
+      }
+
+      .grid div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        padding: calc(var(--gap) * 1.5);
+        
+        min-height: 160px;
+        color: #fff;
+        font-size: 1.1rem;
+        font-weight: 600;
+        background-color: teal;
+        background-image: url(51.webp);
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        transition-property: filter, backdrop-filter, opacity, color;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-out;
+      }
+
+      .grid div:hover {
+        color: #fff;
+        filter: brightness(1.2);
+      }
+
+      .grid div span:first-of-type {
+        z-index: 2;
+      }
+
+      .grid div .overlay {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        background: linear-gradient(
+          180deg,
+          hsl(0, 0%, 0%, 0) 5%,
+          hsl(0, 0%, 0%, 0.8)
+        );
+        backdrop-filter: blur(6px);
+        transition-property: opacity;
+        transition-duration: 0.4s;
+        transition-timing-function: ease-out;
+        z-index: -1;
+      }
+
+      .grid div .shop {
+        display: block;
+        color: tomato;
+        font-size: 0.8rem;
+        font-weight: 200;
+        margin-top: 8px;
+        margin-bottom: -25px;
+        opacity: 0;
+        transition-property: margin-bottom, opacity;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-out;
+        z-index: 2;
+      }
+
+      .grid div:hover > .overlay {
+        opacity: 1;
+      }
+
+      .grid div:hover > .shop {
+        opacity: 1;
+        margin-bottom: 0;
+      }
+
+      .grid > div:nth-of-type(1) {
+        grid-column: 1/3;
+      }
+
+      .grid > div:nth-of-type(2) {
+        grid-column: 3/5;
+        grid-row: 1/3;
+      }
+
+      .grid > div:nth-of-type(4) {
+        grid-column: 2/3;
+        grid-row: 2/5;
+      }
+
+      @media screen and (max-width: 840px) {
+        .grid {
+          height: auto;
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .grid div {
+          min-height: auto;
+          aspect-ratio: 1 / 1;
+          width: 100%;
+        }
+
+        .grid > div:nth-of-type(1),
+        .grid > div:nth-of-type(2),
+        .grid > div:nth-of-type(4) {
+          grid-column: auto;
+          grid-row: auto;
+        }
+      }
+      @font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('/fonts/Montserrat-Black.woff2') format('woff2');
+}
+@media screen and (max-width: 1024px) {
+  .grid {
+    display: none; /* Скрываем весь блок .grid */
+  }
+}
+
+ 
+
+
+
+section #gallery2 {
+  overscroll-behavior-x: none;
+  overscroll-behavior-y: none;
+  scroll-behavior: smooth;
+}
+section #gallery2 {
+  position: relative;
+  color: #1da1f2;
+
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+section {
+  position: relative;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  max-width: 100vw;
+
+  /* overflow-x: hidden; */
+}
+
+p {
+  line-height: 1;
+  color: #1da1f2;
+}
+a {
+  color: #1da1f2;
+  text-decoration: none;
+}
+/* img {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+} */
+#gallery {
+  position: relative;
+  left: calc(-1 * var(--adjust-size));
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  max-width: 100vw;
+  padding: 20px;
+  -webkit-perspective: 0;
+  perspective: 0;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+#gallery figure:nth-child(7n) {
+  --duration: 1s;
+  --pin-color: crimson;
+}
+#gallery figure:nth-child(7n + 1) {
+  --duration: 1.8s;
+  --pin-color: hotpink;
+}
+#gallery figure:nth-child(7n + 2) {
+  --duration: 1.3s;
+  --pin-color: magenta;
+}
+#gallery figure:nth-child(7n + 3) {
+  --duration: 1.5s;
+  --pin-color: orangered;
+}
+#gallery figure:nth-child(7n + 4) {
+  --duration: 1.1s;
+  --pin-color: darkorchid;
+}
+#gallery figure:nth-child(7n + 5) {
+  --duration: 1.6s;
+  --pin-color: deeppink;
+}
+#gallery figure:nth-child(7n + 6) {
+  --duration: 1.2s;
+  --pin-color: mediumvioletred;
+}
+#gallery figure:nth-child(3n) {
+  --angle: 3deg;
+}
+#gallery figure:nth-child(3n + 1) {
+  --angle: -3.3deg;
+}
+#gallery figure:nth-child(3n + 2) {
+  --angle: 2.4deg;
+}
+#gallery figure:nth-child(odd) {
+  --direction: alternate;
+}
+#gallery figure:nth-child(even) {
+  --direction: alternate-reverse;
+}
+#gallery figure {
+  --angle: 3deg;
+  --count: 5;
+  --duration: 1s;
+  --delay: calc(-0.5 * var(--duration));
+  --direction: alternate;
+  --pin-color: red;
+
+  position: relative;
+  display: inline-block;
+  margin: var(--adjust-size);
+  padding: 0.5rem;
+  border-radius: 5px;
+  box-shadow: 0 7px 8px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: auto;
+  text-align: center;
+  background-color: ghostwhite;
+  background-image: url('https://images.unsplash.com/photo-1629968417850-3505f5180761?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTMzMjQ3ODJ8&ixlib=rb-4.0.3&q=80&w=500');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+
+  transform-origin: center 0.22rem;
+  will-change: transform;
+  break-inside: avoid;
+  overflow: hidden;
+  outline: 1px solid transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+#gallery.active figure {
+  animation-duration: var(--duration), 1.5s;
+  animation-delay: var(--delay),
+    calc(var(--delay) + var(--duration) * var(--count));
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: var(--count), 1;
+  animation-direction: var(--direction), normal;
+  animation-fill-mode: both;
+  animation-name: swing, swingEnd;
+}
+#gallery figure:after {
+  position: absolute;
+  top: 0.22rem;
+  left: 50%;
+  width: 0.7rem;
+  height: 0.7rem;
+  content: '';
+  background: var(--pin-color);
+  border-radius: 50%;
+  box-shadow: -0.1rem -0.1rem 0.3rem 0.02rem rgba(0, 0, 0, 0.5) inset;
+  filter: drop-shadow(0.3rem 0.15rem 0.2rem rgba(0, 0, 0, 0.5));
+  transform: translateZ(0);
+  z-index: 2;
+}
+figure img {
+  aspect-ratio: 1 /1;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  z-index: 1;
+}
+figure figcaption {
+  font-family: 'Titillium Web', sans-serif;
+
+  font-size: 14px;
+  font-weight: 200;
+  
+  white-space: normal;
+
+  z-index: 1;
+}
+figure h2 {
+  font-family: 'Titillium Web', sans-serif;
+  color: #ff6347;
+  font-size: 22px;
+}
+figure p {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 17px;
+}
+figure small {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 12px;
+}
+figure > div {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes swing {
+  0% {
+    transform: rotate3d(0, 0, 1, calc(-1 * var(--angle)));
+  }
+  100% {
+    transform: rotate3d(0, 0, 1, var(--angle));
+  }
+}
+@keyframes swingEnd {
+  to {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+#info {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+#info a {
+  font-size: 1.1rem;
+}
+
+@media (min-width: 800px) {
+  #gallery {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+.share-buttons {
+  position: fixed !important; /* Фиксируем кнопки относительно экрана */
+  bottom: 95px !important; /* Поднимаем кнопки на 60px от нижней границы */
+  left: 50% !important; /* Центрируем по горизонтали */
+  transform: translateX(-50%) !important; /* Центрируем относительно середины */
+  background: rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 1001 !important; /* Устанавливаем высокий z-index для видимости */
+}
+
+
+
+  </style>
+    <header>
+        <br>
+        <section >
+          <div style="background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('pngegg.webp'); background-size: cover; background-position: center; width: 100vw; box-sizing: border-box;" class="container22">
+            <br>
+            <p class="grid22">
+              <div style="display: inline-block; padding: 10px; border-radius: 18px;">
+                <span style="padding-left: 1vw;" class="reisen1">welt</span>
+                <span style="padding-left: 1vw;" class="photo1">weit</span>
+              </div>
+          
+              <div style="display: inline-block; padding: 10px; border-radius: 18px;">
+                <span  class="photo">foto</span>
+                <span class="reisen">reisen</span>
+              </div>
+            </p>
+            <br>
+          </div>
+          
+          
+          <nav class="navbar" id="navbar">
+            <div class="burger-menu">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <ul class="nlist">
+              <li>
+                <a href="index.html" class="nav-link" title="Startseite">Start</a>
+              </li>
+    
+              <li>
+                <a href="reiseplan.html" class="nav-link" title="Reiseplan"
+                  >Reiseplan</a
+                >
+              </li>
+    
+              <li>
+                <a href="model.html" class="nav-link" title="Myanmar in Farben"
+                  >Myanmar in Farben</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </section>
+      </header>
+<body>
+    
+</body>
+    <section class="grid-container">
+        <ul class="columnlist">
+          <li class="modal">
+            <section>
+              <img
+                src="24.webp"
+                alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten"
+                loading="lazy"
+                width="600"
+                height="400"
+              />
+              <!-- <h2>
+                  Lebendige Städte und die kulturellen Schätze Europas durch
+                  unsere sorgfältig kuratierten Reisen.
+                </h2> -->
+              <!-- <p>
+                  Lebendige Städte und die kulturellen Schätze Europas durch
+                  unsere sorgfältig kuratierten Reisen.
+                </p> -->
+            </section>
+          </li>
+          <li class="modal">
+            <section>
+              <img
+                src="45.webp"
+                alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten"
+                loading="lazy"
+                width="600"
+                height="400"
+              />
+            </section>
+          </li>
+          <li class="modal">
+            <section>
+              <img
+                src="49.webp"
+                alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten"
+                loading="lazy"
+                width="600"
+                height="400"
+              />
+            </section>
+          </li>
+          <li class="modal">
+            <section>
+              <img
+                src="44.webp"
+                alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten"
+                loading="lazy"
+                width="600"
+                height="400"
+              />
+              <!-- <h1>Frankreich erleben</h1>
+                <p>
+                  Zu den romantischen Straßen von Paris – lassen Sie sich von der
+                  Vielfalt dieses Landes verzaubern.
+                </p> -->
+            </section>
+          </li>
+        </ul>
+      </section>
+  
+      <ul class="nlist submenu">
+        <li>
+          <a href="#" onclick="setActive('Italien', 'flexbox1');return false;">Italien 🌤</a>
+        </li>
+        <li>
+          <a href="#" onclick="setActive('Frankreich', 'flexbox2');return false;">Frankreich 🌤</a>
+        </li>
+        <li>
+          <a href="#" onclick="setActive('Myanmar', 'flexbox3');return false;">Myanmar 🌤</a>
+        </li>
+        <li>
+          <a href="#" onclick="setActive('Türkei', 'flexbox4');return false;">Türkei 🌤</a>
+        </li>
+        <li>
+          <a href="#" onclick="setActive('Portugal', 'flexbox5');return false;">Portugal 🌤</a>
+        </li>
+      </ul>
+      <div class="flag-icons">
+        <br>
+        <h2 style="color: #1da1f2 ; text-align: center;" class="leader"> Länder, die uns ans Herz gewachsen sind und die wir bereits bereist haben.</h2>
+   
+      <div id="flexbox1" class="content-section active">
+        <div class="content">
+          <section class="article">
+            <img
+              src="../12345678.webp"
+              alt="Bildbeschreibung 1"
+              class="article-image"
+              width="600"
+                  height="400"
+            />
+            <div class="article-content">
+              <!-- <h2>Die unendliche Liebe zu Italien und zur Fotografie</h2> -->
+  
+              <p class="note">
+                Italien ist ein Land, das man durch die Linse eines Fotografen neu entdecken kann.
+              </p>
+              <br />
+              <div style="color: #555555;">
+                Italien ist nicht nur ein Reiseziel – es ist eine Quelle der Inspiration für Fotografen. Vom tiefblauen Meer an der Amalfiküste bis hin zu den sonnenverwöhnten Hügellandschaften der Toskana – jedes Bild erzählt seine eigene Geschichte und hält die Schönheit des Moments fest.
+              </div>
+              <br>
+              <div style="color: #555555;">
+                Die alten Gassen Roms, die weichen Lichter über Venedig bei Sonnenuntergang und die unberührten Strände Siziliens – all dies bietet endlose Möglichkeiten, den Zauber Italiens mit der Kamera festzuhalten. Jede Aufnahme wird zu einem Meisterwerk, das die Seele des Landes einfängt.
+              </div>
+              <blockquote>
+                "Fotografie ist die Kunst, den Augenblick unvergänglich zu machen." - Unbekannt
+              </blockquote>
+              <div style="color: #555555;">
+                Haben Sie schon einmal die leuchtenden Farben des italienischen Sommers fotografiert? Die ruhigen Strände und versteckten Buchten, die in der sanften Brise des Mittelmeers liegen, laden dazu ein, die Schönheit dieses einzigartigen Landes auf eine Weise zu erleben, die nur die Fotografie ermöglichen kann.
+              </div>
+            </div>
+          </section>
+          <!-- Ваше содержимое статьи -->
+        </div>
+      </div>
+      
+      <div id="flexbox5" class="content-section">
+        <div class="content">
+          <section class="article">
+            <img
+              src="../sw22.webp"
+              alt="Bildbeschreibung 2"
+              class="article-image"
+              width="600"
+                  height="400"
+            />
+            <div class="article-content">
+              <!-- <h2>Die verborgenen Schätze Portugals entdecken</h2> -->
+            
+              <div style="color: #555555;">
+                  Portugal, ein Land voller Geschichte und Seele, wo reiche Kultur und atemberaubende Landschaften auf wunderbare Weise verschmelzen. Entdecken Sie die unberührten Strände, die malerischen Dörfer und die beeindruckende Küstenlinie des Atlantiks, die von den wilden Wellen umspült wird.
+              </div>
+              <br>
+              <div style="color: #555555;">
+                  Jede Region Portugals hat ihre eigene Geschichte zu erzählen. Ob es die antiken Straßen von Lissabon, die farbenfrohen Häuser von Porto oder die majestätischen Klippen der Algarve sind – Portugal bietet unendliche Möglichkeiten für Entdecker und Fotografen gleichermaßen.
+              </div>
+              <br />
+              <p class="note">
+                  Portugal ist weit mehr als nur Fado und Bacalhau – es ist eine Reise durch Kultur, Natur und Tradition.
+              </p>
+              <br />
+              <div style="color: #555555;">
+                  Haben Sie schon einmal die versteckten Buchten der Algarve besucht? Diese idyllischen Orte, umgeben von kristallklarem Wasser und steilen Klippen, bieten die perfekte Kulisse für jeden Fotografen und Reisenden.
+              </div>
+              <blockquote>
+                  "Reisen in Portugal bedeutet, das Herz für neue Entdeckungen zu öffnen." - Unbekannt
+              </blockquote>
+          </div>
+          
+          </section>
+        </div>
+      </div>
+      <div id="flexbox2" class="content-section">
+        <div class="content">
+          <section class="article article-right">
+            <img
+              src="../123456789.webp"
+              alt="Bildbeschreibung 1"
+              class="article-image"
+              width="600"
+                  height="400"
+            />
+            <div class="article-content">
+              <!-- <h2>Die Eleganz Frankreichs in der Fotografie einfangen</h2>
+              <br /> -->
+             
+              <br />
+              <div style="color: #555555;">
+                Frankreich, das Land der Eleganz und Raffinesse, inspiriert Fotografen aus der ganzen Welt. Ob es sich um einen flüchtigen Moment in den belebten Straßen von Paris handelt oder um die sanften Farben der Provence – Frankreich ist eine Leinwand für unvergessliche Aufnahmen. 
+              </div>
+              <br>
+              <p class="note">
+                Jede Fotografie ist ein Fenster in die Seele Frankreichs.
+              </p>
+            <div style="color: #555555;">
+                Die Straßenfotografie in Frankreich hat eine lange Tradition, die das Leben in all seinen Facetten einfängt. Ein einfaches Porträt einer eleganten Frau auf den Boulevards von Paris kann die Geschichte von Stil, Zeit und Kultur erzählen. Die Kombination aus Mode und urbaner Landschaft schafft eine einzigartige Kulisse für zeitlose Aufnahmen.
+              </div>
+              <br>
+              <p>
+                Haben Sie schon einmal die charmanten Viertel von Montmartre fotografiert? Die schmalen, kopfsteingepflasterten Straßen und die lebendige Atmosphäre machen diesen Teil von Paris zu einem Paradies für Fotografen. 
+              </p>
+              <blockquote>
+                "Fotografie ist die Kunst, die Magie des Alltags einzufangen." - Unbekannt
+              </blockquote>
+    </div>
+    
+          </section>
+        </div>
+      </div>
+      <div id="flexbox4" class="content-section">
+        <div class="content">
+          <section class="article article-right">
+            <img
+              src="../1234567890.webp"
+              alt="Bildbeschreibung 2"
+              class="article-image"
+              width="600"
+                  height="400"
+            />
+            <div class="article-content">
+              <!-- <h2>Die faszinierende Vielfalt der Türkei in Bildern</h2>
+    
+              <br /> -->
+              <div style="color: #555555;">
+                Die Türkei, ein Land zwischen Europa und Asien, ist ein Ort, an dem Geschichte, Kultur und atemberaubende Landschaften aufeinandertreffen. Von den geschäftigen Basaren Istanbuls bis zu den ruhigen Stränden der Ägäis – jede Fotografie erzählt eine einzigartige Geschichte.
+                
+              </div>
+              <br>
+              <div style="color: #555555;">
+                Erleben Sie die Vielfalt der Türkei, von den malerischen Gassen in Kappadokien bis zu den historischen Ruinen von Ephesos. Für Fotografen bietet die Türkei endlose Möglichkeiten, das Wechselspiel von Licht und Schatten in den alten Straßen, Märkten und Landschaften festzuhalten.
+              </div>
+              <br />
+              <p class="note">
+                Jede Ecke der Türkei hält eine neue Perspektive bereit, die nur darauf wartet, mit der Kamera eingefangen zu werden.
+              </p>
+              <br />
+              <p>
+                Haben Sie schon einmal die Heißluftballons über den märchenhaften Tälern Kappadokiens fotografiert? Dieser Anblick bleibt für immer im Gedächtnis und ist ein Traum für jeden Fotografen.
+                
+              </p>
+              <blockquote>
+                "Fotografie ist die Kunst, das Unsichtbare sichtbar zu machen." - Unbekannt
+              </blockquote>
+            </div>
+    
+          </section>
+        </div>
+      </div>
+      <div id="flexbox3" class="content-section">
+        <div class="content">
+          <section class="article">
+            <img
+              src="../36.webp"
+              alt="Fotografie von Myanmar"
+              class="article-image"
+              width="600"
+              height="400"
+            />
+            <div class="article-content">
+              <!-- <h2>Myanmar – das verborgene Juwel Südostasiens</h2>
+              <br /> -->
+              <div style="color: #555555;">
+                Myanmar, ein Land voller alter Traditionen und atemberaubender Landschaften, ist ein Traumziel für Fotografen, die die einzigartige Atmosphäre Südostasiens einfangen möchten. Hier findet man jahrtausendealte Tempel, malerische Dörfer und beeindruckende Berglandschaften, die es nirgendwo sonst auf der Welt gibt.
+              </div>
+              <br />
+              <div style="color: #555555;">
+                Jeder Winkel Myanmars bietet unzählige Fotomöglichkeiten. Die Sonnenaufgänge über Bagan, die mystischen Inle-Seen und die goldenen Pagoden, die im tropischen Sonnenlicht erstrahlen, eröffnen endlose Möglichkeiten für Fotografen.
+              </div>
+              <br />
+              <p class="note">
+                Myanmar ist nicht nur ein Land der Tempel und Pagoden, es ist ein Ort, an dem man die perfekte Harmonie von Natur und Geschichte erleben kann.
+              </p>
+              <br />
+              <div style="color: #555555;">
+                Haben Sie jemals darüber nachgedacht, wie atemberaubend die Sonnenauf- und -untergänge über den alten Tempeln von Bagan aussehen? Diese Orte sind ein wahres Paradies für Fotografen, die die Essenz von Zeit und Kultur festhalten möchten.
+              </div>
+              <blockquote>
+                "Fotografie ist die Kunst, das Ewige im Moment einzufangen." - Unbekannt
+              </blockquote>
+            </div>
+          </section>
+          
+        </div>
+      </div>
+    <section class="grid-container">
+      <ul class="columnlist">
+        <li class="modal">
+          <section>
+            <img
+              src="31.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="sw1.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="34.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="sw2.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="35.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="sw3.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="38.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="sw4.webp"
+              width="600"
+              height="400"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten."
+              loading="lazy"
+            />
+          </section>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Второй блок -->
+    <section class="grid-container">
+      <ul class="columnlist">
+        <li class="modal">
+          <section>
+            <img
+              src="1234.webp"
+              alt="Autor: © Korneli Nastas."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="sw21.webp"
+              alt="Autor: © Korneli Nastas."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="12.webp" alt="Autor: © Korneli Nastas." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="sw22.webp"
+              alt="Autor: © Korneli Nastas."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="123.webp" alt="Autor: © Korneli Nastas." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="sw23.webp"
+              alt="Autor: © Korneli Nastas."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="12345.webp"
+              alt="Autor: © Korneli Nastas."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="sw24.webp"
+              alt="Autor: © Korneli Nastas."
+              loading="lazy"
+            />
+          </section>
+        </li>
+      </ul>
+    </section>
+    <section class="custom-section">
+      <div class="custom-pop" id="pop">
+        <div class="custom-quote quote">
+          <h1>
+            there are three responses to a piece of design<br />Yes, no, and
+            wow.
+          </h1>
+        </div>
+        <div class="custom-author author">
+          <strong>Milton Glaser</strong> <i><small>for Time Magazine</small></i>
+          <div class="social">
+            <i class="fas fa-heart"></i>
+            <!-- Иконка сердечка -->
+            <i class="fab fa-twitter"></i>
+            <!-- Иконка Twitter -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Третий блок -->
+    <section class="grid-container">
+      <ul class="columnlist">
+        <li class="modal">
+          <section>
+            <img src="37.webp" alt="Autor: © Korneli Nastas." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="sw25.webp"
+              alt="Autor: © Korneli Nastas."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="32.webp" alt="Autor: © Korneli Nastas." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="sw26.webp"
+              alt="Autor: © Korneli Nastas."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="36.webp" alt="Autor: © Korneli Nastas." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="sw27.webp"
+              alt="Autor: © Korneli Nastas."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="33.webp" alt="Autor: © Korneli Nastas." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="sw28.webp"
+              alt="Autor: © Korneli Nastas."
+              loading="lazy"
+            />
+          </section>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Четвёртый блок -->
+    <section class="grid-container">
+      <ul class="columnlist">
+        <li class="modal">
+          <section>
+            <img src="48.webp" alt="Autor: © Korneli Nastas." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="sw29.webp"
+              alt="Autor: © Korneli Nastas."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="45.webp" alt="Autor: © Korneli Nastas." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="sw31.webp"
+              alt="Autor: © Korneli Nastas."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="49.webp" alt="Autor: © Korneli Nastas." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="sw32.webp"
+              alt="Autor: © Korneli Nastas."
+              loading="lazy"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img src="47.webp" alt="Autor: © Korneli Nastas." loading="lazy" />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="sw33.webp"
+              alt="Autor: © Korneli Nastas."
+              loading="lazy"
+            />
+          </section>
+        </li>
+      </ul>
+    </section>
+
+    <style>
+      /* Flexbox настройки */
+      .grid-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px; /* Промежутки между изображениями */
+      }
+
+      /* Настройка списка */
+      .columnlist {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      /* Flexbox для элементов списка */
+      .columnlist li {
+        flex: 1 1 calc(12.5% - 10px); /* 8 колонок по умолчанию */
+        box-sizing: border-box;
+      }
+
+      .modal section img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+      /* Адаптивные стили для экранов до 1200px */
+      @media (max-width: 1200px) {
+        .columnlist li {
+          flex: 1 1 calc(50% - 10px); /* 2 колонки для меньших экранов */
+        }
+      }
+    </style>
+ 
+    <!-- <script src="script.js"></script> -->
+    <script>
+        const modal = document.getElementById('modal');
+        const modalImg = document.getElementById('modalImage');
+        const authorInfo = document.getElementById('modalAuthor');
+        const images = document.querySelectorAll('.columnlist img');
+  
+        images.forEach((image) => {
+          image.addEventListener('click', function () {
+            modalImg.src = this.src;
+            authorInfo.textContent = this.alt;
+            modal.classList.add('show');
+          });
+        });
+  
+        modal.addEventListener('click', function () {
+          modal.classList.remove('show');
+        });
+  
+        function closeModal() {
+          modal.classList.remove('show');
+        }
+      </script>
+    <script>
+      function toggleAnswer(element) {
+        const answer = element.nextElementSibling;
+
+        if (answer.style.display === 'block') {
+          answer.style.display = 'none';
+        } else {
+          answer.style.display = 'block';
+        }
+      }
+    </script>
+    <script>
+      const burgerMenu = document.querySelector('.burger-menu');
+      const nlist = document.querySelector('.nlist');
+
+      burgerMenu.addEventListener('click', () => {
+        burgerMenu.classList.toggle('active');
+        nlist.classList.toggle('open'); // Открываем меню при клике
+      });
+
+      var navbar = document.getElementById('navbar');
+
+      // Добавляем событие на прокрутку страницы
+      window.onscroll = function () {
+        stickyNavbar();
+      };
+
+      // Функция, которая управляет фиксированием навбара
+      function stickyNavbar() {
+        if (window.pageYOffset >= 200) {
+          navbar.classList.add('fixed');
+        } else {
+          navbar.classList.remove('fixed');
+        }
+      }
+    </script>
+    <script>
+      // Получаем текущий URL-адрес
+      document.addEventListener('DOMContentLoaded', function () {
+        // Получаем текущий URL без параметров и якорей
+        let currentLocation = window.location.pathname.split('/').pop();
+
+        console.log('Current location:', currentLocation); // Вывод текущего URL
+
+        // Если на главной странице, то currentLocation будет пустым
+        if (currentLocation === '') {
+          currentLocation = 'index.html'; // Для главной страницы
+        }
+
+        // Находим все ссылки меню
+        const menuItems = document.querySelectorAll('.nlist li a');
+
+        // Проходимся по каждой ссылке и проверяем ее href
+        menuItems.forEach((item) => {
+          const href = item.getAttribute('href');
+          console.log('Checking href:', href); // Вывод каждого href
+
+          // Если текущий путь совпадает с href ссылки
+          if (href === currentLocation) {
+            console.log('Matched:', href); // Вывод при совпадении
+            item.classList.add('active');
+          } else {
+            item.classList.remove('active');
+          }
+        });
+      });
+    </script>
+    <script>
+      function showContent(sectionId) {
+        var sections = document.querySelectorAll('.content-section');
+        sections.forEach(function (section) {
+          section.classList.remove('active');
+        });
+        document.getElementById(sectionId).classList.add('active');
+      }
+    </script>
+    <script>
+      const shopText = document.querySelectorAll('.shop');
+
+      for (let i = 0; i < shopText.length; i++) {
+        shopText[i].innerHTML =
+          'Wir planen Ihre Foto-Reise, Sie halten die schönsten Momente fest!';
+      }
+    </script>
+
+    <script>
+      function setActive(country, sectionId) {
+        // Меняем видимый контент
+        var sections = document.querySelectorAll('.content-section');
+        sections.forEach(function (section) {
+          section.classList.remove('active');
+        });
+        document.getElementById(sectionId).classList.add('active');
+
+        // Обновляем URL в адресной строке
+        const url = new URL(window.location);
+        url.searchParams.set('country', country); // Добавляем параметр ?country=Italien
+        window.history.pushState({}, '', url);
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const country = urlParams.get('country');
+
+        if (country === 'Italien') {
+          setActive('Italien', 'flexbox1');
+        } else if (country === 'Frankreich') {
+          setActive('Frankreich', 'flexbox2');
+        } else if (country === 'Myanmar') {
+          setActive('Myanmar', 'flexbox3');
+        } else if (country === 'Türkei') {
+          setActive('Türkei', 'flexbox4');
+        } else if (country === 'Portugal') {
+          setActive('Portugal', 'flexbox5');
+        }
+      });
+    </script>
+    <script>
+      (function () {
+        window.onload = () => {
+          const obj = document.querySelector('#gallery');
+          const time = 10000;
+          function animStart() {
+            if (obj.classList.contains('active') == false) {
+              obj.classList.add('active');
+              setTimeout(() => {
+                animEnd();
+              }, time);
+            }
+          }
+          function animEnd() {
+            obj.classList.remove('active');
+            obj.offsetWidth;
+          }
+          document.addEventListener('scroll', function () {
+            // scroll or scrollend
+            animStart();
+          });
+          window.addEventListener('resize', animStart);
+          animStart();
+        };
+      })();
+    </script>
+    <script>
+      function showAlert(event) {
+        event.preventDefault(); // Останавливаем стандартное поведение формы
+
+        // Показываем дружелюбный alert
+        alert(
+          'Danke für Ihre Anmeldung! Wir schicken Ihnen nur die wichtigsten Neuigkeiten – und garantiert keinen Spam!'
+        );
+
+        // Можно добавить логику для отправки формы через AJAX или дальше обработать данные
+      }
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var modalImages = document.querySelectorAll('.modal img'); // Находим все изображения
+
+        modalImages.forEach(function (modalImg) {
+          // Отслеживаем клик по изображению
+          modalImg.addEventListener('click', function () {
+            var existingShareContainer =
+              document.querySelector('.share-buttons');
+
+            // Если изображение уже увеличено (имеет класс fullscreen)
+            if (modalImg.classList.contains('fullscreen')) {
+              // Убираем класс fullscreen (уменьшаем изображение)
+              modalImg.classList.remove('fullscreen');
+
+              // Удаляем контейнер с кнопками, если он есть
+              if (existingShareContainer) {
+                existingShareContainer.remove(); // Немедленно удаляем контейнер с кнопками
+              }
+            } else {
+              // Удаляем кнопки с предыдущего изображения, если они остались
+              if (existingShareContainer) {
+                existingShareContainer.remove();
+              }
+
+              // Добавляем класс fullscreen для увеличения изображения
+              modalImg.classList.add('fullscreen');
+
+              // Создаем контейнер с кнопками шаринга
+              var shareContainer = document.createElement('div');
+              shareContainer.className = 'share-buttons';
+
+              // URL изображения
+              var imgUrl = modalImg.src;
+
+              // Создаем кнопку для Facebook с иконкой
+              var facebookButton = document.createElement('a');
+              facebookButton.href =
+                'https://www.facebook.com/sharer/sharer.php?u=' +
+                encodeURIComponent(imgUrl);
+              facebookButton.target = '_blank';
+              facebookButton.innerHTML = '<i class="fab fa-facebook-f"></i>'; // Иконка Facebook
+
+              // Создаем кнопку для Twitter с иконкой
+              var twitterButton = document.createElement('a');
+              twitterButton.href =
+                'https://twitter.com/intent/tweet?url=' +
+                encodeURIComponent(imgUrl);
+              twitterButton.target = '_blank';
+              twitterButton.innerHTML = '<i class="fab fa-twitter"></i>'; // Иконка Twitter
+
+              // Создаем кнопку для Telegram с иконкой
+              var telegramButton = document.createElement('a');
+              telegramButton.href =
+                'https://t.me/share/url?url=' + encodeURIComponent(imgUrl);
+              telegramButton.target = '_blank';
+              telegramButton.innerHTML =
+                '<i class="fab fa-telegram-plane"></i>'; // Иконка Telegram
+
+              // Создаем кнопку для Instagram (здесь просто ссылка на профиль или страницу)
+              var instagramButton = document.createElement('a');
+              instagramButton.href =
+                'https://www.instagram.com/?url=' + encodeURIComponent(imgUrl);
+              instagramButton.target = '_blank';
+              instagramButton.innerHTML = '<i class="fab fa-instagram"></i>'; // Иконка Instagram
+
+              // Добавляем кнопки в контейнер
+              shareContainer.appendChild(facebookButton);
+              shareContainer.appendChild(twitterButton);
+              shareContainer.appendChild(telegramButton);
+              shareContainer.appendChild(instagramButton);
+
+              // Стили для контейнера (делаем его фиксированным, чтобы он следовал за изображением)
+              shareContainer.style.position = 'fixed';
+              shareContainer.style.bottom = '20px';
+              shareContainer.style.left = '50%';
+              shareContainer.style.transform = 'translateX(-50%)';
+              shareContainer.style.background = 'rgba(0, 0, 0, 0.2)'; // Легкий черный фон для контраста
+              shareContainer.style.padding = '5px';
+              shareContainer.style.borderRadius = '5px';
+              shareContainer.style.zIndex = '1001';
+
+              // Стили для иконок (уменьшение размера и установка вашего цвета #1da1f2)
+              var iconButtons = [
+                facebookButton,
+                twitterButton,
+                telegramButton,
+                instagramButton,
+              ];
+              iconButtons.forEach(function (button) {
+                button.style.marginRight = '10px';
+                button.style.color = '#1da1f2'; // Ваш голубой цвет
+                button.style.fontSize = '20px'; // Уменьшенный размер иконок
+              });
+
+              // Вставляем контейнер в body, чтобы кнопки были на экране при увеличении
+              document.body.appendChild(shareContainer);
+            }
+          });
+        });
+      });
+    </script>
+ 
+</html>

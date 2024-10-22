@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-YDYYVDE06J"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-YDYYVDE06J');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;700&display=swap');
+   
+   
+    
+ 
+
+      @import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+      body {
+        font-family: 'Titillium Web', sans-serif;
+        font-weight: 200;
+        line-height: 1.6;
+        margin: 20px;
+      }
+      .question {
+        font-weight: bold;
+        margin-top: 30px;
+        font-size: larger;
+        color: dodgerblue;
+      }
+      .answer {
+        display: block;
+        margin: 5px 0;
+      }
+      .correct {
+        color: darkcyan;
+      }
+      .incorrect {
+        color: red;
+      }
+      .question-block {
+        margin: 20px 0;
+        padding: 10px;
+        border: 1px solid #ccc;
+      }
+      .hidden {
+        display: none;
+      }
+      #content {
+        display: none;
+      }
+    </style>
+    <title>Q&A-Suche</title>
+  </head>
+  <header></header>
+    <br>
+    <section >
+      <div style="background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('pngegg.webp'); background-size: cover; background-position: center; width: 100vw; box-sizing: border-box;" class="container22">
+        <br>
+        <p class="grid22">
+          <div style="display: inline-block; padding: 10px; border-radius: 18px;">
+            <span style="padding-left: 1vw;" class="reisen1">welt</span>
+            <span style="padding-left: 1vw;" class="photo1">weit</span>
+          </div>
+      
+          <div style="display: inline-block; padding: 10px; border-radius: 18px;">
+            <span  class="photo">foto</span>
+            <span class="reisen">reisen</span>
+          </div>
+        </p>
+        <br>
+      </div>
+      
+      
+      <nav class="navbar" id="navbar">
+        <div class="burger-menu">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <ul class="nlist">
+          <li>
+            <a href="index.html" class="nav-link" title="Startseite">Start</a>
+          </li>
+
+          <li>
+            <a href="reiseplan.html" class="nav-link" title="Reiseplan"
+              >Reiseplan</a
+            >
+          </li>
+
+          <li>
+            <a href="model.html" class="nav-link" title="Myanmar in Farben"
+              >Myanmar in Farben</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </section>
+ 
+  <body>
+   
+    <div id="flexbox1" class="content-section active">
+      <div class="content">
+        <section class="article">
+          <img
+            src="../00.gif"
+            alt="Bildbeschreibung 1"
+            class="article-image"
+            width="600"
+                height="400"
+          />
+          <div class="article-content">
+         
+
+            <p class="note">
+              Q&A-Suche befindet sich derzeit in einer Wartungsphase.
+            </p>
+            <br />
+            <div style="color: #555555;">
+              Dank Ihres zeitnahen und äußerst hilfreichen Feedbacks befindet sich die Q&A-Suche momentan in einer Wartungsphase, um die Benutzererfahrung zu verbessern und mögliche Fehler zu beheben. Während dieser Zeit arbeiten wir daran, die Suchfunktion effizienter zu gestalten und die Ergebnisse präziser zu machen.
+            </div>
+            <br>
+            <div style="color: #555555;">
+              Wir bemühen uns, die Wartungsarbeiten so schnell wie möglich abzuschließen.  Die Suche wird bald mit optimierten Funktionen und schnellerer Leistung wieder verfügbar sein.
+            </div>
+            <blockquote>
+              Bitte haben Sie etwas Geduld und versuchen Sie es später erneut oder abonnieren Sie unseren Newsletter, und wir informieren Sie per E-Mail, sobald die Q&A-Suche wieder online ist.
+            </blockquote>
+            <br>
+
+            <!-- <div id="passwordPrompt" style="max-width: 150px">
+              <label for="password"
+                >Passwort eingeben:</label
+              >
+              <input type="password" id="password" />
+              <button
+                onclick="checkPassword()"
+                style="font-size: small; background-color: #555; color: #fff"
+              >
+                Eingeben
+              </button>
+            </div>
+            <div id="content">
+              <input
+                type="text"
+                id="searchInput"
+                placeholder="Du hast das richtige Passwort eingegeben 💯 Allerdings befindet sich die Q&A-Suche weiterhin in Wartung 😊 "
+                onkeyup="searchQuestions()"
+              />
+            </div> -->
+          </div>
+     
+        </section>
+        <!-- Ваше содержимое статьи -->
+      </div>
+    </div>  
+    <br>
+    <form class="news-form" onsubmit="showAlert(event)">
+      <div class="news-form-group">
+          <label for="news-name">Ihr Name:</label>
+          <input type="text" id="news-name" name="news-name" placeholder="Vorname Nachname" required />
+      </div>
+      <div class="news-form-group">
+          <label for="news-email">Ihre E-Mail-Adresse:</label>
+          <input type="email" id="news-email" name="news-email" placeholder="beispiel@dmail.de" required />
+      </div>
+      <div class="news-submit">
+          <button type="submit">Newsletter Abonnieren</button>
+      </div>
+  </form>
+  
+    <section class="grid-container">
+      <ul class="columnlist">
+        <li class="modal">
+          <section>
+            <img
+              src="24.webp"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten"
+              loading="lazy"
+              width="600"
+              height="400"
+            />
+            <!-- <h2>
+                Lebendige Städte und die kulturellen Schätze Europas durch
+                unsere sorgfältig kuratierten Reisen.
+              </h2> -->
+            <!-- <p>
+                Lebendige Städte und die kulturellen Schätze Europas durch
+                unsere sorgfältig kuratierten Reisen.
+              </p> -->
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="45.webp"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten"
+              loading="lazy"
+              width="600"
+              height="400"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="49.webp"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten"
+              loading="lazy"
+              width="600"
+              height="400"
+            />
+          </section>
+        </li>
+        <li class="modal">
+          <section>
+            <img
+              src="44.webp"
+              alt="Autor: © Korneli Nastas. Alle Rechte vorbehalten"
+              loading="lazy"
+              width="600"
+              height="400"
+            />
+            <!-- <h1>Frankreich erleben</h1>
+              <p>
+                Zu den romantischen Straßen von Paris – lassen Sie sich von der
+                Vielfalt dieses Landes verzaubern.
+              </p> -->
+          </section>
+        </li>
+      </ul>
+    </section>
+    <br />
+  </body>
+  <script>
+    function checkPassword() {
+      const enteredPassword = document.getElementById('password').value;
+      const correctPassword = 'Korneli'; // Задай свое пароль здесь
+
+      if (enteredPassword === correctPassword) {
+        document.getElementById('passwordPrompt').style.display = 'none';
+        document.getElementById('content').style.display = 'block';
+        setTimeout(function () {
+          window.location.href = 'https://de.webmasters-europe.org/'; // Перенаправление через 2 секунды
+        }, 3900);
+      } else {
+        alert(
+          'Falsches Passwort, aber kein Grund zur Sorge 😊 Das Leben bleibt großartig – überall lauern kleine Glücksmomente! '
+        );
+        setTimeout(function () {
+          window.location.href = 'https://de.webmasters-europe.org/'; // Перенаправление через 2 секунды
+        }, 100);
+      }
+    }
+  </script>
+  <script>
+    function showAlert(event) {
+        event.preventDefault(); // Останавливаем стандартное поведение формы
+    
+        // Показываем дружелюбный alert
+        alert("Danke für Ihre Anmeldung! Wir schicken Ihnen nur die wichtigsten Neuigkeiten – und garantiert keinen Spam!");
+        
+        // Можно добавить логику для отправки формы через AJAX или дальше обработать данные
+    }
+    </script>
+    
+</html>

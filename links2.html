@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Example</title>
+    <style>
+      /* Основные стили для меню */
+      .navbar {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        background-color: #f7f7f7;
+      }
+
+      .nlist {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        gap: 20px;
+        flex-direction: column; /* Вертикальный список */
+      }
+
+      .nlist li a {
+        text-decoration: none;
+        color: #1da1f2; /* Цвет текста для неактивных кнопок */
+        font-weight: bold;
+        padding: 10px;
+        border: 2px solid #1da1f2;
+        border-radius: 12px;
+        background-color: #fff;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      .active {
+        color: white !important;
+        background-color: #1da1f2 !important; /* Активная кнопка с синим фоном */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Верхнее меню с 3 кнопками -->
+    <nav class="navbar">
+      <ul class="nlist">
+        <li><a href="index.html" id="start-link">Start</a></li>
+        <li><a href="reiseplan.html" id="reiseplan-link">Reiseplan</a></li>
+        <li><a href="model.html" id="myanmar-link">Myanmar in Farben</a></li>
+      </ul>
+    </nav>
+
+    <!-- Подменю с кнопками стран -->
+    <nav class="navbar">
+      <ul class="nlist submenu">
+        <li>
+          <a
+            href="#"
+            id="georgien-link"
+            onclick="setActive('Georgien'); return false;"
+            >Georgien</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            id="armenien-link"
+            onclick="setActive('Armenien'); return false;"
+            >Armenien</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            id="kazachstan-link"
+            onclick="setActive('Kazachstan'); return false;"
+            >Kazachstan</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <script>
+      // Функция активации кнопок подменю
+      function setActive(country) {
+        // Убираем класс active у всех ссылок подменю
+        const allLinks = document.querySelectorAll('.nlist.submenu li a');
+        allLinks.forEach((link) => {
+          link.classList.remove('active');
+        });
+
+        // Активируем выбранную страну
+        const activeLink = document.getElementById(
+          `${country.toLowerCase()}-link`
+        );
+        if (activeLink) {
+          activeLink.classList.add('active');
+        }
+      }
+
+      // Активация кнопок при загрузке страницы
+      document.addEventListener('DOMContentLoaded', function () {
+        const currentPage = window.location.pathname;
+        const urlParams = new URLSearchParams(window.location.search);
+        const countryParam = urlParams.get('country');
+
+        // Активируем "Reiseplan" и "Georgien", если находимся на странице reiseplan.html
+        if (currentPage.includes('reiseplan.html')) {
+          document.getElementById('reiseplan-link').classList.add('active');
+
+          // Если параметр не передан, активируем Georgien
+          if (!countryParam) {
+            document.getElementById('georgien-link').classList.add('active');
+          }
+        }
+
+        // Если страна указана в параметре URL, активируем её
+        if (countryParam) {
+          setActive(countryParam);
+        }
+      });
+    </script>
+  </body>
+</html>

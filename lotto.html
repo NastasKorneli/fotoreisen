@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-YDYYVDE06J"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-YDYYVDE06J');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Lotto 6aus49 Zahlengenerator mit realistischen Bällen und stilvollem Design"
+    />
+    <title>Lotto 6/49 Generator</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Poppins');
+      @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Acme&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+      body {
+        background: linear-gradient(45deg, #fce38a, #f38181, #a8edea, #fed6e3);
+        background-size: 500% 500%;
+        animation: moveBackground 15s ease infinite;
+        font-family: 'Source Code Pro', monospace;
+      }
+
+      @keyframes moveBackground {
+        0% {
+          background-position: 0% 50%;
+        }
+        25% {
+          background-position: 50% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        75% {
+          background-position: 50% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .lotto-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        margin-bottom: 30px;
+      }
+
+      .lotto-ball {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle at 30% 30%,
+          #ffffff 0%,
+          #ffee00 30%,
+          #ff9900 100%
+        );
+        box-shadow: inset -5px -5px 10px rgba(0, 0, 0, 0.1),
+          inset 5px 5px 10px rgba(255, 255, 255, 0.5),
+          5px 5px 10px rgba(0, 0, 0, 0.2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #000;
+        text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+        opacity: 0;
+        transform: rotate(0deg);
+        animation: spin 1s ease-out forwards;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .lotto-ball::after {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(
+          circle at 30% 30%,
+          rgba(255, 255, 255, 0.8) 0%,
+          rgba(255, 255, 255, 0) 50%
+        );
+        opacity: 0.4;
+      }
+
+      @keyframes spin {
+        0% {
+          opacity: 0;
+          transform: rotate(0deg) scale(0.5);
+        }
+        50% {
+          opacity: 0.7;
+          transform: rotate(360deg) scale(1.2);
+        }
+        100% {
+          opacity: 1;
+          transform: rotate(720deg) scale(1);
+        }
+      }
+
+      .lotto-title {
+        font-size: 2.5rem;
+        color: #0056b3;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      .generate-btn {
+        background: repeating-linear-gradient(
+          45deg,
+          #0056b3 0.1px,
+          #007bff 0.45px,
+          #0056b3 2.25px,
+          #0056b3 2.15px
+        );
+        border: none;
+        color: white;
+        padding: 15px 30px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 6px 12px rgba(0, 86, 179, 0.3);
+        display: inline-block;
+        margin: 20px 0;
+        position: relative;
+        overflow: hidden;
+      }
+      .generate-btn::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          45deg,
+          rgba(255, 255, 255, 0.1),
+          rgba(255, 255, 255, 0.2)
+        );
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      .generate-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0, 86, 179, 0.4);
+      }
+      .generate-btn:hover::before {
+        opacity: 1;
+      }
+      .generate-btn:active {
+        transform: translateY(1px);
+        box-shadow: 0 4px 8px rgba(0, 86, 179, 0.3);
+      }
+
+      @media (max-width: 576px) {
+        .lotto-ball {
+          width: 60px;
+          height: 60px;
+          font-size: 1.4rem;
+        }
+
+        .lotto-title {
+          font-size: 2rem;
+        }
+
+        .generate-btn {
+          font-size: 1rem;
+          padding: 10px 20px;
+        }
+      }
+
+      .input-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        text-align: center;
+        margin: 5px;
+        border-radius: 10px;
+        border: 2px solid #0056b3;
+      }
+
+      .button-container {
+        text-align: center;
+      }
+
+      .markdown-container {
+        background: #ffffff;
+        padding: 20px;
+        margin: 40px auto;
+        max-width: 800px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        color: #333;
+        font-family: 'Poppins', sans-serif;
+        display: none;
+      }
+      .number-circle {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: #0056b3;
+        color: white;
+        text-align: center;
+        line-height: 30px;
+        margin: 2px;
+      }
+      .normal-case {
+        text-transform: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div
+      id="entryModal"
+      class="modal"
+      tabindex="-1"
+      style="display: block; background: #fce38a"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content p-4 text-center">
+          <h2 class="lotto-title mb-4 normal-case">
+            Gratis Fotoshooting zu gewinnen!
+          </h2>
+          <div id="inputContainer" class="d-flex justify-content-center mb-4">
+            <!-- User number inputs -->
+            <input
+              type="number"
+              min="1"
+              max="49"
+              class="input-number"
+              id="input1"
+            />
+            <input
+              type="number"
+              min="1"
+              max="49"
+              class="input-number"
+              id="input2"
+            />
+            <input
+              type="number"
+              min="1"
+              max="49"
+              class="input-number"
+              id="input3"
+            />
+            <input
+              type="number"
+              min="1"
+              max="49"
+              class="input-number"
+              id="input4"
+            />
+            <input
+              type="number"
+              min="1"
+              max="49"
+              class="input-number"
+              id="input5"
+            />
+            <input
+              type="number"
+              min="1"
+              max="49"
+              class="input-number"
+              id="input6"
+            />
+          </div>
+          <p class="mb-4">
+            Wählen Sie sechs einzigartige Nummern für Ihre Teilnahme aus!
+          </p>
+          <button id="submitButton" class="generate-btn">Los geht's!</button>
+        </div>
+      </div>
+    </div>
+
+    <main style="display: none">
+      <div class="container py-5">
+        <br />
+        <h1
+          class="text-center lotto-title"
+          style="font-family: 'Source Code Pro', monospace; font-size: 4rem"
+        >
+          Tipp ab & gewinne!
+        </h1>
+        <br />
+        <!-- Lotto number display -->
+        <div class="lotto-container" id="lottoNumbers"></div>
+        <div
+          id="matchResult"
+          class="text-center mt-4"
+          style="display: none"
+        ></div>
+        <div
+          id="userNumbersResult"
+          class="text-center mt-4"
+          style="display: none"
+        ></div>
+        <br />
+
+        <!-- Divs for match results -->
+        <div id="message-0" class="text-center" style="display: none">
+          Keine Übereinstimmungen. Besseres Glück nächstes Mal!
+          <br />
+          <br />
+          <a
+            href="https://i.pinimg.com/originals/04/12/e4/0412e43fc32d4c41e00db23c6f553b6b.gif"
+          >
+            <img
+              src="https://i.pinimg.com/originals/04/12/e4/0412e43fc32d4c41e00db23c6f553b6b.gif"
+              alt="Bild"
+              style="
+                width: 130px;
+                height: 130px;
+                object-fit: cover;
+                border-radius: 50%;
+              "
+            />
+          </a>
+        </div>
+        <div id="message-1" class="text-center" style="display: none">
+          1 Übereinstimmung! Nicht schlecht, aber Sie können es besser!
+          <br />
+          <br />
+          <a
+            href="https://i.pinimg.com/originals/fc/ca/fa/fccafa6ce178ac8c1499abff6483a131.gif"
+          >
+            <img
+              src="https://i.pinimg.com/originals/fc/ca/fa/fccafa6ce178ac8c1499abff6483a131.gif"
+              alt="Bild"
+              style="
+                width: 130px;
+                height: 130px;
+                object-fit: cover;
+                border-radius: 50%;
+              "
+            />
+          </a>
+        </div>
+
+        <div id="message-2" class="text-center" style="display: none">
+          2 Übereinstimmungen! Fast da!
+          <br />
+          <br />
+          <a
+            href="https://i.pinimg.com/originals/95/2d/5e/952d5e7de150f25a683b3d509c8fbce5.gif"
+          >
+            <img
+              src="https://i.pinimg.com/originals/95/2d/5e/952d5e7de150f25a683b3d509c8fbce5.gif"
+              alt="Bild"
+              style="
+                width: 130px;
+                height: 130px;
+                object-fit: cover;
+                border-radius: 50%;
+              "
+            />
+          </a>
+        </div>
+        <div id="message-3" class="text-center" style="display: none">
+          3 Übereinstimmungen! Sie haben ein kleines Talent!
+          <br />
+          <br />
+          <a
+            href="https://i.pinimg.com/originals/46/5c/40/465c407a6a1705bf5e9bfe010b43a818.gif"
+          >
+            <img
+              src="https://i.pinimg.com/originals/46/5c/40/465c407a6a1705bf5e9bfe010b43a818.gif"
+              alt="Bild"
+              style="
+                width: 130px;
+                height: 130px;
+                object-fit: cover;
+                border-radius: 50%;
+              "
+            />
+          </a>
+        </div>
+        <div id="message-4" class="text-center" style="display: none">
+          4 Übereinstimmungen! Schon beeindruckend!
+          <br />
+          <br />
+          <a
+            href="https://i.pinimg.com/originals/bf/9b/1a/bf9b1ad61a5361c4997aaf844b783bf7.gif"
+          >
+            <img
+              src="https://i.pinimg.com/originals/bf/9b/1a/bf9b1ad61a5361c4997aaf844b783bf7.gif"
+              alt="Bild"
+              style="
+                width: 130px;
+                height: 130px;
+                object-fit: cover;
+                border-radius: 50%;
+              "
+            />
+          </a>
+        </div>
+        <div id="message-5" class="text-center" style="display: none">
+          5 Übereinstimmungen! Unglaublich nah!
+          <br />
+          <br />
+          <a
+            href="https://i.pinimg.com/originals/cd/4d/db/cd4ddb427a38f54930928b2c434ed6ae.gif"
+          >
+            <img
+              src="https://i.pinimg.com/originals/cd/4d/db/cd4ddb427a38f54930928b2c434ed6ae.gif"
+              alt="Bild"
+              style="
+                width: 130px;
+                height: 130px;
+                object-fit: cover;
+                border-radius: 50%;
+              "
+            />
+          </a>
+        </div>
+        <div id="message-6" class="text-center" style="display: none">
+          6 Übereinstimmungen! Jackpot, Sie sind der Gewinner! Herzlichen
+          Glückwunsch! Sie haben ein Fotoshooting in Hamburg gewonnen. Hier ist
+          meine Telefonnummer: 0157 381 81 756 oder E-Mail:
+          korneli.nastas@gmail.com. Kontaktieren Sie mich, und wir machen
+          wunderschöne Fotos – kostenlos!
+          <br />
+          <br />
+          <a
+            href="https://i.pinimg.com/originals/d9/7d/3d/d97d3dc25c87ff2cc04f0d9ad3c78a22.gif"
+          >
+            <img
+              src="https://i.pinimg.com/originals/d9/7d/3d/d97d3dc25c87ff2cc04f0d9ad3c78a22.gif"
+              alt="Bild"
+              style="
+                width: 130px;
+                height: 130px;
+                object-fit: cover;
+                border-radius: 50%;
+              "
+            />
+          </a>
+        </div>
+
+        <div class="text-center">
+          <button
+            id="generateButton"
+            class="generate-btn"
+            style="margin-top: 20px; font-family: 'Source Code Pro', monospace"
+          >
+            noch einmal
+          </button>
+        </div>
+      </div>
+      <div style="text-align: center">
+        <a href="https://fotoreisen.2ix.de" target="_blank">
+          <strong>www.fotoreisen.2ix.de</strong>
+        </a>
+      </div>
+    </main>
+    <script>
+      'use strict';
+
+      function generateLottoNumbers() {
+        const lottoNumbers = new Set();
+        while (lottoNumbers.size < 6) {
+          const number = Math.floor(Math.random() * 49) + 1;
+          lottoNumbers.add(number);
+        }
+        return Array.from(lottoNumbers).sort((a, b) => a - b);
+      }
+
+      function displayLottoNumbers(numbers) {
+        const lottoContainer = document.getElementById('lottoNumbers');
+        lottoContainer.innerHTML = '';
+        numbers.forEach((number, index) => {
+          const ball = document.createElement('div');
+          ball.classList.add('lotto-ball');
+          ball.textContent = number;
+          ball.style.animationDelay = `${index * 0.5}s`;
+          lottoContainer.appendChild(ball);
+        });
+      }
+
+      function showMessage(matches) {
+        // Hide all messages first
+        for (let i = 0; i <= 6; i++) {
+          document.getElementById(`message-${i}`).style.display = 'none';
+        }
+        // Show the message that corresponds to the number of matches
+        document.getElementById(`message-${matches}`).style.display = 'block';
+      }
+
+      function compareNumbers(generatedNumbers) {
+        const userNumbers = [
+          parseInt(document.getElementById('input1').value),
+          parseInt(document.getElementById('input2').value),
+          parseInt(document.getElementById('input3').value),
+          parseInt(document.getElementById('input4').value),
+          parseInt(document.getElementById('input5').value),
+          parseInt(document.getElementById('input6').value),
+        ];
+        if (userNumbers.includes(NaN)) {
+          alert('Bitte geben Sie 6 gültige Zahlen zwischen 1 und 49 ein');
+          return;
+        }
+
+        const matches = userNumbers.filter((num) =>
+          generatedNumbers.includes(num)
+        ).length; // Count the number of matches
+
+        const resultText = `<span style="font-weight: bold; font-size: 1.5rem; color:#ff0000; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);">Treffer: ${matches}</span>`;
+
+        setTimeout(() => {
+          const matchResult = document.getElementById('matchResult');
+          matchResult.innerHTML = resultText;
+          matchResult.style.display = 'block';
+
+          const userNumbersResult =
+            document.getElementById('userNumbersResult');
+          userNumbersResult.innerHTML = `Ihre Zahlen: ${userNumbers
+            .map((num) => `<span class="number-circle">${num}</span>`)
+            .join('')}`;
+
+          userNumbersResult.style.display = 'block';
+
+          // Show corresponding message based on number of matches
+          showMessage(matches);
+
+          // Display the markdown container with documentation
+          document.querySelector('.markdown-container').style.display = 'block';
+        }, 2800);
+      }
+
+      document
+        .getElementById('generateButton')
+        .addEventListener('click', function () {
+          const generatedNumbers = generateLottoNumbers();
+          displayLottoNumbers(generatedNumbers);
+          compareNumbers(generatedNumbers);
+        });
+
+      // Event listener for submitting numbers on the first modal
+      document
+        .getElementById('submitButton')
+        .addEventListener('click', function () {
+          const inputs = [
+            document.getElementById('input1').value,
+            document.getElementById('input2').value,
+            document.getElementById('input3').value,
+            document.getElementById('input4').value,
+            document.getElementById('input5').value,
+            document.getElementById('input6').value,
+          ];
+
+          if (inputs.every((val) => val !== '' && val >= 1 && val <= 49)) {
+            document.getElementById('entryModal').style.display = 'none';
+            document.querySelector('main').style.display = 'block';
+            const generatedNumbers = generateLottoNumbers();
+            displayLottoNumbers(generatedNumbers);
+            compareNumbers(generatedNumbers);
+          } else {
+            alert('Bitte geben Sie 6 gültige Zahlen zwischen 1 und 49 ein');
+          }
+        });
+    </script>
+
+    <div class="markdown-container">
+      <h1>Regeln des Gewinnspiels</h1>
+      <p>
+        Ich bin ein professioneller Fotograf mit
+        <strong>25 Jahren Erfahrung</strong>. Sie können meine Arbeiten auf der
+        Webseite
+        <a href="https://fotoreisen.2ix.de">fotoreisen.2ix.de</a> einsehen. Ich
+        veranstalte ein Gewinnspiel, bei dem jeder die Chance hat,
+        <strong>eine kostenlose Fotosession in Hamburg</strong> zu gewinnen.
+        Wenn Sie an meinem Spiel teilnehmen und Glück haben, gelten folgende
+        Preise:
+      </p>
+      <h2>Gewinne</h2>
+      <ul>
+        <li>
+          <u>6 aus 49:</u>
+          <strong>Ein komplettes, kostenloses Fotoshooting</strong> im urbanen
+          Stil mit einer Reihe hochwertiger Porträtfotos.
+        </li>
+        <li>
+          <u>5 aus 49:</u> Ein kostenloses Fotoshooting und
+          <strong>eine Fotografie als Geschenk</strong>. Weitere Fotos kosten 10
+          Euro pro Bild.
+        </li>
+        <li>
+          <u>4 aus 49:</u> Das Fotoshooting kostet
+          <strong>nur 100 Euro</strong>, Sie erhalten
+          <u>3 Fotos als Geschenk</u>. Weitere Fotos kosten 20 Euro pro Bild.
+        </li>
+        <li>
+          <u>3 aus 49:</u> Das Fotoshooting kostet 150 Euro,
+          <strong>eine Fotografie gibt es als Geschenk</strong>, weitere kosten
+          20 Euro pro Bild.
+        </li>
+      </ul>
+      <h2>Wichtige Hinweise</h2>
+      <ul>
+        <li>
+          Bei <strong>2, 1 oder keinen richtigen Zahlen</strong> gelten
+          dieselben Bedingungen wie bei 3 aus 49: 150 Euro für das Shooting,
+          <u>eine Fotografie als Geschenk</u>, und weitere für 20 Euro pro Bild.
+        </li>
+        <li>
+          Die <strong>6 Zahlen</strong>, die Sie wählen, müssen wie beim Lotto
+          <u>unterschiedlich</u> sein.
+        </li>
+        <li>
+          Sie können Ihre Zahlen jederzeit auf
+          <a href="https://fotoreisen.2ix.de/lotto.html"
+            >fotoreisen.2ix.de/lotto.html</a
+          >
+          ändern und spielen, bis Sie gewinnen.
+        </li>
+      </ul>
+      <h2>Wie Sie Ihren Gewinn geltend machen</h2>
+      <p>
+        Machen Sie ein Foto von Ihrem Gewinn und kontaktieren Sie mich
+        telefonisch unter <strong>0157 381 81 756</strong> oder per E-Mail an
+        <a href="mailto:korneli.nastas@gmail.com">korneli.nastas@gmail.com</a>.
+        Sie können mich auch in den sozialen Netzwerken erreichen:
+        <a href="https://www.facebook.com/korneli.nastas"><u>Facebook</u></a
+        >, <a href="https://x.com/KorneliNastas"><u>twitter</u></a
+        >.
+      </p>
+      <p>
+        <strong>Viel Glück und bis bald!</strong><br />Herzliche Grüße,<br />
+        Korneli
+      </p>
+    </div>
+  </body>
+</html>
